@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_bird.xml" value="0.2703125" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_icon.xml" value="0.2703125" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_solid.xml" value="0.2703125" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_user_icon.xml" value="0.2703125" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_login.xml" value="0.536" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_login.xml" value="0.2264151024877837" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.19924529018924966" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.2988679352838745" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
