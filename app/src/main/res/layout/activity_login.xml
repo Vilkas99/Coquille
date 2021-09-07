@@ -6,23 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/Maia"
         android:text="Coquille"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="188dp" />
+        android:textColor="#000000"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="173dp" />
 
-    <Button
-        android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="?colorPrimary"
+
+    <!-- A CardView that contains a TextView -->
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:elevation="12dp"
+        android:stateListAnimator="@null"
         android:text="Ingresar"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="304dp"
+        android:textSize="12sp"
+        app:cornerRadius="15dp"
+        app:strokeColor="?colorPrimary"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="522dp" />
 
-        tools:layout_editor_absoluteY="499dp" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="282dp"
+        android:layout_height="142dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="309dp">
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
