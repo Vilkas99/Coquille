@@ -7,6 +7,8 @@
     tools:context=".Login">
 
 
+    <!-- A CardView that contains a TextView -->
+
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
@@ -15,58 +17,113 @@
         android:text="Coquille"
         android:textColor="#000000"
         android:textSize="48sp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="173dp" />
-
-
-    <!-- A CardView that contains a TextView -->
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:elevation="12dp"
         android:stateListAnimator="@null"
         android:text="Ingresar"
         android:textColor="#000000"
         android:textSize="12sp"
         app:cornerRadius="15dp"
-        app:strokeColor="?colorPrimary"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="522dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="?colorPrimary" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="282dp"
-        android:layout_height="142dp"
+        android:layout_height="128dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
+        android:translationY="-100dp"
         app:cardCornerRadius="4dp"
         app:cardElevation="10dp"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="309dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_useranme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario"
+            app:boxStrokeColor="#12DFFF"
             app:startIconDrawable="@drawable/ic_user_icon"
-            app:startIconTint="#12DFFF"
-
-            >
+            app:startIconTint="#12DFFF">
 
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:backgroundTint="@color/white" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:translationY="70dp"
+            app:startIconDrawable="@drawable/ic_key_icon"
+            app:startIconTint="#12DFFF">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.cardview.widget.CardView>
+
+
+    <RadioButton
+        android:id="@+id/radio_button_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:onClick="..."
+        android:text="Recuérdame"
+        android:buttonTint="?colorSecondaryVariant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/materialButton"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Registrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton"
+        app:layout_constraintVertical_bias="0.53"
+        tools:text="Registrarse" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
