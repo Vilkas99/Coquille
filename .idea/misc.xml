@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.1703125" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_login.xml" value="0.2988679352838745" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.19924529018924966" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.2988679352838745" />
       </map>
     </option>
   </component>
