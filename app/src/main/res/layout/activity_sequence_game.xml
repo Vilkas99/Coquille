@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sequence_game">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="411dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardBackgroundColor="?colorSecondary"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="102dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:elevation="12dp"
+            android:stateListAnimator="@null"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:translationX="10dp"
+            android:translationY="12dp"
+            app:cornerRadius="15dp"
+            app:strokeColor="?colorPrimary"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="655dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia"
+            android:hint="Secuencia"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp"
+            android:translationX="250dp"
+            android:translationY="15dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="281dp"
+        android:layout_height="82dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="612dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_square"
+            android:translationX="10dp"
+            android:translationY="15dp">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_triangle"
+            android:translationX="110dp"
+            android:translationY="15dp">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_circle"
+            android:translationX="210dp"
+            android:translationY="15dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:elevation="12dp"
+        android:stateListAnimator="@null"
+        android:text="Confirmar"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:cornerRadius="15dp"
+        app:strokeColor="?colorPrimary"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="655dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-15dp"
+        tools:layout_editor_absoluteY="203dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia"
+            android:hint="Lv. 1"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:translationX="50dp"
+            android:translationY="15dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="207dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia"
+            android:hint="00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:translationX="40dp"
+            android:translationY="15dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="324dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_square"
+            android:translationX="5dp"
+            android:translationY="10dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="323dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_circle"
+            android:translationX="5dp"
+            android:translationY="10dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="323dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_triangle"
+            android:translationX="5dp"
+            android:translationY="10dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="462dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_uestionmark"
+            android:translationX="5dp"
+            android:translationY="10dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="462dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_circle"
+            android:translationX="5dp"
+            android:translationY="10dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="462dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_square"
+            android:translationX="5dp"
+            android:translationY="10dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
