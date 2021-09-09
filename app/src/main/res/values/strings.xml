@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Coquille</string>
+    <string name="tiulo">Título</string>
+    <string name="cuentos_magicos">Cuentos mágicos</string>
+    <string name="tortuguita">Tortuguita</string>
+    <string name="memoria">Memoria</string>
+    <string name="secuencia">Secuencia</string>
+    <string name="racha_de_12_dias">Racha de 12 dias</string>
+    <string name="todo9">todo9</string>
+    <string name="todo8">todo8</string>
+    <string name="todo7">todo7</string>
+    <string name="todo6">todo6</string>
+    <string name="todo5">todo5</string>
+    <string name="todo4">todo4</string>
+    <string name="todo3">todo3</string>
+    <string name="todo2">todo2</string>
+    <string name="todo1">todo1</string>
 </resources>
