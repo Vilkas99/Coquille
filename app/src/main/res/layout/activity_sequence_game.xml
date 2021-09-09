@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sequence_game">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_1"
+        android:layout_width="411dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardBackgroundColor="?colorSecondary"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton_1"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:elevation="12dp"
+            android:stateListAnimator="@null"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:translationX="10dp"
+            android:translationY="12dp"
+            app:cornerRadius="15dp"
+            app:strokeColor="?colorPrimary"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="655dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia2"
+            android:hint="@string/secuencia"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textSize="35sp"
+            android:translationX="265dp"
+            android:translationY="17dp">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_sequence"
+            android:translationX="175dp"
+            android:translationY="2dp"
+            android:contentDescription="@string/todo_6">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_2"
+        android:layout_width="281dp"
+        android:layout_height="82dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view"
+        app:layout_constraintVertical_bias="0.733"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_square"
+            android:translationX="10dp"
+            android:translationY="15dp"
+            android:contentDescription="@string/todo_5">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_triangle"
+            android:translationX="110dp"
+            android:translationY="15dp"
+            android:contentDescription="@string/todo_4">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_circle"
+            android:translationX="210dp"
+            android:translationY="15dp"
+            android:contentDescription="@string/todo_3">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:elevation="12dp"
+        android:stateListAnimator="@null"
+        android:text="@string/confirmar"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view"
+        app:layout_constraintVertical_bias="0.841"
+        app:strokeColor="?colorPrimary" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_3"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-280dp"
+        android:translationX="-90dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_view"
+        app:layout_constraintVertical_bias="0.131"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia2"
+            android:hint="@string/lv_1"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textSize="25sp"
+            android:translationX="50dp"
+            android:translationY="15dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_4"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-100dp"
+        android:translationX="15dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia2"
+            android:hint="@string/_00_00"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textSize="25sp"
+            android:translationX="40dp"
+            android:translationY="15dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-90dp"
+        android:translationX="80dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_square"
+            android:translationX="5dp"
+            android:translationY="10dp"
+            android:contentDescription="@string/todo_9">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-120dp"
+        android:translationX="110dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_circle"
+            android:translationX="5dp"
+            android:translationY="10dp"
+            android:contentDescription="@string/todo">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-120dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_triangle"
+            android:translationX="5dp"
+            android:translationY="10dp"
+            android:contentDescription="@string/todo_8">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-0dp"
+        android:translationX="60dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_uestionmark"
+            android:translationX="5dp"
+            android:translationY="10dp"
+            android:contentDescription="@string/todo_7">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-0dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_circle"
+            android:translationX="5dp"
+            android:translationY="10dp"
+            android:contentDescription="@string/todo_2">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-0dp"
+        android:translationX="15dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_view_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_square"
+            android:translationX="5dp"
+            android:translationY="10dp"
+            android:contentDescription="@string/todo_1">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
