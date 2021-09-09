@@ -48,6 +48,7 @@
             android:fontFamily="@font/maia"
             android:hint="@string/secuencia"
             android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="280dp"
             android:translationY="15dp">
@@ -158,6 +159,7 @@
             android:fontFamily="@font/maia"
             android:hint="@string/lv_1"
             android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
             android:textSize="25sp"
             android:translationX="50dp"
             android:translationY="15dp">
@@ -191,6 +193,7 @@
             android:fontFamily="@font/maia"
             android:hint="@string/_00_00"
             android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
             android:textSize="25sp"
             android:translationX="40dp"
             android:translationY="15dp">
