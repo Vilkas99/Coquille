@@ -136,6 +136,8 @@
             tools:ignore="MissingConstraints">
 
         </TextView>
+
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -156,6 +158,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.472"
             tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_profilep_c_king" />
 
 
     </androidx.cardview.widget.CardView>
@@ -302,6 +309,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.472"
         tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_profile_pic_mage" />
 
     </androidx.cardview.widget.CardView>
 
