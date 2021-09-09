@@ -7,7 +7,7 @@
     tools:context=".preview_sequence">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view"
         android:layout_width="411dp"
         android:layout_height="65dp"
         android:layout_gravity="center"
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="@string/secuencia"
+            android:hint="Secuencia"
             android:textColor="#FFFFFF"
             android:textSize="35sp"
             android:translationX="280dp"
@@ -59,8 +59,7 @@
             android:layout_height="60dp"
             android:src="@drawable/ic_sequence"
             android:translationX="175dp"
-            android:translationY="2dp"
-            android:contentDescription="@string/todo_6">
+            android:translationY="2dp">
 
         </ImageView>
 
