@@ -112,6 +112,7 @@
         android:translationY="-40dp"
         android:translationX="15dp"
         app:cardBackgroundColor="#FFFFFF"
+        android:onClick="routeToSequenceGame"
         app:cardCornerRadius="4dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
