@@ -20,7 +20,8 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="-3dp">
+        tools:layout_editor_absoluteY="-3dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView2"
@@ -85,69 +86,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_useranme"
-                    android:layout_width="240dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Nombre de usuario"
 
-                    app:boxStrokeColor="#12DFFF"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                <FrameLayout
+                    android:id="@+id/profile_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.529"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_info"
-                    app:layout_constraintVertical_bias="0.09"
-                    app:startIconDrawable="@drawable/ic_user_icon"
-                    app:startIconTint="#12DFFF">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_password"
-                    android:layout_width="240dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Contraseña"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.529"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.4"
-                    app:startIconDrawable="@drawable/ic_key_icon"
-                    app:startIconTint="#12DFFF">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/white" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/materialButton"
-                    style="@style/Widget.MaterialComponents.Button"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:elevation="12dp"
-                    android:stateListAnimator="@null"
-                    android:text="Guardar"
-                    android:textColor="#000000"
-                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="parent"/>
 
 
-                    app:cornerRadius="15dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_password"
-                    app:layout_constraintVertical_bias="0.333"
-                    app:strokeColor="?colorPrimary" />
 
                 <TextView
                     android:id="@+id/textView_logros"
@@ -156,6 +105,8 @@
                     android:fontFamily="@font/geosans_light"
                     android:text="Logros"
                     android:textSize="25dp"
+                    android:onClick="changeToAchivement"
+                    android:clickable="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.661"
@@ -170,6 +121,8 @@
                     android:fontFamily="@font/geosans_light"
                     android:text="Info"
                     android:textSize="25dp"
+                    android:onClick="changeToInfo"
+                    android:clickable="true"
 
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
