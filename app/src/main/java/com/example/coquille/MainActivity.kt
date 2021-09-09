@@ -9,11 +9,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
-
-
-    fun goToSettings(view: View){
-        intent = Intent(this, Settings::class.java)
-        startActivity(intent)
-    }
+    
 }
