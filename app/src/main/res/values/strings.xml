@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Coquille</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="julieta">Julieta</string>
-    <string name="secuencia">Secuencia</string>
     <string name="confirmar">Confirmar</string>
     <string name="_00_00">00:00</string>
     <string name="lv_1">Lv. 1</string>
@@ -32,5 +32,22 @@
     <string name="restingRecommendationsSettingTitle">Recomendaciones inteligentes de descansos</string>
     <string name="restingRecommendationsDescription">Te recomendararemos que te tomes un descanso de jugar cuando detectemos que quizá lo necesites</string>
     <string name="notificationsToPLayTextViewText">Notificaciones para jugar</string>
+
+
+    <string name="tiulo">Título</string>
+    <string name="cuentos_magicos">Cuentos mágicos</string>
+    <string name="tortuguita">Tortuguita</string>
+    <string name="memoria">Memoria</string>
+    <string name="secuencia">Secuencia</string>
+    <string name="racha_de_12_dias">Racha de 12 dias</string>
+    <string name="todo9">todo9</string>
+    <string name="todo8">todo8</string>
+    <string name="todo7">todo7</string>
+    <string name="todo6">todo6</string>
+    <string name="todo5">todo5</string>
+    <string name="todo4">todo4</string>
+    <string name="todo3">todo3</string>
+    <string name="todo2">todo2</string>
+    <string name="todo1">todo1</string>
 
 </resources>

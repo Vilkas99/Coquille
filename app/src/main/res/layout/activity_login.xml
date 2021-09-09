@@ -13,7 +13,6 @@
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:fontFamily="@font/maia2"
         android:text="Coquille"
         android:textColor="#000000"
@@ -34,6 +33,7 @@
         android:elevation="12dp"
         android:stateListAnimator="@null"
         android:text="Ingresar"
+        android:onClick="routeToHome"
         android:textColor="#000000"
         android:textSize="12sp"
         app:cornerRadius="15dp"

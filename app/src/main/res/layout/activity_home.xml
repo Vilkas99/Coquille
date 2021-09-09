@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_home">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_vertical_guideline"
+        app:layout_constraintGuide_percent="0.08"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_vertical_guideline"
+        app:layout_constraintGuide_percent="0.47"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/third_vertical_guideline"
+        app:layout_constraintGuide_percent="0.53"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fourth_vertical_guideline"
+        app:layout_constraintGuide_percent="0.92"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_horizontal_guideline"
+        app:layout_constraintGuide_percent="0.15"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_horizontal_guideline"
+        app:layout_constraintGuide_percent="0.35"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/third_horizontal_guideline"
+        app:layout_constraintGuide_percent="0.43"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fourth_horizontal_guideline"
+        app:layout_constraintGuide_percent="0.63"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fifth_horizontal_guideline"
+        app:layout_constraintGuide_percent="0.71"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sixth_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9110807" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_header_menu"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationY="-20dp"
+        app:cardCornerRadius="20dp"
+
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/daily_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/maia2"
+            android:text="@string/racha_de_12_dias"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/fire_icon"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/ic_fire"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/button_settings"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:stateListAnimator="@null"
+            app:cardBackgroundColor="#FFF0BA"
+            android:onClick="routeToConfig"
+
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/settings_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/settings"
+                android:layout_marginStart="2.5dp"
+                android:layout_marginTop="2.5dp"
+                android:contentDescription="@string/todo2" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/button_user"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:stateListAnimator="@null"
+            app:cardBackgroundColor="#FFF0BA"
+
+            android:onClick="routeToProfile"
+
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_orc"
+                tools:ignore="ImageContrastCheck"
+                android:contentDescription="@string/todo3" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sequence_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stateListAnimator="@null"
+        app:cardBackgroundColor="#12DFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        android:onClick="routeToSequencePreview"
+
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/second_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/first_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@id/first_horizontal_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/second_horizontal_guideline">
+
+        <ImageView
+            android:id="@+id/sequence_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            app:srcCompat="@drawable/sequence_logo"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo4" />
+
+        <TextView
+            android:id="@+id/name_sequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/geosans"
+            android:text="@string/secuencia"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/memory_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stateListAnimator="@null"
+        app:cardBackgroundColor="#EF767A"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/third_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@id/first_horizontal_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/second_horizontal_guideline">
+
+        <ImageView
+            android:id="@+id/memory_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            app:srcCompat="@drawable/memory_logo"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo5" />
+
+        <TextView
+            android:id="@+id/name_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/geosans"
+            android:text="@string/memoria"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tortuguita_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stateListAnimator="@null"
+        app:cardBackgroundColor="#EF767A"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/second_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/first_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@id/third_horizontal_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/fourth_horizontal_guideline">
+
+        <ImageView
+            android:id="@+id/tortuguita_logo"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            app:srcCompat="@drawable/ic_tortuguita_logo"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo6" />
+
+        <TextView
+            android:id="@+id/name_tortuguita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/geosans"
+            android:text="@string/tortuguita"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/book_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stateListAnimator="@null"
+        app:cardBackgroundColor="#12DFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/third_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@id/third_horizontal_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/fourth_horizontal_guideline">
+
+        <ImageView
+            android:id="@+id/book_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            app:srcCompat="@drawable/ic_book_logo"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo7" />
+
+        <TextView
+            android:id="@+id/name_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/geosans"
+            android:text="@string/cuentos_magicos"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/colorful_button"
+        android:layout_width="336dp"
+        android:layout_height="137dp"
+        android:stateListAnimator="@null"
+        app:cardBackgroundColor="#FFE68F"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/sixth_horizontal_guideline"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/first_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@id/fifth_horizontal_guideline">
+
+        <ImageView
+            android:id="@+id/colorful_logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="40dp"
+
+            app:srcCompat="@drawable/ic_colorful_logo"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo8" />
+
+        <TextView
+            android:id="@+id/colorful_sequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="200dp"
+            android:fontFamily="@font/geosans"
+            android:text="@string/tiulo"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_logout"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:stateListAnimator="@null"
+        app:cardCornerRadius="10dp"
+        android:translationX="20dp"
+        android:onClick="routeToLogin"
+
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorful_button"
+        app:layout_constraintVertical_bias="0.542">
+
+        <ImageView
+            android:id="@+id/exit_logo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+
+            app:srcCompat="@drawable/ic_logout_logo"
+            android:contentDescription="@string/todo9" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

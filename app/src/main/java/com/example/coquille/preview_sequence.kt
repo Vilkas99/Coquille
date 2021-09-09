@@ -16,4 +16,9 @@ class preview_sequence : AppCompatActivity() {
         val intent = Intent(this, Sequence_game::class.java)
         startActivity(intent)
     }
+
+    fun routeToHome(view: View) {
+        val intent = Intent(this, activity_home::class.java)
+        startActivity(intent)
+    }
 }

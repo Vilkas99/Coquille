@@ -1,5 +1,6 @@
 package com.example.coquille
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -31,5 +32,10 @@ class profile : AppCompatActivity() {
             replace(R.id.profile_fragment, achivementFragment)
             commit()
         }
+    }
+
+    fun routeToHome(view: View) {
+        val intent = Intent(this, activity_home::class.java)
+        startActivity(intent)
     }
 }
