@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Coquille</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="julieta">Julieta</string>
@@ -27,4 +26,11 @@
     <string name="name_5">Nivel 5</string>
     <string name="name_6">Nivel 6</string>
     <string name="todo_">TODO</string>
+
+    <string name="ajustes">Ajustes</string>
+    <string name="generalText">General</string>
+    <string name="restingRecommendationsSettingTitle">Recomendaciones inteligentes de descansos</string>
+    <string name="restingRecommendationsDescription">Te recomendararemos que te tomes un descanso de jugar cuando detectemos que quizá lo necesites</string>
+    <string name="notificationsToPLayTextViewText">Notificaciones para jugar</string>
+
 </resources>
