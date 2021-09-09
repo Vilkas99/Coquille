@@ -14,4 +14,13 @@
     <string name="todo_7">TODO</string>
     <string name="todo_8">TODO</string>
     <string name="todo_9">TODO</string>
+    <string name="secuencia_">Secuencia</string>
+    <string name="sample_text_">[SAMPLE TEXT]</string>
+    <string name="name_1">[NAME]</string>
+    <string name="name_2">[NAME]</string>
+    <string name="name_3">[NAME]</string>
+    <string name="name_4">[NAME]</string>
+    <string name="name_5">[NAME]</string>
+    <string name="name_6">[NAME]</string>
+    <string name="todo_">TODO</string>
 </resources>

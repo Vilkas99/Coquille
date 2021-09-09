@@ -46,8 +46,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="Secuencia"
+            android:hint="@string/secuencia_"
             android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="280dp"
             android:translationY="15dp">
@@ -57,16 +58,18 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:contentDescription="@string/todo_"
             android:src="@drawable/ic_sequence"
             android:translationX="175dp"
-            android:translationY="2dp">
+            android:translationY="2dp"
+            tools:ignore="ImageContrastCheck">
 
         </ImageView>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_10"
         android:layout_width="365dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
@@ -88,8 +91,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="[SAMPLE TEXT]"
-            android:textColor="#FFFFFF"
+            android:hint="@string/sample_text_"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="100dp"
             android:translationY="45dp">
@@ -99,7 +103,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_11"
         android:layout_width="180dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -121,8 +125,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="[NAME]"
-            android:textColor="#FFFFFF"
+            android:hint="@string/name_1"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="10dp"
             android:translationY="10dp"
@@ -132,7 +137,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/card_view_1"
+            android:id="@+id/card_view_12"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
@@ -154,7 +159,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_13"
         android:layout_width="180dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -176,8 +181,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="[NAME]"
-            android:textColor="#FFFFFF"
+            android:hint="@string/name_2"
+            android:textColor="#FF0909"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="10dp"
             android:translationY="10dp"
@@ -188,7 +194,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_14"
         android:layout_width="180dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -205,12 +211,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.472"
         tools:ignore="MissingConstraints">>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="[NAME]"
-            android:textColor="#FFFFFF"
+            android:hint="@string/name_3"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="10dp"
             android:translationY="10dp"
@@ -220,7 +228,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_15"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
@@ -241,7 +249,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_16"
         android:layout_width="180dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -258,12 +266,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.472"
         tools:ignore="MissingConstraints">>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="[NAME]"
-            android:textColor="#FFFFFF"
+            android:hint="@string/name_4"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="10dp"
             android:translationY="10dp"
@@ -273,7 +283,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_17"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
@@ -294,7 +304,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_18"
         android:layout_width="180dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -311,12 +321,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.472"
         tools:ignore="MissingConstraints">>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="[NAME]"
-            android:textColor="#FFFFFF"
+            android:hint="@string/name_5"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="10dp"
             android:translationY="10dp"
@@ -326,7 +338,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_19"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
@@ -344,9 +356,10 @@
         app:layout_constraintVertical_bias="0.472"
         tools:ignore="MissingConstraints">
 
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_20"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
@@ -367,7 +380,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_1"
+        android:id="@+id/card_view_21"
         android:layout_width="180dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -384,12 +397,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.472"
         tools:ignore="MissingConstraints">>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia"
-            android:hint="[NAME]"
-            android:textColor="#FFFFFF"
+            android:hint="@string/name_6"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="35sp"
             android:translationX="10dp"
             android:translationY="10dp"
