@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/maia2"
-            android:text="Julieta"
+            android:text="@string/julieta"
             android:textColor="@color/white"
             android:textSize="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
