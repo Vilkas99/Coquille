@@ -5,18 +5,63 @@
     android:layout_height="match_parent"
     tools:context=".ProfileInfo_Fragment">
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/text_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/text_bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/text_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/text_guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/button_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/button_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67"/>
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_useranme"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="264dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:hint="Nombre de usuario"
         app:boxStrokeColor="#12DFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_top"
+        app:layout_constraintBottom_toBottomOf="@id/text_bot"
+        app:layout_constraintEnd_toEndOf="@id/text_guideline3"
+        app:layout_constraintStart_toStartOf="@id/text_guideline4"
 
         app:startIconDrawable="@drawable/ic_user_icon"
         app:startIconTint="#12DFFF">
@@ -29,14 +74,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_password"
-        android:layout_width="240dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/text_guideline3"
+        app:layout_constraintStart_toStartOf="@id/text_guideline4"
         app:layout_constraintTop_toBottomOf="@+id/input_useranme"
         app:layout_constraintVertical_bias="0.059"
         app:startIconDrawable="@drawable/ic_key_icon"
@@ -51,8 +95,8 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/materialButton"
         style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:elevation="12dp"
         android:stateListAnimator="@null"
         android:text="Guardar"
@@ -62,11 +106,11 @@
 
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/button_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/button_left"
         app:layout_constraintTop_toBottomOf="@+id/input_password"
-        app:layout_constraintVertical_bias="0.165"
+        app:layout_constraintVertical_bias="0.055"
         app:strokeColor="?colorPrimary" />
 
 

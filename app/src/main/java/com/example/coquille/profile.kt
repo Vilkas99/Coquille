@@ -4,11 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ListView
+import androidx.core.content.ContextCompat
 
 class profile : AppCompatActivity() {
 
     val infoFragment = ProfileInfo_Fragment()
     val achivementFragment = ProfileAchivement_Fragment()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +32,7 @@ class profile : AppCompatActivity() {
     }
 
     fun changeToAchivement(view: View) {
+
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.profile_fragment, achivementFragment)
             commit()
