@@ -24,6 +24,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:layout_constraintVertical_bias="0.069" />
 
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/materialButton"
         style="@style/Widget.MaterialComponents.Button"
@@ -31,20 +32,20 @@
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
         android:elevation="12dp"
+        android:onClick="routeToHome"
+        android:soundEffectsEnabled="false"
         android:stateListAnimator="@null"
         android:text="Ingresar"
-        android:onClick="routeToHome"
         android:textColor="#000000"
         android:textSize="12sp"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.381"
         app:strokeColor="?colorPrimary" />
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
