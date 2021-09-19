@@ -32,6 +32,7 @@
             android:elevation="12dp"
             android:stateListAnimator="@null"
             android:text=""
+            android:onClick="routeToPreviewSequence"
             android:textColor="#000000"
             android:textSize="12sp"
             android:translationX="10dp"
@@ -45,13 +46,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/maia"
+            android:fontFamily="@font/maia2"
             android:hint="@string/secuencia"
             android:textColor="#FFFFFF"
             android:textColorHint="#000000"
             android:textSize="35sp"
-            android:translationX="280dp"
-            android:translationY="15dp">
+            android:translationX="265dp"
+            android:translationY="17dp">
 
         </TextView>
 
@@ -156,7 +157,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/maia"
+            android:fontFamily="@font/maia2"
             android:hint="@string/lv_1"
             android:textColor="#FFFFFF"
             android:textColorHint="#000000"
@@ -190,7 +191,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/maia"
+            android:fontFamily="@font/maia2"
             android:hint="@string/_00_00"
             android:textColor="#FFFFFF"
             android:textColorHint="#000000"
