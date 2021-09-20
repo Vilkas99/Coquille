@@ -8,11 +8,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
-        android:translationY="-100dp"
         app:cardBackgroundColor="?colorSecondary"
         app:cardCornerRadius="4dp"
         app:cardElevation="10dp"
@@ -21,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintVertical_bias="0.001"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.button.MaterialButton
@@ -30,9 +29,9 @@
             android:layout_width="65dp"
             android:layout_height="48dp"
             android:elevation="12dp"
+            android:onClick="routeToHome"
             android:stateListAnimator="@null"
             android:text=""
-            android:onClick="routeToHome"
             android:textColor="#000000"
             android:textSize="12sp"
             android:translationX="10dp"
