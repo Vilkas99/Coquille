@@ -9,45 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coquille">
-
+        <activity
+            android:name=".Repeated_figures"
+            android:exported="true" />
         <activity
             android:name=".profile"
-            android:exported="true" >
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".Settings"
-            android:exported="true" >
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".activity_home"
-            android:exported="true" >
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".Login"
-            android:exported="true"
-        >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".preview_sequence" android:exported="true">
-
-        </activity>
-
+        <activity
+            android:name=".preview_sequence"
+            android:exported="true"></activity>
         <activity
             android:name=".Sequence_game"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
