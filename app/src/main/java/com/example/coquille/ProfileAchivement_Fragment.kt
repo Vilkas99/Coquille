@@ -14,7 +14,7 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Use the [ProfileInfo_Fragment.newInstance] factory method to
- * create an instance of this fragment.
+ * create an    instance of this fragment.
  */
 class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_) {
 
