@@ -1,9 +1,10 @@
-package com.example.coquille
+package com.example.coquille.controllers
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.coquille.R
 
 class profile : AppCompatActivity() {
 

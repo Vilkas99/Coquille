@@ -1,13 +1,16 @@
-package com.example.coquille
+package com.example.coquille.controllers
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-class MainActivity : AppCompatActivity() {
+import com.example.coquille.R
+
+class Settings : AppCompatActivity(){
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_settings)
     }
-    
+
+
+
 }
