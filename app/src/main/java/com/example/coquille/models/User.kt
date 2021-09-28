@@ -7,4 +7,6 @@ class User constructor(userName: String, password: String, profilePic: String, p
     val points = points
     val collectables = collectables
     val settings = settings
+
+
 }
