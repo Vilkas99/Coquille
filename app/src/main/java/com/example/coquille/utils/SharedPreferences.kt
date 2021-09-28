@@ -21,7 +21,7 @@ class SharedPreferences constructor(context: Context) {
         }
     }
 
-    fun retrieveData(key: String, type: String): String? {
+    fun retrieveData(key: String): String? {
         val jsonData = sharedPreferences.getString(key, "")
         return jsonData
     }
