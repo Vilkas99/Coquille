@@ -9,9 +9,7 @@ object Utils {
 
     @JvmStatic fun getCurrentUser(context: Context) : User{
         val mySharedPreferences = SharedPreferences(context)
-
         val currentUserJson = mySharedPreferences.retrieveData("currentUser")
-
         val currentUser = gson.fromJson(currentUserJson, User::class.java)
 
         return currentUser
