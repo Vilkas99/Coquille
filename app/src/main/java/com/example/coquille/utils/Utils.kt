@@ -13,6 +13,9 @@ object Utils {
         val currentUser = gson.fromJson(currentUserJson, User::class.java)
 
         return currentUser
-
     }
+
+
+
+
 }
