@@ -3,20 +3,25 @@ package com.example.coquille.controllers
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import com.example.coquille.R
+import com.example.coquille.databinding.ActivityProfileBinding
+
 
 class profile : AppCompatActivity() {
+
+    private lateinit var binding: ActivityProfileBinding
 
     val infoFragment = ProfileInfo_Fragment()
     val achivementFragment = ProfileAchivement_Fragment()
 
-    //Reference to UI Componentes
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
-
+        binding = ActivityProfileBinding.inflate(LayoutInflater.from(this))
+        setContentView(binding.root)
         supportFragmentManager.beginTransaction()
             .apply {
                 replace(R.id.profile_fragment, infoFragment)
