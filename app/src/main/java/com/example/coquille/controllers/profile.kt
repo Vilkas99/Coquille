@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import com.example.coquille.R
 import com.example.coquille.databinding.ActivityProfileBinding
 
@@ -28,8 +29,6 @@ class profile : AppCompatActivity() {
                 commit()
             }
     }
-
-
 
     fun changeToInfo(view: View) {
         supportFragmentManager.beginTransaction().apply {

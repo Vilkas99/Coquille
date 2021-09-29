@@ -2,6 +2,7 @@ package com.example.coquille.controllers
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,36 +10,31 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.coquille.R
+import com.example.coquille.databinding.FragmentProfileInfoBinding
 import com.example.coquille.utils.Utils
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileInfo_Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfileInfo_Fragment : Fragment(R.layout.fragment_profile_info_) {
 
     val newUsername = R.id.input_useranme
     val newPassword = R.id.input_password
 
-    val updateButton = findViewById(R.id.updateButton) as Button
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        updateButton.setOnClickListener { view ->
-            updateConfirmation(view)
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val rootView = inflater.inflate(R.layout.fragment_profile_info_, container, false)
+        val location: Button = rootView.findViewById(R.id.updateButton)
+        location.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View?) {
+                updateConfirmation()
+            }
+        })
+        return rootView
     }
 
 
 
-    fun updateConfirmation(view: View   ){
+
+    fun updateConfirmation(){
+        Log.d("TAG", "Entrando!")
         val builder = AlertDialog.Builder(requireContext())
         builder.setMessage("¿Estás segur@ de actualizar tus datos?")
             .setCancelable(false)

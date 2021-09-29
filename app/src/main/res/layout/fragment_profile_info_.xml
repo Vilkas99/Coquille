@@ -56,9 +56,9 @@
         android:elevation="12dp"
         android:stateListAnimator="@null"
         android:text="Guardar"
+
+
         android:textColor="#000000"
-
-
         android:textSize="12sp"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
