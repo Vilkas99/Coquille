@@ -1,6 +1,6 @@
 package com.example.coquille.models
 
-class User constructor(userName: String, password: String, profilePic: String, points: Int, collectables:Array<Collectable>, settings: Settings) {
+class User constructor(userName: String, password: String, profilePic: String, points: Int, collectables:List<Collectable>, settings: Settings) {
     var userName = userName
     var password = password
     var profilePic = profilePic
