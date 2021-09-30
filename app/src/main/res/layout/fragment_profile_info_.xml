@@ -6,7 +6,7 @@
     tools:context=".controllers.ProfileInfo_Fragment">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_useranme"
+        android:id="@+id/input_username_layout"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
 
@@ -22,27 +22,29 @@
         app:startIconTint="#12DFFF">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_password"
+        android:id="@+id/input_password_layout"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_useranme"
+        app:layout_constraintTop_toBottomOf="@+id/input_username_layout"
         app:layout_constraintVertical_bias="0.059"
         app:startIconDrawable="@drawable/ic_key_icon"
         app:startIconTint="#12DFFF">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_password"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white" />
@@ -65,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        app:layout_constraintTop_toBottomOf="@+id/input_password_layout"
         app:layout_constraintVertical_bias="0.165"
         app:strokeColor="?colorPrimary" />
 

@@ -13,6 +13,7 @@ import com.example.coquille.models.Collectable
 import com.example.coquille.models.Settings
 import com.example.coquille.models.User
 import com.example.coquille.utils.MySharedPreferences
+import com.example.coquille.utils.Utils
 
 
 class profile : AppCompatActivity() {
@@ -41,7 +42,11 @@ class profile : AppCompatActivity() {
         val settings = Settings(true, true, true, true, true)
         val user = User("Prueba", "asdawdqw", "asdwdqdqw", 12, colectables, settings )
 
-        sharedPref.saveData(user as Object, "currentUser")
+        sharedPref.saveData(user, "currentUser")
+
+        var currentUser = Utils.getCurrentUser(this)
+        binding.userName.setText(currentUser.userName)
+        binding.userPoints.setText(currentUser.points.toString())
 
 
 
