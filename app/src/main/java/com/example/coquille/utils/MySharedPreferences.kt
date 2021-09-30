@@ -26,6 +26,15 @@ class MySharedPreferences constructor(context: Context) { //TODO: Corregir todo 
         }
     }
 
+
+    fun editData(data: Any?, key: String){
+        val sharedPreferences = context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val json = gson.toJson(data)
+        editor.putString(key, json)
+        editor.apply()
+    }
+
     fun retrieveData(key: String): String? {
         val sharedPreferences = context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val jsonData = sharedPreferences.getString(key, "")

@@ -70,4 +70,10 @@ class profile : AppCompatActivity() {
         val intent = Intent(this, activity_home::class.java)
         startActivity(intent)
     }
+
+    fun updateInfo(){
+        val currentUser = Utils.getCurrentUser(this);
+        binding.userName.setText(currentUser.userName)
+        binding.userPoints.setText(currentUser.points.toString())
+    }
 }
