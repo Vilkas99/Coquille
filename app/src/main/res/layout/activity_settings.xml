@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="fill_parent"
     android:fillViewport="true"
     tools:ignore="SpeakableTextPresentCheck">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/settings_background">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view"
-            android:layout_margin="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="20dp"
             android:stateListAnimator="@null"
             app:cardCornerRadius="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -26,106 +26,146 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_title">
 
-            <TextView
-                android:id="@+id/ajustesTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/biko_bold"
-                android:gravity="center"
-                android:text="@string/ajustes"
-                android:textColor="@color/black"
-                android:textIsSelectable="false"
-                android:textSize="48sp" />
             <RelativeLayout
+
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/ajustesTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/biko_bold"
+                    android:gravity="center"
+                    android:text="@string/ajustes"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="false"
+                    android:textSize="48sp" />
 
                 <TextView
                     android:id="@+id/generalHeaderTextView"
-                    android:layout_width="201dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/ajustesTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/biko_regular"
                     android:text="@string/generalText"
                     android:textColor="@color/black"
                     android:textIsSelectable="false"
                     android:textSize="34sp" />
 
-                <TextView
-                    android:id="@+id/restingRecommendationsTextView"
-                    android:layout_width="226dp"
-                    android:layout_height="41dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/restingRecommendationsToggleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_below="@id/generalHeaderTextView"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/biko_regular"
-                    android:text="@string/restingRecommendationsSettingTitle"
-                    android:textColor="@color/black"
-                    android:textIsSelectable="false"
-                    android:textSize="20sp"
-                    app:autoSizeTextType="uniform" />
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:id="@+id/restingRecommendationsTextView"
+                        android:layout_width="290dp"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="@font/biko_regular"
+                        android:text="@string/restingRecommendationsSettingTitle"
+                        android:textColor="@color/black"
+                        android:textIsSelectable="false"
+                        android:textSize="20sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/recommendResting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:checked="true"
+                        android:thumb="@drawable/custom_toggle_button_thumb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/restingRecommendationsTextView"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:track="@drawable/custom_toggle_button_background" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
                 <TextView
                     android:id="@+id/restingRecommendationsDescriptionTextView"
-                    android:layout_width="332dp"
-                    android:layout_height="63dp"
-                    android:layout_below="@+id/restingRecommendationsTextView"
-                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/restingRecommendationsToggleLayout"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginBottom="5dp"
                     android:text="@string/restingRecommendationsDescription"
                     android:textIsSelectable="false">
-
-
                 </TextView>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/playNotificationsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/restingRecommendationsDescriptionTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
-                <ToggleButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignTop="@+id/restingRecommendationsTextView"
-                    android:layout_marginStart="29dp"
-                    android:layout_marginTop="-4dp"
-                    android:layout_toEndOf="@+id/restingRecommendationsTextView"
-                    android:background="@color/rojoMain"
-                    app:elevation="0dp"
-                    app:pressedTranslationZ="0dp"
-                    app:useCompatPadding="true" />
+                    <TextView
+                        android:id="@+id/notificationsToPlay"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:text="@string/notificationsToPLayTextViewText"
+                        android:textColor="@color/black"
+                        android:textIsSelectable="false"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/notifyToPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/notificationsToPlay"
+                        app:layout_constraintLeft_toRightOf="@+id/notificationsToPlay"
+                        app:layout_constraintTop_toTopOf="@+id/notificationsToPlay"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:checked="true"
+                        android:thumb="@drawable/custom_toggle_button_thumb"
+                        app:track="@drawable/custom_toggle_button_background" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <TextView
-                    android:id="@+id/notificationsToPlay"
-                    android:layout_width="226dp"
-                    android:layout_height="41dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_below="@id/restingRecommendationsDescriptionTextView"
-                    android:text="@string/notificationsToPLayTextViewText"
-                    android:textColor="@color/black"
-                    android:textIsSelectable="false"
-                    android:textSize="20sp">
-
+                    android:id="@+id/notificationsToPlayDescription"
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/playNotificationsLayout"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/restingRecommendationsDescription"
+                    android:textIsSelectable="false">
                 </TextView>
-
-                <ToggleButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignTop="@+id/notificationsToPlay"
-                    android:layout_marginStart="29dp"
-                    android:layout_marginTop="-4dp"
-                    android:layout_toEndOf="@+id/notificationsToPlay"
-                    android:background="@color/rojoMain"
-                    app:elevation="0dp"
-                    app:pressedTranslationZ="0dp"
-                    app:useCompatPadding="true" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-
-
-
 
     </LinearLayout>
 
