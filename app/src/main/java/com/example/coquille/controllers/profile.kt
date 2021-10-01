@@ -24,6 +24,7 @@ class profile : AppCompatActivity() {
     val infoFragment = ProfileInfo_Fragment()
     val achivementFragment = ProfileAchivement_Fragment()
     lateinit var currentUser : User
+    lateinit var sharedPref: MySharedPreferences
 
 
 
@@ -37,7 +38,7 @@ class profile : AppCompatActivity() {
                 commit()
             }
 
-        val sharedPref = MySharedPreferences(this)
+        sharedPref = MySharedPreferences(this)
 
         val collectables = MutableList(1){Collectable("asdasd", 20, "wuajaaaaa")}
         val settings = Settings(true, true, true, true, true)
@@ -74,13 +75,16 @@ class profile : AppCompatActivity() {
     }
 
     fun updateInfo(){
-        binding.userName.setText(currentUser.userName)
-        binding.userPoints.setText(currentUser.points.toString())
+        val currentUserUpdated = Utils.getCurrentUser(this)
+        binding.userName.setText(currentUserUpdated.userName)
+        binding.userPoints.setText(currentUserUpdated.points.toString())
     }
 
     fun updateAvatar(drawable : Int){
+        val currentUserUpdated = Utils.getCurrentUser(this)
         binding.userPic.setImageResource(drawable)
-        currentUser.profilePic = drawable
+        currentUserUpdated.profilePic = drawable
+        sharedPref.editData(currentUserUpdated, "currentUser")
         updateInfo()
     }
 }

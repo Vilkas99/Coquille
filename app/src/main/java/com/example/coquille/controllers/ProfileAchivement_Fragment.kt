@@ -88,6 +88,7 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
                         updateAvatarConfirmation(collectableID)
                     }
 
+                    sharedPreferences.editData(usuario, "currentUser")
 
                 }
                 .setNegativeButton("No"){ dialog, id ->
