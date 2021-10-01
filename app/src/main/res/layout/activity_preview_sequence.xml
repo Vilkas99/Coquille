@@ -281,7 +281,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia2"
-            android:hint="Nivel 23"
+            android:hint="Nivel 25"
             android:textColor="#000000"
             android:textColorHint="#000000"
             android:textSize="35sp"
