@@ -60,11 +60,18 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
             }
         })
 
-        /*segundoLogro.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(view: View?) {
-                acquireCollectable()
+        segundoLogro.setOnClickListener(object : View.OnClickListener {
+              override fun onClick(view: View?) {
+                if (lookForCollectable(segundoLogroTitulo.text.toString())){
+                    updateAvatarConfirmation(R.drawable.ic_profile_pic_mage)
+                } else {
+                    val costo = Integer.parseInt(segundoLogroCosto.text.toString())
+                    val titulo = segundoLogroTitulo.text.toString()
+                    acquireCollectable(titulo, costo, R.drawable.ic_profile_pic_mage)
+                }
+
             }
-        })*/
+        })
 
         return rootView
     }
