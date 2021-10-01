@@ -2,6 +2,7 @@ package com.example.coquille.controllers
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,7 +23,7 @@ class profile : AppCompatActivity() {
 
     val infoFragment = ProfileInfo_Fragment()
     val achivementFragment = ProfileAchivement_Fragment()
-
+    lateinit var currentUser : User
 
 
 
@@ -38,15 +39,16 @@ class profile : AppCompatActivity() {
 
         val sharedPref = MySharedPreferences(this)
 
-        val colectables = List(1) {Collectable("asdasd", 20, "wuajaaaaa")}
+        val collectables = MutableList(1){Collectable("asdasd", 20, "wuajaaaaa")}
         val settings = Settings(true, true, true, true, true)
-        val user = User("Prueba", "asdawdqw", "asdwdqdqw", 12, colectables, settings )
+        val user = User("Prueba", "asdawdqw", R.drawable.ic_profilep_c_king, 1900, collectables, settings )
 
         sharedPref.saveData(user, "currentUser")
 
-        var currentUser = Utils.getCurrentUser(this)
+        currentUser = Utils.getCurrentUser(this)
         binding.userName.setText(currentUser.userName)
         binding.userPoints.setText(currentUser.points.toString())
+        binding.userPic.setImageResource(currentUser.profilePic)
 
 
 
@@ -72,8 +74,13 @@ class profile : AppCompatActivity() {
     }
 
     fun updateInfo(){
-        val currentUser = Utils.getCurrentUser(this);
         binding.userName.setText(currentUser.userName)
         binding.userPoints.setText(currentUser.points.toString())
+    }
+
+    fun updateAvatar(drawable : Int){
+        binding.userPic.setImageResource(drawable)
+        currentUser.profilePic = drawable
+        updateInfo()
     }
 }

@@ -2,7 +2,6 @@ package com.example.coquille.controllers
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
