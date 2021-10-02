@@ -24,7 +24,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -53,7 +53,7 @@
             app:srcCompat="@drawable/ic_points" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/userPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia2"
