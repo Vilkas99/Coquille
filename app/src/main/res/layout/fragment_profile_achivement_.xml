@@ -7,8 +7,8 @@
 
 
 
-            <ImageView
-                android:id="@+id/imageView4"
+    <ImageView
+                android:id="@+id/logro1"
                 android:layout_width="298dp"
                 android:layout_height="121dp"
                 android:src="@drawable/ic_logro"
@@ -21,7 +21,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/logro2"
         android:layout_width="301dp"
         android:layout_height="121dp"
         android:src="@drawable/ic_logro"
@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/logro1"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -37,41 +37,41 @@
         android:layout_width="72dp"
         android:layout_height="102dp"
         android:src="@drawable/ic_profile_pic_orc"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/logro1"
+        app:layout_constraintEnd_toEndOf="@+id/logro1"
         app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/logro1"
+        app:layout_constraintTop_toTopOf="@+id/logro1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/logro1Titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/maia2"
         android:text="Caballero de otro mundo"
         android:textSize="20dp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/logro1"
+        app:layout_constraintEnd_toEndOf="@+id/logro1"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/logro1"
         app:layout_constraintVertical_bias="0.298" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/logro1Costo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/maia2"
         android:text="600"
         android:textColor="@color/black"
         android:textSize="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/logro1"
+        app:layout_constraintEnd_toEndOf="@+id/logro1"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/logro1Titulo"
         app:layout_constraintVertical_bias="0.285" />
 
     <ImageView
@@ -80,11 +80,11 @@
         android:layout_height="33dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_points"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/logro1"
+        app:layout_constraintEnd_toEndOf="@+id/logro1"
         app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/logro1Titulo"
         app:layout_constraintVertical_bias="0.025" />
 
     <ImageView
@@ -93,26 +93,26 @@
         android:layout_height="101dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/ic_profile_pic_mage"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/logro2"
+        app:layout_constraintEnd_toEndOf="@+id/logro2"
         app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/logro2"
+        app:layout_constraintTop_toBottomOf="@+id/logro1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/logro2Titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/maia2"
         android:text="Hechicera del saber"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/logro2"
+        app:layout_constraintEnd_toEndOf="@+id/logro2"
         app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/logro1"
         app:layout_constraintVertical_bias="0.288" />
 
     <ImageView
@@ -120,15 +120,15 @@
         android:layout_width="34dp"
         android:layout_height="38dp"
         android:src="@drawable/ic_points"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/logro2"
+        app:layout_constraintEnd_toEndOf="@+id/logro2"
         app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/logro2Titulo"
         app:layout_constraintVertical_bias="0.472" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/logro2Costo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -137,11 +137,11 @@
         android:textColor="@color/black"
 
         android:textSize="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/logro2"
+        app:layout_constraintEnd_toEndOf="@+id/logro2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/logro2Titulo"
         app:layout_constraintVertical_bias="0.49" />
 
 
