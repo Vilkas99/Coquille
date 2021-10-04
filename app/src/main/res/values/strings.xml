@@ -49,5 +49,6 @@
     <string name="todo3">todo3</string>
     <string name="todo2">todo2</string>
     <string name="todo1">todo1</string>
+    <string name="limitar_tiempo_de_juego_titlle">Limitar tiempo de juego</string>
 
 </resources>

@@ -30,9 +30,9 @@
 
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="15dp"
                 >
 
@@ -76,43 +76,47 @@
 
                     <TextView
                         android:id="@+id/restingRecommendationsTextView"
-                        android:layout_width="290dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
                         android:fontFamily="@font/biko_regular"
                         android:text="@string/restingRecommendationsSettingTitle"
                         android:textColor="@color/black"
                         android:textIsSelectable="false"
-                        android:textSize="20sp"
-                        app:autoSizeTextType="uniform"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="60dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent" />
+                         />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/recommendResting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:checked="true"
                         android:thumb="@drawable/custom_toggle_button_thumb"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintLeft_toRightOf="@+id/restingRecommendationsTextView"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:track="@drawable/custom_toggle_button_background" />
+                        app:track="@drawable/custom_toggle_button_background"
+                        android:checked="@={}"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <TextView
                     android:id="@+id/restingRecommendationsDescriptionTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/restingRecommendationsToggleLayout"
+                    android:layout_marginTop="7dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginBottom="5dp"
                     android:text="@string/restingRecommendationsDescription"
-                    android:textIsSelectable="false">
-                </TextView>
+                    android:textIsSelectable="false"
+                    android:textSize="16sp"></TextView>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/playNotificationsLayout"
                     android:layout_width="match_parent"
@@ -125,15 +129,18 @@
 
                     <TextView
                         android:id="@+id/notificationsToPlay"
-                        android:layout_width="290dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/biko_regular"
                         android:text="@string/notificationsToPLayTextViewText"
                         android:textColor="@color/black"
                         android:textIsSelectable="false"
-                        android:textSize="20sp">
+                        android:textSize="25sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="60dp">
 
                     </TextView>
 
@@ -145,25 +152,148 @@
                         app:layout_constraintLeft_toRightOf="@+id/notificationsToPlay"
                         app:layout_constraintTop_toTopOf="@+id/notificationsToPlay"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:checked="true"
                         android:thumb="@drawable/custom_toggle_button_thumb"
-                        app:track="@drawable/custom_toggle_button_background" />
+                        app:track="@drawable/custom_toggle_button_background"
+                        />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                 <TextView
                     android:id="@+id/notificationsToPlayDescription"
-                    android:layout_width="307dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/playNotificationsLayout"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
+                    android:layout_marginTop="7dp"
                     android:text="@string/restingRecommendationsDescription"
-                    android:textIsSelectable="false">
+                    android:textIsSelectable="false"
+                    android:textSize="16sp">
+
                 </TextView>
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/limitPLayTimeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/notificationsToPlayDescription"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/limitPlayTimeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="60dp"
+                        android:fontFamily="@font/biko_regular"
+                        android:text="@string/limitar_tiempo_de_juego_titlle"
+                        android:textColor="@color/black"
+                        android:textIsSelectable="false"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/limitPlayTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/custom_toggle_button_thumb"
+                        app:layout_constraintBottom_toBottomOf="@+id/limitPlayTimeTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/limitPlayTimeTextView"
+                        app:layout_constraintTop_toTopOf="@+id/limitPlayTimeTextView"
+                        app:track="@drawable/custom_toggle_button_background" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <EditText
+                    android:id="@+id/editTextTime3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:layout_below="@id/limitPLayTimeLayout"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/editTextTime3">
+
+                    <TextView
+                        android:id="@+id/musicTextView"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/biko_regular"
+                        android:text="Música"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@id/musicOn"
+                        app:layout_constraintEnd_toStartOf="@+id/sfxTextView"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                    <TextView
+                        android:id="@+id/sfxTextView"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:text="Efectos de sonido"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@id/sfxOn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicTextView"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/musicOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/custom_toggle_button_thumb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/musicTextView"
+                        app:layout_constraintStart_toStartOf="@+id/musicTextView"
+                        app:layout_constraintTop_toBottomOf="@id/musicTextView"
+                        app:track="@drawable/custom_toggle_button_background"
+                        tools:layout_editor_absoluteY="20dp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sfxOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/custom_toggle_button_thumb"
+                        app:layout_constraintEnd_toEndOf="@+id/sfxTextView"
+                        app:layout_constraintStart_toStartOf="@+id/sfxTextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/musicTextView"
+                        app:track="@drawable/custom_toggle_button_background"
+                        tools:layout_editor_absoluteY="19dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </RelativeLayout>
+
+
 
         </androidx.cardview.widget.CardView>
 
