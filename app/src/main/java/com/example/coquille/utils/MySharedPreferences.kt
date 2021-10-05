@@ -26,7 +26,6 @@ class MySharedPreferences constructor(context: Context) { //TODO: Corregir todo 
         }
     }
 
-
     fun editData(data: Any?, key: String){
         val sharedPreferences = context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
