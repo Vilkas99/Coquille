@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.1703125" />
+        <entry key="app/src/main/res/drawable/custom_toggle_button_background.xml" value="0.2859375" />
+        <entry key="app/src/main/res/drawable/custom_toggle_button_thumb.xml" value="0.2859375" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_bird.xml" value="0.2703125" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_icon.xml" value="0.2703125" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_solid.xml" value="0.2703125" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_user_icon.xml" value="0.2703125" />
+<<<<<<< HEAD
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_login.xml" value="0.536" />
 <<<<<<< HEAD
@@ -19,19 +24,19 @@
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/drawable/ic_flecha_correcta.xml" value="0.3265625" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_login.xml" value="0.19924529018924966" />
 >>>>>>> 15c9b0e0d3038d07e453f909034ea6884c867f2f
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.19924529018924966" />
-<<<<<<< HEAD
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_preview_sequence.xml" value="0.2359375" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.2264151024877837" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_sequence_game.xml" value="0.2988679352838745" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/fragment_profile_achivement_.xml" value="0.4528302049755674" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/fragment_profile_info_.xml" value="0.2328125" />
 =======
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_home.xml" value="0.536" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_preview_game.xml" value="0.264" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_sequence_game.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_achivement_.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_info_.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/level_cards.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_login.xml" value="0.2988679352838745" />
+>>>>>>> e7576015148478bc11e5d3d2d1c5c56ca683a2b8
+        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.19924529018924966" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.2988679352838745" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1752786220871327" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2821557971014493" />
-        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.25" />
->>>>>>> 33ffbe263a3e3d7b3995b3f88420361ff3b46914
       </map>
     </option>
   </component>

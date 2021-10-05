@@ -38,4 +38,11 @@ class activity_home : AppCompatActivity() {
         val intent = Intent(this, Login::class.java)
         startActivity(intent)
     }
+
+    fun routeToPreview(view: View){
+        val player = MediaPlayer.create(this, R.raw.sequence_sound)
+        player.start()
+        val intent = Intent(this, PreviewGame::class.java)
+        startActivity(intent)
+    }
 }
