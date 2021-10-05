@@ -9,45 +9,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coquille">
-
+        <activity
+            android:name=".controllers.PreviewGame"
+            android:exported="true" />
         <activity
             android:name=".controllers.profile"
-            android:exported="true" >
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".controllers.Settings"
-            android:exported="true" >
-        </activity>
+            android:exported="true"></activity>
 
         <activity
             android:name=".controllers.activity_home"
-            android:exported="true" >
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".controllers.MainActivity"
             android:exported="true" />
         <activity
             android:name=".controllers.Login"
+<<<<<<< HEAD
             android:exported="true"
             >
+=======
+            android:exported="true">
+>>>>>>> e7576015148478bc11e5d3d2d1c5c56ca683a2b8
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
-        <activity android:name=".controllers.preview_sequence" android:exported="true">
-
-        </activity>
-
+        <activity
+            android:name=".controllers.preview_sequence"
+            android:exported="true"></activity>
         <activity
             android:name=".controllers.Sequence_game"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
