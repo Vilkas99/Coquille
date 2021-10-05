@@ -100,7 +100,6 @@
                         app:layout_constraintLeft_toRightOf="@+id/restingRecommendationsTextView"
                         app:layout_constraintTop_toTopOf="parent"
                         app:track="@drawable/custom_toggle_button_background"
-                        android:checked="@={}"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
