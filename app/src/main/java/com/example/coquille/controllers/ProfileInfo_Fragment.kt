@@ -27,7 +27,7 @@ class ProfileInfo_Fragment : Fragment(R.layout.fragment_profile_info_) {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_profile_info_, container, false)
-        val location: Button = rootView.findViewById(R.id.updateButton)
+        val location: Button = rootView.findViewById(R.id.confirmButton)
 
         userName = rootView.findViewById(R.id.input_username)
         password = rootView.findViewById(R.id.input_password)

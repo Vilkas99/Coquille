@@ -25,7 +25,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton_1"
+            android:id="@+id/backButton"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="65dp"
             android:layout_height="48dp"
@@ -84,56 +84,40 @@
         app:layout_constraintVertical_bias="0.733"
         tools:ignore="MissingConstraints">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/option1"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/ic_square"
+            android:contentDescription="@string/todo_5"
+            android:background="@drawable/ic_square"
             android:translationX="10dp"
-            android:translationY="15dp"
-            android:contentDescription="@string/todo_5">
+            android:translationY="15dp">
 
-        </ImageView>
+        </ImageButton>
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/option2"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/ic_triangle"
+            android:contentDescription="@string/todo_4"
+            android:background="@drawable/ic_triangle"
             android:translationX="110dp"
-            android:translationY="15dp"
-            android:contentDescription="@string/todo_4">
+            android:translationY="15dp">
 
-        </ImageView>
+        </ImageButton>
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/option3"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/ic_circle"
+            android:contentDescription="@string/todo_3"
+            android:background="@drawable/ic_circle"
             android:translationX="210dp"
-            android:translationY="15dp"
-            android:contentDescription="@string/todo_3">
+            android:translationY="15dp">
 
-        </ImageView>
+        </ImageButton>
 
     </androidx.cardview.widget.CardView>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/updateButton"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:elevation="12dp"
-        android:stateListAnimator="@null"
-        android:text="@string/confirmar"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view"
-        app:layout_constraintVertical_bias="0.841"
-        app:strokeColor="?colorPrimary" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_3"
@@ -155,6 +139,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            android:id="@+id/points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia2"
@@ -189,6 +174,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            android:id="@+id/timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia2"
@@ -222,12 +208,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/figure1"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="@string/todo_9"
             android:src="@drawable/ic_square"
             android:translationX="5dp"
-            android:translationY="10dp"
-            android:contentDescription="@string/todo_9">
+            android:translationY="10dp">
 
         </ImageView>
 
@@ -250,12 +237,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/figure3"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_circle"
             android:translationX="5dp"
-            android:translationY="10dp"
-            android:contentDescription="@string/todo">
+            android:translationY="10dp">
 
         </ImageView>
 
@@ -277,12 +265,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/figure2"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="@string/todo_8"
             android:src="@drawable/ic_triangle"
             android:translationX="5dp"
-            android:translationY="10dp"
-            android:contentDescription="@string/todo_8">
+            android:translationY="10dp">
 
         </ImageView>
 
@@ -305,12 +294,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/guessfg"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="@string/todo_7"
             android:src="@drawable/ic_uestionmark"
             android:translationX="5dp"
-            android:translationY="10dp"
-            android:contentDescription="@string/todo_7">
+            android:translationY="10dp">
 
         </ImageView>
 
@@ -332,12 +322,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/figure5"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="@string/todo_2"
             android:src="@drawable/ic_circle"
             android:translationX="5dp"
-            android:translationY="10dp"
-            android:contentDescription="@string/todo_2">
+            android:translationY="10dp">
 
         </ImageView>
 
@@ -360,15 +351,52 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/figure4"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="@string/todo_1"
             android:src="@drawable/ic_square"
             android:translationX="5dp"
-            android:translationY="10dp"
-            android:contentDescription="@string/todo_1">
+            android:translationY="10dp">
 
         </ImageView>
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/gameWonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:rotation="-45"
+        android:text="You Won!"
+        android:textColor="#44BB44"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_1"
+        app:layout_constraintVertical_bias="0.789"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/gameLostTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:rotation="-45"
+        android:text="You Lost!"
+        android:textColor="#BB4444"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_1"
+        app:layout_constraintVertical_bias="0.789"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
