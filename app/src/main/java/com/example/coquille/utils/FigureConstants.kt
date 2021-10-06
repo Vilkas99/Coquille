@@ -1,4 +1,4 @@
-package com.example.coquille.controllers
+package com.example.coquille.utils
 
 object FigureConstants {
     val words = listOf(

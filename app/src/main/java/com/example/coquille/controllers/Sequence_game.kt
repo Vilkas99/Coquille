@@ -3,62 +3,50 @@ package com.example.coquille.controllers
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.coquille.R
+import com.example.coquille.databinding.ActivitySequenceGameBinding
 import kotlin.random.Random
+import com.example.coquille.models.Sequence
+import com.example.coquille.utils.FigureConstants
 
 class Sequence_game : AppCompatActivity() {
 
-    private var drawable: Int = R.drawable.ic_circle
-    private lateinit var imageView: ImageView
-    private lateinit var imageView2: ImageView
-    private lateinit var imageView3: ImageView
-    private lateinit var imageView4: ImageView
-    private lateinit var imageView5: ImageView
-    private lateinit var imageView6: ImageView
-    private lateinit var imageView7: ImageView
-    private lateinit var imageView8: ImageView
-    private lateinit var gameLostTextView: TextView
-    private lateinit var gameWonTextView: TextView
-    private lateinit var timer: TextView
+    private lateinit var binding: ActivitySequenceGameBinding
+    lateinit var sequence: Sequence
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sequence_game)
+        binding = ActivitySequenceGameBinding.inflate(LayoutInflater.from(this))
+        setContentView(binding.root)
 
-        imageView = findViewById(R.id.figure1)
-        imageView2 = findViewById(R.id.figure2)
-        imageView3 = findViewById(R.id.figure3)
-        imageView4 = findViewById(R.id.figure4)
-        imageView5 = findViewById(R.id.figure5)
-        imageView6 = findViewById(R.id.option1)
-        imageView7 = findViewById(R.id.option2)
-        imageView8 = findViewById(R.id.option3)
-        gameWonTextView = findViewById(R.id.gameWonTextView)
-        gameLostTextView = findViewById(R.id.gameLostTextView)
-        timer = findViewById(R.id.timer)
+        val sequence = Sequence(0, 0, R.drawable.ic_square, R.drawable.ic_square, R.drawable.ic_triangle, R.drawable.ic_circle, R.drawable.ic_circle, R.drawable.ic_square, R.drawable.ic_triangle, R.drawable.ic_circle, "Haz ganado", "Haz perido:(")
+
+        binding.gameWonTextView.text = sequence.gameWon
+        binding.gameLostTextView.text = sequence.gameLost
+
         genSequence()
 
-        imageView7.setOnClickListener {
-            if (imageView7.tag == imageView3.tag){
+        binding.option2.setOnClickListener {
+            if (binding.option2.tag == binding.figure2.tag){
                 Toast.makeText(this, "Pruebita", Toast.LENGTH_LONG).show()
-                gameWonTextView.visibility = View.VISIBLE
+                binding.gameWonTextView.visibility = View.VISIBLE
             }
 
         }
 
         object : CountDownTimer(10000, 1000){
             override fun onTick(p0: Long) {
-                timer.setText("Faltan: "+p0 / 1000)
+                binding.timer.setText("Faltan: "+p0 / 1000)
             }
 
             override fun onFinish() {
-                timer.setText("You Died!")
-                gameLostTextView.visibility = View.VISIBLE
+                binding.timer.setText("You Died!")
+                binding.gameLostTextView.visibility = View.VISIBLE
             }
         }.start()
     }
@@ -79,16 +67,16 @@ class Sequence_game : AppCompatActivity() {
         val imageResource2 = resources.getIdentifier(imageToUse2, null, packageName)
         val imageToUse3 = FigureConstants.words3[randomIndex]
         val imageResource3 = resources.getIdentifier(imageToUse3, null, packageName)
-        imageView.setImageResource(imageResource)
-        imageView2.setImageResource(imageResource)
-        imageView3.setImageResource(imageResource2)
-        imageView3.tag = imageToUse2
-        imageView7.tag = imageToUse2
-        imageView4.setImageResource(imageResource3)
-        imageView5.setImageResource(imageResource3)
-        imageView6.setBackgroundResource(imageResource)
-        imageView7.setBackgroundResource(imageResource2)
-        imageView8.setBackgroundResource(imageResource3)
+        binding.figure1.setImageResource(imageResource)
+        binding.figure2.setImageResource(imageResource)
+        binding.figure3.setImageResource(imageResource2)
+        binding.figure4.setImageResource(imageResource3)
+        binding.figure5.setImageResource(imageResource3)
+        binding.option1.setBackgroundResource(imageResource)
+        binding.option2.setBackgroundResource(imageResource2)
+        binding.option3.setBackgroundResource(imageResource3)
+        binding.figure2.tag = imageResource2
+        binding.option2.tag = imageResource2
     }
 
 

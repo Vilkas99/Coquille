@@ -21,20 +21,19 @@
 
         <activity
             android:name=".controllers.activity_home"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".controllers.MainActivity"
             android:exported="true" />
         <activity
             android:name=".controllers.Login"
-<<<<<<< HEAD
-            android:exported="true"
-            >
-=======
             android:exported="true">
->>>>>>> e7576015148478bc11e5d3d2d1c5c56ca683a2b8
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
         </activity>
         <activity
             android:name=".controllers.preview_sequence"
