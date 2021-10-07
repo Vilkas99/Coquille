@@ -73,6 +73,7 @@ class profile : AppCompatActivity() {
         startActivity(intent)
     }
 
+
     fun updateInfo(){
         val currentUserUpdated = Utils.getCurrentUser(this)
         binding.userName.setText(currentUserUpdated.userName)

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.coquille.R
 
+
 class activity_home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +44,13 @@ class activity_home : AppCompatActivity() {
         val player = MediaPlayer.create(this, R.raw.sequence_sound)
         player.start()
         val intent = Intent(this, PreviewGame::class.java)
+        startActivity(intent)
+    }
+
+    fun routeToTortuga(view: View){
+        val player = MediaPlayer.create(this, R.raw.sequence_sound)
+        player.start()
+        val intent = Intent(this, Turtle::class.java)
         startActivity(intent)
     }
 }
