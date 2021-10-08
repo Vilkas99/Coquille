@@ -7,6 +7,7 @@ import android.view.View
 import com.example.coquille.R
 
 class Sequence_game : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sequence_game)

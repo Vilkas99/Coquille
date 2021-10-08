@@ -2,6 +2,8 @@ package com.example.coquille.utils
 
 import android.content.Context
 import android.util.Log
+import android.view.View
+import android.widget.Toast
 import com.example.coquille.models.Collectable
 import com.example.coquille.models.User
 import com.google.gson.Gson
@@ -41,6 +43,15 @@ object Utils {
         }
 
         return dummy
+    }
+
+    @JvmStatic fun getId(view: View) : String{
+        if (view.id == View.NO_ID) return "no-id"
+        else return view.resources.getResourceName(view.id)
+    }
+
+    @JvmStatic fun sendMessage(message: String, context: Context) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
 }
