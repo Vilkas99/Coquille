@@ -41,6 +41,9 @@
         <activity
             android:name=".controllers.Sequence_game"
             android:exported="true"></activity>
+        <activity
+            android:name=".controllers.MemoryGameActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

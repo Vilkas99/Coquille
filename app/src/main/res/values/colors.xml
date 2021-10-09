@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="memoryGameUnlippedCard">#FEF5E2</color>
+    <color name="memoryGameFlippedCard">#EFEDFF</color>
     <color name="amarilloMain">#FFE68F</color>
     <color name="azulMain">#12DFFF</color>
     <color name="rojoMain">#EF767A</color>
