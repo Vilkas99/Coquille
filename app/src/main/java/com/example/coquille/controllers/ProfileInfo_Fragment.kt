@@ -39,6 +39,7 @@ class ProfileInfo_Fragment : Fragment(R.layout.fragment_profile_info_) {
                 updateConfirmation()
             }
         })
+
         return rootView
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controllers.Sequence_game">
+    tools:context=".controllers.Sequence_stage1">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_1"
@@ -32,7 +32,7 @@
             android:elevation="12dp"
             android:stateListAnimator="@null"
             android:text=""
-            android:onClick="routeToPreviewSequence"
+            android:onClick="routeToPreviewScreen"
             android:textColor="#000000"
             android:textSize="12sp"
             android:translationX="10dp"
@@ -68,74 +68,24 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_2"
-        android:layout_width="281dp"
-        android:layout_height="82dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-100dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view"
-        app:layout_constraintVertical_bias="0.733"
-        tools:ignore="MissingConstraints">
 
-        <ImageButton
-            android:id="@+id/option1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:contentDescription="@string/todo_5"
-            android:background="@drawable/ic_square"
-            android:translationX="10dp"
-            android:translationY="15dp">
-
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/option2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:contentDescription="@string/todo_4"
-            android:background="@drawable/ic_triangle"
-            android:translationX="110dp"
-            android:translationY="15dp">
-
-        </ImageButton>
-
-        <ImageButton
-            android:id="@+id/option3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:contentDescription="@string/todo_3"
-            android:background="@drawable/ic_circle"
-            android:translationX="210dp"
-            android:translationY="15dp">
-
-        </ImageButton>
-
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_3"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="296dp"
         android:stateListAnimator="@null"
-        android:translationY="-280dp"
         android:translationX="-90dp"
+        android:translationY="-280dp"
         app:cardBackgroundColor="?colorPrimary"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/card_view"
-        app:layout_constraintVertical_bias="0.131"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -189,214 +139,16 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-90dp"
-        android:translationX="80dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/card_view"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/figure1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/todo_9"
-            android:src="@drawable/ic_square"
-            android:translationX="5dp"
-            android:translationY="10dp">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-120dp"
-        android:translationX="110dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/figure3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_circle"
-            android:translationX="5dp"
-            android:translationY="10dp">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-120dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/figure2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/todo_8"
-            android:src="@drawable/ic_triangle"
-            android:translationX="5dp"
-            android:translationY="10dp">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-0dp"
-        android:translationX="60dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/card_view"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/guessfg"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/todo_7"
-            android:src="@drawable/ic_uestionmark"
-            android:translationX="5dp"
-            android:translationY="10dp">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_9"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-0dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/figure5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/todo_2"
-            android:src="@drawable/ic_circle"
-            android:translationX="5dp"
-            android:translationY="10dp">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-0dp"
-        android:translationX="15dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/card_view_9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/figure4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/todo_1"
-            android:src="@drawable/ic_square"
-            android:translationX="5dp"
-            android:translationY="10dp">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/gameWonTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:rotation="-45"
-        android:text="You Won!"
-        android:textColor="#44BB44"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:visibility="gone"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/host"
+        android:layout_width="409dp"
+        android:layout_height="572dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view_1"
-        app:layout_constraintVertical_bias="0.789"
-        tools:visibility="visible" />
+        app:layout_constraintVertical_bias="0.978"/>
 
-    <TextView
-        android:id="@+id/gameLostTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:rotation="-45"
-        android:text="You Lost!"
-        android:textColor="#BB4444"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view_1"
-        app:layout_constraintVertical_bias="0.789"
-        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
