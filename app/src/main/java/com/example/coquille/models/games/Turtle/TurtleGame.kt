@@ -6,7 +6,7 @@ import com.example.coquille.R
 import com.example.coquille.models.abstracts.Game
 import com.example.coquille.utils.Utils
 
-class TurtleGame(currentPosition : Position, positions : MutableList<Position>, points :Int, totalTime: Int, firePositions: MutableList<Position>,  monkeyPositions: MutableList<Position> ): Game("Tortuguita", "¡El pantano se está incendiando! Apaga todos " + "los fuegos y evita a los changuitos antes de que se acabe el tiempo.") {
+class TurtleGame(currentPosition : View, positions : MutableList<View>, points :Int, totalTime: Int, firePositions: MutableList<View>,  monkeyPositions: MutableList<View> ): Game("Tortuguita", "¡El pantano se está incendiando! Apaga todos " + "los fuegos y evita a los changuitos antes de que se acabe el tiempo.") {
 
     var currentPosition = currentPosition
     var positions = positions
@@ -20,19 +20,28 @@ class TurtleGame(currentPosition : Position, positions : MutableList<Position>, 
 
     fun handleInteraction(context: Context, payload : Any?){
         if(currentState == "move") {
-            nextMovement(payload as Position, context)
-        } else if(currentState == "removeFire") removeFire(payload as Position)
+            nextMovement(payload as View, context)
+        } else if(currentState == "removeFire") removeFire(payload as View)
     }
 
-    fun nextMovement(nextPos : Position, context : Context)  {
+    fun nextMovement(nextPos : View, context : Context)  {
         if (isANeighbour(nextPos)){
             if (!firePositions.contains(nextPos) && !monkeyPositions.contains(nextPos)){
-                currentPosition.viewReference.setBackgroundResource(R.drawable.circle)
-                currentPosition.state = "normal"
 
+                var posData = currentPosition.getTag() as Position
+
+                //Accedemos a la posición actual
+                currentPosition.setBackgroundResource(R.drawable.circle)
+                posData.state = "normal"
+                currentPosition.setTag(posData)
+
+                //Establecemos la posición actual como la siguiente posición
                 currentPosition = nextPos
-                currentPosition.viewReference.setBackgroundResource(R.drawable.player_circle)
-                currentPosition.state = "player"
+                var newData = currentPosition.getTag() as Position
+                currentPosition.setBackgroundResource(R.drawable.player_circle)
+                newData.state = "player"
+                currentPosition.setTag(newData)
+
                 return
             }
             Utils.sendMessage("¡Esa posición está ocupada!", context)
@@ -42,38 +51,58 @@ class TurtleGame(currentPosition : Position, positions : MutableList<Position>, 
         return
     }
 
-    fun removeFire(firePos : Position){
+    fun removeFire(firePos : View){
         if (isANeighbour(firePos)){
             firePositions.remove(firePos)
-            firePos.viewReference.setBackgroundResource(R.drawable.player_circle)
-            firePos.state = "normal"
+
+            val fireData = firePos.getTag() as Position
+            firePos.setBackgroundResource(R.drawable.player_circle)
+            fireData.state = "normal"
+            firePos.setTag(fireData)
         }
     }
 
 
     fun setMonkeyPositions(){
-        var newMonkeys = mutableListOf<Position>()
+        var newMonkeys = mutableListOf<View>()
         monkeyPositions.forEach{
-            var newPossiblePosition: Position
+            var newPossiblePosition: View
             do {
                 val nextIndexRandom = (0 until positions.size).random()
                 newPossiblePosition = positions[nextIndexRandom]
             } while ( newPossiblePosition in firePositions || newPossiblePosition in monkeyPositions)
 
+            val newMonkeyData = newPossiblePosition.getTag() as Position
+            newMonkeyData.state = "monkey"
+
             newMonkeys.add(newPossiblePosition)
-            newPossiblePosition.viewReference.setBackgroundResource(R.drawable.monkey_circle)
+            newPossiblePosition.setBackgroundResource(R.drawable.monkey_circle)
         }
 
         monkeyPositions = newMonkeys
     }
 
 
-    fun isANeighbour(positionToEvaluate : Position) : Boolean{
-        currentPosition.neighbours.forEach { neighbour ->
-            if (neighbour == positionToEvaluate){
-                return true
-            }
+    fun isANeighbour(positionToEvaluate : View) : Boolean{
+        var posToEvaluateData = positionToEvaluate.getTag() as Position
+        var currentPosData = currentPosition.getTag() as Position
+
+        var nextCol = posToEvaluateData.col
+        var nextRow = posToEvaluateData.row
+
+        var myCol = currentPosData.col
+        var myRow = currentPosData.row
+
+        val sameCol = myCol == nextCol
+        val sameRow = myRow == nextRow
+
+        if(sameCol || sameRow){
+            val sameX = (myCol + 1 == nextCol) || (myCol -1 == nextCol)
+            val sameY = (myRow + 1 == nextRow) || (myRow -1 == nextRow)
+
+            if (sameX || sameY) return true
         }
+
         return false
     }
 }

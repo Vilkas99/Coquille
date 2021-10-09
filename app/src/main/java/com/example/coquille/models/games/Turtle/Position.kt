@@ -3,14 +3,10 @@ package com.example.coquille.models.games.Turtle
 import android.view.View
 import com.example.coquille.utils.Utils
 
-class Position(view:View, state : String) {
-    var id = Utils.getId(view)
+class Position(id : String, state : String, row : Int, col : Int) {
+    var id = id
     var state = state
-    var neighbours = mutableListOf<Position>()
-    var viewReference = view
-
-    fun addNeighbour(pos : Position){
-        neighbours.add(pos)
-    }
+    var row = row
+    var col = col
 
 }

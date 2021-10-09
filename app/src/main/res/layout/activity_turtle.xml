@@ -163,12 +163,14 @@
     </androidx.cardview.widget.CardView>
 
 
+
+
     <View
         android:id="@+id/circulo_2"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_row="3"
-        android:layout_column="2"
+        android:layout_column="3"
         android:layout_margin="5sp"
         android:layout_marginStart="16dp"
         android:tag="position"
@@ -241,7 +243,7 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_row="3"
-        android:layout_column="2"
+        android:layout_column="1"
         android:layout_margin="5sp"
         android:background="@drawable/fire_circle"
         android:tag="position"
@@ -346,7 +348,7 @@
 
 
     <View
-        android:id="@+id/item_1"
+        android:id="@+id/water"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_row="3"
@@ -364,7 +366,7 @@
     </View>
 
     <View
-        android:id="@+id/item_2"
+        android:id="@+id/freeze"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_row="3"
@@ -382,7 +384,7 @@
     </View>
 
     <View
-        android:id="@+id/item_3"
+        android:id="@+id/slowMotion"
         android:layout_width="90dp"
         android:layout_height="90dp"
 
