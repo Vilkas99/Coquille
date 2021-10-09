@@ -32,7 +32,7 @@ class TurtleGame(currentPosition : View, positions : MutableList<View>, points :
 
                 //Accedemos a la posición actual
                 currentPosition.setBackgroundResource(R.drawable.circle)
-                posData.state = "normal"
+                posData.state = "position"
                 currentPosition.setTag(posData)
 
                 //Establecemos la posición actual como la siguiente posición
@@ -56,8 +56,8 @@ class TurtleGame(currentPosition : View, positions : MutableList<View>, points :
             firePositions.remove(firePos)
 
             val fireData = firePos.getTag() as Position
-            firePos.setBackgroundResource(R.drawable.player_circle)
-            fireData.state = "normal"
+            firePos.setBackgroundResource(R.drawable.circle)
+            fireData.state = "position"
             firePos.setTag(fireData)
         }
     }

@@ -174,7 +174,7 @@
         android:layout_margin="5sp"
         android:layout_marginStart="16dp"
         android:tag="position"
-
+        android:onClick="handleInteraction"
         android:background="@drawable/monkey_circle"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -192,7 +192,8 @@
         android:layout_column="2"
         android:layout_margin="5sp"
         android:background="@drawable/circle"
-        android:tag="position"
+        android:onClick="handleInteraction"
+        android:tag="3,2"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/top_V_2"
@@ -209,7 +210,7 @@
         android:layout_column="2"
         android:layout_margin="5sp"
         android:background="@drawable/circle"
-        android:tag="position"
+        android:tag="2,2"
 
 
         app:layout_constraintBottom_toTopOf="@+id/middle_H_4"
@@ -228,8 +229,8 @@
         android:layout_column="2"
         android:layout_margin="5sp"
         android:background="@drawable/player_circle"
-        android:tag="position"
-
+        android:tag="0,1"
+        android:onClick="handleInteraction"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_3"
         app:layout_constraintEnd_toStartOf="@+id/top_V_2"
         app:layout_constraintStart_toStartOf="@+id/top_V_1"
@@ -247,7 +248,7 @@
         android:layout_margin="5sp"
         android:background="@drawable/fire_circle"
         android:tag="position"
-
+        android:onClick="handleInteraction"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_3"
         app:layout_constraintEnd_toStartOf="@+id/top_V_1"
         app:layout_constraintStart_toStartOf="parent"
@@ -264,8 +265,8 @@
         android:layout_column="2"
         android:layout_margin="5sp"
         android:background="@drawable/circle"
-        android:tag="position"
-
+        android:tag="1,0"
+        android:onClick="handleInteraction"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_2"
         app:layout_constraintEnd_toStartOf="@+id/top_V_1"
         app:layout_constraintStart_toStartOf="parent"
@@ -282,8 +283,8 @@
         android:layout_column="2"
         android:layout_margin="5sp"
         android:background="@drawable/circle"
-        android:tag="position"
-
+        android:tag="1,1"
+        android:onClick="handleInteraction"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_2"
         app:layout_constraintEnd_toStartOf="@+id/top_V_2"
         app:layout_constraintStart_toStartOf="@+id/top_V_1"
@@ -301,7 +302,7 @@
         android:layout_margin="5sp"
         android:background="@drawable/fire_circle"
         android:tag="position"
-
+        android:onClick="handleInteraction"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_4"
         app:layout_constraintEnd_toStartOf="@+id/top_V_1"
         app:layout_constraintStart_toStartOf="parent"
@@ -319,7 +320,7 @@
         android:layout_margin="5sp"
         android:background="@drawable/monkey_circle"
         android:tag="position"
-
+        android:onClick="handleInteraction"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_1"
         app:layout_constraintEnd_toStartOf="@+id/top_V_1"
         app:layout_constraintStart_toStartOf="parent"
@@ -337,7 +338,7 @@
         android:layout_margin="5sp"
         android:background="@drawable/fire_circle"
         android:tag="position"
-
+        android:onClick="handleInteraction"
         app:layout_constraintBottom_toTopOf="@+id/middle_H_1"
         app:layout_constraintEnd_toStartOf="@+id/top_V_2"
         app:layout_constraintStart_toStartOf="@+id/top_V_1"
@@ -356,6 +357,7 @@
         android:layout_margin="5sp"
         android:background="@drawable/habilidad_2"
         android:tag="water"
+        android:onClick="handleInteraction"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/top_V_2"
@@ -374,6 +376,7 @@
         android:layout_margin="5sp"
         android:background="@drawable/habilidad_1"
         android:tag="freezeMonkey"
+        android:onClick="handleInteraction"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/top_V_1"
@@ -390,6 +393,7 @@
 
         android:background="@drawable/habilidad_3"
         android:tag="slowMotion"
+        android:onClick="handleInteraction"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
