@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/memory_game_root_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Repeated_figures">
+    android:layout_height="match_parent">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cardsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:nestedScrollingEnabled="false"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <FrameLayout
@@ -32,10 +49,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/points_frame_layout"
+        app:layout_constraintEnd_toEndOf="@id/cardsRecyclerView"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/points_frame_layout"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/memory_card_first_heart"
@@ -43,7 +62,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_heart"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/memory_card_second_heart" />
+            app:layout_constraintStart_toEndOf="@+id/memory_card_second_heart"
+            />
 
         <ImageView
             android:id="@+id/memory_card_second_heart"
@@ -51,7 +71,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_heart"
             app:layout_constraintEnd_toStartOf="@+id/memory_card_first_heart"
-            app:layout_constraintStart_toEndOf="@+id/memory_card_third_heart" />
+            app:layout_constraintStart_toEndOf="@+id/memory_card_third_heart"
+             />
 
         <ImageView
             android:id="@+id/memory_card_third_heart"
@@ -59,21 +80,11 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_heart"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
     </LinearLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.example.coquille.controllers.stage1"
-        android:layout_width="380dp"
-        android:layout_height="541dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

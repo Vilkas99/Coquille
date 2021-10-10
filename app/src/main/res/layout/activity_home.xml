@@ -222,6 +222,7 @@
         android:id="@+id/memory_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:onClick="routeToMemoryCardGame"
         android:stateListAnimator="@null"
         app:cardBackgroundColor="#EF767A"
         app:cardCornerRadius="10dp"
@@ -341,7 +342,6 @@
         app:cardBackgroundColor="#FFE68F"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
-
         app:layout_constraintBottom_toTopOf="@+id/sixth_horizontal_guideline"
         app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/first_vertical_guideline"

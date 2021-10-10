@@ -34,6 +34,13 @@ class activity_home : AppCompatActivity() {
         startActivity(intent)
     }
 
+    /*fun routeToRepeatedFigures(view: View) {
+        val player = MediaPlayer.create(this, R.raw.sequence_sound)
+        player.start()
+        val intent = Intent(this, repeated_figures::class.java)
+        startActivity(intent)
+    }*/
+
     fun routeToLogin(view: View) {
         val intent = Intent(this, Login::class.java)
         startActivity(intent)
@@ -45,4 +52,12 @@ class activity_home : AppCompatActivity() {
         val intent = Intent(this, PreviewGame::class.java)
         startActivity(intent)
     }
+
+    fun routeToMemoryCardGame(view: View){
+        val player = MediaPlayer.create(this, R.raw.sequence_sound)
+        player.start()
+        val intent = Intent(this,  MemoryGameActivity::class.java)
+        startActivity(intent)
+    }
+
 }

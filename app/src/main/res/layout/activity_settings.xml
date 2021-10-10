@@ -88,7 +88,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginEnd="60dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                         />
+                        />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/recommendResting"
@@ -100,7 +100,6 @@
                         app:layout_constraintLeft_toRightOf="@+id/restingRecommendationsTextView"
                         app:layout_constraintTop_toTopOf="parent"
                         app:track="@drawable/custom_toggle_button_background"
-
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -115,7 +114,7 @@
                     android:layout_alignParentEnd="true"
                     android:text="@string/restingRecommendationsDescription"
                     android:textIsSelectable="false"
-                    android:textSize="16sp"></TextView>
+                    android:textSize="16sp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/playNotificationsLayout"
@@ -249,7 +248,9 @@
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintHorizontal_chainStyle="spread"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
 
                     <TextView
                         android:id="@+id/sfxTextView"
@@ -263,7 +264,9 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toEndOf="@+id/musicTextView"
-                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/musicOn"
@@ -300,4 +303,3 @@
     </LinearLayout>
 
 </ScrollView>
-
