@@ -130,6 +130,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
                     android:fontFamily="@font/maia2"
                     android:text="Cuento magicos"
                     android:textColor="#ffff"
@@ -195,7 +196,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/geosans"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus orci ligula, ac ultrices est feugiat id. Curabitur eget tellus. "
+                    android:text="ola "
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:layout_marginStart="10dp"
@@ -220,7 +221,7 @@
         app:layout_constraintTop_toTopOf="@+id/third_horizontal_guideline">
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"  android:onClick="routeToGame">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -246,6 +247,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/difficulty_layout1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -259,41 +261,7 @@
                         android:layout_marginStart="10dp"
                         android:textColor="#000000"
                         android:textSize="18sp" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
+
 
 
                 </LinearLayout>
@@ -342,7 +310,7 @@
         app:layout_constraintTop_toTopOf="@+id/fifth_horizontal_guideline">
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" android:onClick="routeToGame">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -368,6 +336,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/difficulty_layout2"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -381,27 +350,6 @@
                         android:layout_marginStart="10dp"
                         android:textColor="#000000"
                         android:textSize="18sp" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
 
 
                 </LinearLayout>
@@ -450,7 +398,7 @@
         app:layout_constraintTop_toTopOf="@+id/seventh_horizontal_guideline">
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"  android:onClick="routeToGame">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -476,6 +424,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/difficulty_layout3"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -489,20 +438,6 @@
                         android:layout_marginStart="10dp"
                         android:textColor="#000000"
                         android:textSize="18sp" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/ic_diamond_difficulty"
-                        android:layout_margin="2dp"
-                        android:contentDescription="@string/todo4" />
 
                 </LinearLayout>
 

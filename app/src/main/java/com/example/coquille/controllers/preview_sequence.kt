@@ -13,10 +13,6 @@ class preview_sequence : AppCompatActivity() {
         setContentView(R.layout.activity_preview_sequence)
     }
 
-    fun routeToSequenceGame(view: View) {
-        val intent = Intent(this, Sequence_game::class.java)
-        startActivity(intent)
-    }
 
     fun routeToHome(view: View) {
         val intent = Intent(this, activity_home::class.java)

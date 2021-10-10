@@ -226,6 +226,7 @@
         app:cardBackgroundColor="#EF767A"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
+        android:onClick="routeToPreview"
 
         app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/third_vertical_guideline"
@@ -261,6 +262,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:stateListAnimator="@null"
+        android:onClick="routeToPreview"
         app:cardBackgroundColor="#EF767A"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
@@ -303,6 +305,7 @@
         app:cardBackgroundColor="#12DFFF"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
+        android:onClick="routeToPreview"
 
         app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/third_vertical_guideline"
@@ -341,6 +344,7 @@
         app:cardBackgroundColor="#FFE68F"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
+        android:onClick="routeToPreview"
 
         app:layout_constraintBottom_toTopOf="@+id/sixth_horizontal_guideline"
         app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
