@@ -41,7 +41,7 @@ class profile : AppCompatActivity() {
         sharedPref = MySharedPreferences(this)
 
         val collectables = MutableList(1){Collectable("asdasd", 20, "wuajaaaaa")}
-        val settings = Settings(true, true, true, true, true)
+        val settings = Settings()
         val user = User("Prueba", "asdawdqw", R.drawable.ic_profilep_c_king, 1900, collectables, settings )
 
         sharedPref.saveData(user, "currentUser")
