@@ -25,7 +25,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton_1"
+            android:id="@+id/backButton"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="65dp"
             android:layout_height="48dp"

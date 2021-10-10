@@ -51,7 +51,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/updateButton"
+        android:id="@+id/confirmButton"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="130dp"
         android:layout_height="50dp"
