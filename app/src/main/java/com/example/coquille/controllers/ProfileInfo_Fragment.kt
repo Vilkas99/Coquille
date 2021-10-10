@@ -19,7 +19,7 @@ class ProfileInfo_Fragment : Fragment(R.layout.fragment_profile_info_) {
 
     var newPassword = "";
 
-    lateinit var binding : FragmentProfileInfoBinding;
+    lateinit var binding : FragmentProfileInfoBinding
     lateinit var userName : EditText
     lateinit var password : EditText
     lateinit var sharedPreferences: MySharedPreferences

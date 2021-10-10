@@ -2,6 +2,7 @@ package com.example.coquille.utils
 
 import android.content.Context
 import android.util.Log
+import com.example.coquille.models.CardContent
 import com.example.coquille.models.Collectable
 import com.example.coquille.models.User
 import com.google.gson.Gson
@@ -11,6 +12,8 @@ object Utils {
 
     val collectable1 = Collectable("ic_profile_pic_orc", 600, "Caballero de otro mundo")
     val collectable2 = Collectable("ic_profile_pic_mage", 900, "Hechicera del saber" )
+
+
 
     val collectables = listOf(collectable1, collectable2)
 
