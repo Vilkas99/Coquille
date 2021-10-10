@@ -50,10 +50,10 @@ class Sequence_game : AppCompatActivity() {
             R.drawable.ic_triangle,
             R.drawable.ic_circle,
             "Haz ganado",
-            "Haz perido:("
+            "Haz perdido:("
         )
 
-        timerSequence(10000, 1000)
+        timerSequence(20000, 1000)
 
         println("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
         println(infoFragment.passed)
@@ -66,7 +66,6 @@ class Sequence_game : AppCompatActivity() {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.host, infoFragment2)
                 commit()
-                timerSequence(10000,1000)
             }
             println(this)
         }
@@ -77,22 +76,18 @@ class Sequence_game : AppCompatActivity() {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.host, infoFragment3)
                 commit()
-                binding.timer.text = "10"
-                timerSequence(10000,1000)
             }
             println(this)
         }
     }
 
-
     fun timerSequence(time: Long, intervalo: Long){
         object : CountDownTimer(time, intervalo) {
             override fun onTick(p0: Long) {
-                binding.timer.setText("Faltan: " + p0 / 1000)
+                binding.timer.setText("00:" + p0 / 1000)
             }
 
             override fun onFinish() {
-                binding.timer.setText("You Died!")
                 infoFragment.lost.visibility = View.VISIBLE
             }
         }.start()
