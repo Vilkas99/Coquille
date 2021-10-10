@@ -222,7 +222,6 @@
         android:id="@+id/memory_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:onClick="routeToMemoryCardGame"
         android:stateListAnimator="@null"
         app:cardBackgroundColor="#EF767A"
         app:cardCornerRadius="10dp"
