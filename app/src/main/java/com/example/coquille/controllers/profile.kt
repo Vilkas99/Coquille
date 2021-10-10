@@ -1,13 +1,11 @@
 package com.example.coquille.controllers
 
 import android.content.Intent
-import android.content.SharedPreferences
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Toast
+import android.widget.ImageView
 import com.example.coquille.R
 import com.example.coquille.databinding.ActivityProfileBinding
 import com.example.coquille.models.Collectable
@@ -15,7 +13,7 @@ import com.example.coquille.models.Settings
 import com.example.coquille.models.User
 import com.example.coquille.utils.MySharedPreferences
 import com.example.coquille.utils.Utils
-
+import com.example.coquille.utils.HeartSystem
 
 class profile : AppCompatActivity() {
 
@@ -39,6 +37,7 @@ class profile : AppCompatActivity() {
             }
 
         sharedPref = MySharedPreferences(this)
+
 
         val collectables = MutableList(1){Collectable("asdasd", 20, "wuajaaaaa")}
         val settings = Settings()
@@ -73,6 +72,7 @@ class profile : AppCompatActivity() {
         val intent = Intent(this, activity_home::class.java)
         startActivity(intent)
     }
+
 
     fun updateInfo(){
         val currentUserUpdated = Utils.getCurrentUser(this)

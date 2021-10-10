@@ -93,29 +93,6 @@ class Sequence_game : AppCompatActivity() {
         }.start()
     }
 
-
-
-    /*fun genSequence() {
-
-        val randomIndex = Random.nextInt(0, FigureConstants.words.size)
-        val imageToUse = FigureConstants.words[randomIndex]
-        val imageResource = resources.getIdentifier(imageToUse, null, packageName)
-        val imageToUse2 = FigureConstants.words2[randomIndex]
-        val imageResource2 = resources.getIdentifier(imageToUse2, null, packageName)
-        val imageToUse3 = FigureConstants.words3[randomIndex]
-        val imageResource3 = resources.getIdentifier(imageToUse3, null, packageName)
-        binding.figure1.setImageResource(imageResource)
-        binding.figure2.setImageResource(imageResource)
-        binding.figure3.setImageResource(imageResource2)
-        binding.figure4.setImageResource(imageResource3)
-        binding.figure5.setImageResource(imageResource3)
-        binding.option1.setBackgroundResource(imageResource)
-        binding.option2.setBackgroundResource(imageResource2)
-        binding.option3.setBackgroundResource(imageResource3)
-        binding.figure2.tag = imageResource2
-        binding.option2.tag = imageResource2
-    }*/
-
     fun routeToPreviewScreen(view: View) {
         val player = MediaPlayer.create(this, R.raw.sequence_sound)
         player.start()

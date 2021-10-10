@@ -1,16 +1,18 @@
 package com.example.coquille.utils
 
 import android.content.Context
-import android.util.Log
+import android.view.View
+import android.widget.Toast
 import com.example.coquille.models.Collectable
 import com.example.coquille.models.User
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 object Utils {
 
     val collectable1 = Collectable("ic_profile_pic_orc", 600, "Caballero de otro mundo")
     val collectable2 = Collectable("ic_profile_pic_mage", 900, "Hechicera del saber" )
+
+
 
     val collectables = listOf(collectable1, collectable2)
 
@@ -43,10 +45,14 @@ object Utils {
         return dummy
     }
 
+    @JvmStatic fun getId(view: View) : String{
+        if (view.id == View.NO_ID) return "no-id"
+        else return view.resources.getResourceName(view.id)
+    }
 
-
-
-
+    @JvmStatic fun sendMessage(message: String, context: Context) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+    }
 
 
 }
