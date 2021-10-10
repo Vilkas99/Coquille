@@ -21,6 +21,10 @@
 
         <activity
             android:name=".controllers.activity_home"
+            android:exported="true"/>
+
+        <activity
+            android:name=".controllers.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,19 +32,21 @@
             </intent-filter>
         </activity>
 
+
         <activity
             android:name=".controllers.MainActivity"
             android:exported="true" />
 
-        <activity
-            android:name=".controllers.Login"
-            android:exported="true"/>
 
         <activity
             android:name=".controllers.preview_sequence"
             android:exported="true"/>
         <activity
             android:name=".controllers.Sequence_game"
+            android:exported="true"/>
+
+        <activity
+            android:name=".controllers.MemoryGameActivity"
             android:exported="true"/>
     </application>
 

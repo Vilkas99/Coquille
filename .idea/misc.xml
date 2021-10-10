@@ -3,25 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_bird.xml" value="0.2703125" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_icon.xml" value="0.2703125" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_solid.xml" value="0.2703125" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_profile_pic_mage.xml" value="0.3828125" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_user_icon.xml" value="0.2703125" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_preview_game.xml" value="0.434878587196468" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_preview_sequence.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.31614583333333335" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_sequence_game.xml" value="0.31614583333333335" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_settings.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_achivement_.xml" value="0.31614583333333335" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_info_.xml" value="0.31614583333333335" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/level_cards.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_login.xml" value="0.2988679352838745" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.19924529018924966" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.2988679352838745" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.1703125" />
+        <entry key="app/src/main/res/drawable/card_back_background.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/card_background.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/card_front_background.xml" value="0.3707692307692308" />
+        <entry key="app/src/main/res/drawable/custom_toggle_button_background.xml" value="0.2859375" />
+        <entry key="app/src/main/res/drawable/custom_toggle_button_thumb.xml" value="0.2859375" />
+        <entry key="app/src/main/res/drawable/ic_book.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_book_logo.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_candyhouse.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_colorful_logo.xml" value="0.33697916666666666" />
+        <entry key="app/src/main/res/drawable/ic_orc.xml" value="0.33697916666666666" />
+        <entry key="app/src/main/res/drawable/ic_points.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_profile_pic_orc.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_sequence.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_spell_book.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_square.xml" value="0.33697916666666666" />
+        <entry key="app/src/main/res/drawable/ic_user_icon.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/memory_game_card.xml" value="0.3765625" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/activity_memory_game.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_sequence_game.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_profile_achivement_.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/gemes_counter.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/memory_game_card.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/memory_game_card_back.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/memory_game_card_front.xml" value="0.1" />
       </map>
     </option>
   </component>
