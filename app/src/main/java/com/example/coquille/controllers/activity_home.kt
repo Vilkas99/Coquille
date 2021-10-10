@@ -45,4 +45,12 @@ class activity_home : AppCompatActivity() {
         val intent = Intent(this, PreviewGame::class.java)
         startActivity(intent)
     }
+
+    fun routeToMemoryCardGame(view: View){
+        val player = MediaPlayer.create(this, R.raw.sequence_sound)
+        player.start()
+        val intent = Intent(this,  MemoryGameActivity::class.java)
+        startActivity(intent)
+    }
+
 }
