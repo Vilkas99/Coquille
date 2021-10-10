@@ -6,81 +6,138 @@ import com.example.coquille.R
 import com.example.coquille.models.abstracts.Game
 import com.example.coquille.utils.Utils
 
-class TurtleGame(currentPosition : View, positions : MutableList<View>, points :Int, totalTime: Int, firePositions: MutableList<View>,  monkeyPositions: MutableList<View> ): Game("Tortuguita", "¡El pantano se está incendiando! Apaga todos " + "los fuegos y evita a los changuitos antes de que se acabe el tiempo.") {
+class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositions: MutableList<View>,  monkeyPositions: MutableList<View> ): Game("Tortuguita", "¡El pantano se está incendiando! Apaga todos " + "los fuegos y evita a los changuitos antes de que se acabe el tiempo.") {
 
     var currentPosition = currentPosition
-    var positions = positions
     var firePositions = firePositions
     var monkeyPositions = monkeyPositions
 
     var currentState = ""
+    var playerState = ""
+
     var points = points
     var totalTime = totalTime
 
+    var coolDownWater = 0
+    var coolDownSlowMotion = 0
+    var coolDownFreezeMonkey = 0
 
-    fun handleInteraction(context: Context, payload : Any?){
-        if(currentState == "move") {
-            nextMovement(payload as View, context)
-        } else if(currentState == "removeFire") removeFire(payload as View)
+    var slowDuration = 0
+    var freezeDuration = 0
+
+
+    fun evaluateGameState(context: Context, gameEnded : Boolean){
+        if (firePositions.size == 0){
+            Utils.sendMessage("¡Has ganado!",context )
+            currentState = "won"
+            points += 50
+        }
+
+        else if(gameEnded){
+            Utils.sendMessage("¡Se ha terminado el tiempo!",context )
+        }
     }
 
-    fun nextMovement(nextPos : View, context : Context)  {
-        if (isANeighbour(nextPos)){
+    //TODO: Desarrollar el resto de habilidades
+
+    fun removeCoolDown(){
+        if (coolDownWater > 0) coolDownWater -= 1
+
+        if (coolDownSlowMotion > 0){
+            coolDownSlowMotion -= 1
+            if (slowDuration > 0) slowDuration -= 1
+        }
+        else if (coolDownSlowMotion == 0 && currentState == "slow") currentState = "normal"
+
+        if (coolDownFreezeMonkey > 0){
+            coolDownFreezeMonkey -= 1
+            if(freezeDuration > 0) freezeDuration -= 1
+        }
+        else if (coolDownFreezeMonkey == 0 && currentState == "freeze") currentState = "normal"
+    }
+
+
+
+
+    fun handleInteraction(nextState : String , context: Context, payload : Any?) : Boolean{
+        if(nextState == "move" && playerState == "moving") {
+            if (nextMovement(payload as View, context)){
+                playerState = "normal"
+                slowDuration = 0
+                return true
+            }
+            return false
+
+        } else if(nextState == "removeFire"){
+            if (coolDownWater == 0 && removeFire(payload as View, context)){
+                coolDownWater = 3
+                playerState = "normal"
+                return true
+            } else {
+                return false
+            }
+        } else if(nextState == "slowMotion"){
+            if(coolDownSlowMotion == 0){
+                currentState = "slow"
+                coolDownSlowMotion = 15
+                slowDuration = 6
+                return true
+            }
+        } else if (nextState == "freezeMonkey"){
+            if (coolDownFreezeMonkey == 0){
+                currentState = "freeze"
+                coolDownFreezeMonkey = 10
+                freezeDuration = 4
+                return true
+            }
+        }
+        return false
+    }
+
+    fun nextMovement(nextPos : View, context : Context)  : Boolean {
+        if (isANeighbour(nextPos) || currentState == "slow"){
             if (!firePositions.contains(nextPos) && !monkeyPositions.contains(nextPos)){
 
                 var posData = currentPosition.getTag() as Position
 
                 //Accedemos a la posición actual
-                currentPosition.setBackgroundResource(R.drawable.circle)
                 posData.state = "position"
                 currentPosition.setTag(posData)
 
                 //Establecemos la posición actual como la siguiente posición
                 currentPosition = nextPos
                 var newData = currentPosition.getTag() as Position
-                currentPosition.setBackgroundResource(R.drawable.player_circle)
                 newData.state = "player"
                 currentPosition.setTag(newData)
 
-                return
+                return true
             }
             Utils.sendMessage("¡Esa posición está ocupada!", context)
-            return
+            return false
         }
         Utils.sendMessage("Estás demasiado lejos :(", context)
-        return
+        return false
     }
 
-    fun removeFire(firePos : View){
-        if (isANeighbour(firePos)){
+    fun removeFire(firePos : View, context: Context) : Boolean{
+        if ((isANeighbour(firePos) || currentState == "slow") && firePositions.contains(firePos)){
             firePositions.remove(firePos)
 
             val fireData = firePos.getTag() as Position
-            firePos.setBackgroundResource(R.drawable.circle)
             fireData.state = "position"
             firePos.setTag(fireData)
-        }
-    }
 
+            val nuevosPuntos = 200 - totalTime
+            points += nuevosPuntos
 
-    fun setMonkeyPositions(){
-        var newMonkeys = mutableListOf<View>()
-        monkeyPositions.forEach{
-            var newPossiblePosition: View
-            do {
-                val nextIndexRandom = (0 until positions.size).random()
-                newPossiblePosition = positions[nextIndexRandom]
-            } while ( newPossiblePosition in firePositions || newPossiblePosition in monkeyPositions)
-
-            val newMonkeyData = newPossiblePosition.getTag() as Position
-            newMonkeyData.state = "monkey"
-
-            newMonkeys.add(newPossiblePosition)
-            newPossiblePosition.setBackgroundResource(R.drawable.monkey_circle)
+            coolDownWater += 3
+            Utils.sendMessage("¡Recibiste :" + nuevosPuntos.toString() + " puntos!", context)
+            return true
         }
 
-        monkeyPositions = newMonkeys
+        return false
     }
+
 
 
     fun isANeighbour(positionToEvaluate : View) : Boolean{
