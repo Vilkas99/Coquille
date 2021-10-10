@@ -3,10 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/layout/activity_main.xml" value="0.1703125" />
-        <entry key="app/src/main/res/drawable/custom_toggle_button_background.xml" value="0.2859375" />
-        <entry key="app/src/main/res/drawable/custom_toggle_button_thumb.xml" value="0.2859375" />
-        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_bird.xml" value="0.2703125" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_icon.xml" value="0.2703125" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/ic_key_solid.xml" value="0.2703125" />
@@ -18,6 +14,7 @@
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_preview_sequence.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_sequence_game.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_settings.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_achivement_.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_info_.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/level_cards.xml" value="0.36666666666666664" />
