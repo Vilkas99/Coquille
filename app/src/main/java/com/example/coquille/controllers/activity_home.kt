@@ -95,6 +95,15 @@ class activity_home : AppCompatActivity() {
             else -> println("Botón inexistente")
         }
 
-
     }
+
+
+    fun routeToMemoryCardGame(view: View){
+        val player = MediaPlayer.create(this, R.raw.sequence_sound)
+        player.start()
+        val intent = Intent(this,  MemoryGameActivity::class.java)
+        startActivity(intent)
+    }
+
 }
+
