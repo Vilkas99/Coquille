@@ -23,10 +23,10 @@ object Data {
     val cardMemoria4 = CardContent("Prueba de juego aaa", 5, R.drawable.ic_fire)
 
 
-    val cardTortuga1 = CardContent("Prueba de la descripción ahhhhh D: TORTUGA")
-    val cardTortuga2 = CardContent("Hansel & TORTUGA", 3, R.drawable.ic_candyhouse)
-    val cardTortuga3 = CardContent("Los 3 cochinitos", 2, R.drawable.ic_colorful_logo)
-    val cardTortuga4 = CardContent("Prueba de juego aaa", 5, R.drawable.ic_fire)
+    val cardTortuga1 = CardContent("¡Bievenid@ al juego de la tortuga! ¡Apaga todos los fuegos con tus poderes de tortuga antes de que se acabe el tiempo! Cuidado con los changos porque ellos no te quieren dejar pasar")
+    val cardTortuga2 = CardContent("Tutorial", 1, R.drawable.player_circle)
+    val cardTortuga3 = CardContent("Bomberos al rescate", 2, R.drawable.ic_fairy)
+    val cardTortuga4 = CardContent("¡Maestro de las llamas!", 5, R.drawable.ic_fire)
 
 
     val cardDibuja1 = CardContent("Prueba de la descripción ahhhhh D: DIBUJO")
