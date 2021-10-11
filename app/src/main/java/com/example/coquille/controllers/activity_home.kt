@@ -47,7 +47,6 @@ class activity_home : AppCompatActivity() {
 
     fun routeToPreview(view: View ){
         val nameCard = view.resources.getResourceName(view.id)
-        println("Card name "+nameCard)
         val player = MediaPlayer.create(this, R.raw.sequence_sound)
         player.start()
 
