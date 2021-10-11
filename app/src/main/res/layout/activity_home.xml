@@ -178,21 +178,20 @@
     </LinearLayout>
 
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/sequence_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:onClick="routeToPreview"
+        android:soundEffectsEnabled="false"
         android:stateListAnimator="@null"
         app:cardBackgroundColor="#12DFFF"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
-        android:onClick="routeToPreview"
-        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@id/second_horizontal_guideline"
         app:layout_constraintEnd_toStartOf="@+id/second_vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/first_vertical_guideline"
-        app:layout_constraintTop_toTopOf="@id/first_horizontal_guideline"
-        app:layout_constraintBottom_toBottomOf="@id/second_horizontal_guideline">
+        app:layout_constraintTop_toTopOf="@id/first_horizontal_guideline">
 
         <ImageView
             android:id="@+id/sequence_logo"
@@ -200,10 +199,11 @@
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35dp"
-            app:srcCompat="@drawable/sequence_logo"
-            tools:ignore="ImageContrastCheck"
+
+            android:adjustViewBounds="true"
             android:contentDescription="@string/todo4"
-            android:adjustViewBounds="true"/>
+            app:srcCompat="@drawable/sequence_logo"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/name_sequence"
@@ -345,7 +345,6 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
         android:onClick="routeToPreview"
-
         app:layout_constraintBottom_toTopOf="@+id/sixth_horizontal_guideline"
         app:layout_constraintEnd_toStartOf="@+id/fourth_vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/first_vertical_guideline"
