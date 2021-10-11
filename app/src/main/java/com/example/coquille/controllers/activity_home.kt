@@ -104,5 +104,14 @@ class activity_home : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun routeToTortuga(view: View){
+        val player = MediaPlayer.create(this, R.raw.sequence_sound)
+        player.start()
+        val intent = Intent(this, Turtle::class.java)
+        startActivity(intent)
+    }
+
 }
+
+
 

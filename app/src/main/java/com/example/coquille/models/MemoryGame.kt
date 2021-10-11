@@ -3,7 +3,7 @@ package com.example.coquille.models
 import com.example.coquille.R
 import com.example.coquille.models.abstracts.Game
 
-class MemoryGame(difficulty : Int = 0) : Game("Memorama", "dummy.jpg", "¡Encuentra todos los pares de tarjetas sin equivocarte y gana gemas!"){
+class MemoryGame(difficulty : Int = 0) : Game("Memorama", "dummy.jpg"){
 
 
     private lateinit var cards : Array<MemoryGameCard>
