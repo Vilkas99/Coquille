@@ -1,6 +1,7 @@
 package com.example.coquille.controllers
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -15,9 +16,12 @@ import com.example.coquille.R
 import com.example.coquille.databinding.ActivityTurtleBinding
 import com.example.coquille.models.games.Turtle.Position
 import com.example.coquille.models.games.Turtle.TurtleGame
+import com.example.coquille.utils.MySharedPreferences
 import com.example.coquille.utils.Utils
 
 class Turtle : AppCompatActivity() {
+
+    lateinit var sharedPref: MySharedPreferences
 
     lateinit var gameState: TurtleGame
     lateinit var binding: ActivityTurtleBinding
@@ -37,6 +41,8 @@ class Turtle : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        sharedPref = MySharedPreferences(this)
 
         //Binding
         binding = ActivityTurtleBinding.inflate(LayoutInflater.from(this))
@@ -173,9 +179,16 @@ class Turtle : AppCompatActivity() {
         var fireTime = 0
         object : CountDownTimer(time, intervalo) {
             override fun onTick(p0: Long) {
-                if (gameState.currentState != "won"){
                     evaluateCoolDown()
                     evaluateGameState()
+
+                    if (gameState.currentState == "won" || gameState.currentState == "finished"){
+                        val currentUserUpdated = Utils.getCurrentUser(context)
+                        currentUserUpdated.points += gameState.points
+                        sharedPref.editData(currentUserUpdated, "currentUser")
+                        routeToHome()
+                        cancel()
+                    }
 
                     gameState.removeCoolDown()
                     gameState.totalTime += 1
@@ -195,13 +208,18 @@ class Turtle : AppCompatActivity() {
 
                     binding.tiempoText.setText((p0 / 1000).toString())
                     gameState.evaluateGameState(context, false)
-                }
+
             }
 
             override fun onFinish() {
                 gameState.evaluateGameState(context, true)
             }
         }.start()
+    }
+
+    fun routeToHome() {
+        val intent = Intent(this, activity_home::class.java)
+        startActivity(intent)
     }
 
     fun evaluateCoolDown(){

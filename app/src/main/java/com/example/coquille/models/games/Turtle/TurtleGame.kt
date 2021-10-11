@@ -1,8 +1,11 @@
 package com.example.coquille.models.games.Turtle
 
 import android.content.Context
+import android.content.Intent
 import android.view.View
+import androidx.core.content.ContextCompat.startActivity
 import com.example.coquille.R
+import com.example.coquille.controllers.activity_home
 import com.example.coquille.models.abstracts.Game
 import com.example.coquille.utils.Utils
 
@@ -34,6 +37,7 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
         }
 
         else if(gameEnded){
+            currentState = "finished"
             Utils.sendMessage("¡Se ha terminado el tiempo!",context )
         }
     }
