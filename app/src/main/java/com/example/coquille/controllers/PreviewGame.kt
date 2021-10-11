@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -101,7 +102,7 @@ class PreviewGame() : AppCompatActivity() {
             }
             "book" -> {
                 cardsGame = Data.getCard("Cuentos")
-                binding.gameTitle.setText("Cuentos locos xd")
+                binding.gameTitle.setText("Cuentos asombrosos")
                 binding.iconHeader.setImageDrawable(resources.getDrawable(R.drawable.ic_book_logo))
 
                 binding.bodyDescription.setText(cardsGame[0].textCard)
@@ -167,6 +168,7 @@ class PreviewGame() : AppCompatActivity() {
     }
 
     fun routeToGame(view: View) {
+        val card = view.resources.getResourceName(view.id)
         when(binding.gameTitle.text.toString()){
             "Secuencia" -> {
                 val intent = Intent(this, Sequence_game::class.java)
@@ -180,15 +182,49 @@ class PreviewGame() : AppCompatActivity() {
                 val intent = Intent(this, profile::class.java)
                 startActivity(intent)
             }
-            "Cuentos locos xd" -> {
-                val intent = Intent(this, Login::class.java)
-                startActivity(intent)
+            "Cuentos asombrosos" -> {
+                when(card){
+                    "com.example.coquille:id/card1" -> {
+                        val player = MediaPlayer.create(this, R.raw.profile_sound)
+                        player.start()
+                        val intent = Intent(this, BookGame::class.java)
+                        val nameLevel :String = "El león y el ratón"
+                        val b : Bundle = Bundle()
+                        b.putString("level", nameLevel)
+                        intent.putExtras(b)
+                        startActivity(intent)
+                    }
+                    "com.example.coquille:id/card2" -> {
+                        val player = MediaPlayer.create(this, R.raw.profile_sound)
+                        player.start()
+                        val intent = Intent(this, BookGame::class.java)
+                        val nameLevel :String = "El patito feo"
+                        val b : Bundle = Bundle()
+                        b.putString("level", nameLevel)
+                        intent.putExtras(b)
+                        startActivity(intent)
+                    }
+                    "com.example.coquille:id/card3" -> {
+                        val player = MediaPlayer.create(this, R.raw.profile_sound)
+                        player.start()
+                        val intent = Intent(this, BookGame::class.java)
+                        val nameLevel :String = "El pájaro y la ballena"
+                        val b : Bundle = Bundle()
+                        b.putString("level", nameLevel)
+                        intent.putExtras(b)
+                        startActivity(intent)
+                    }
+                    else -> println("Nivel inexistente")
+                }
+
             }
             "Juego de colores? xd" -> {
-                val intent = Intent(this, activity_home::class.java)
+                val intent = Intent(this, BookGame::class.java)
                 startActivity(intent)
             }
+            else -> println("Juego inexistente")
         }
+
 
 
     }
