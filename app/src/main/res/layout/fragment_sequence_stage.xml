@@ -108,61 +108,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:contentDescription="@string/todo_1"
-            android:src="@drawable/ic_square"
+            android:src="@drawable/ic_uestionmark"
             tools:ignore="ImageContrastCheck">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_9"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/figure5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:contentDescription="@string/todo_2"
-            android:src="@drawable/ic_circle"
-            tools:ignore="ImageContrastCheck">
-
-        </ImageView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.814"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/guessfg"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:contentDescription="@string/todo_7"
-            android:src="@drawable/ic_uestionmark">
 
         </ImageView>
 

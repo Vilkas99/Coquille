@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -21,8 +19,6 @@ class Sequence_stage1 : Fragment() {
     lateinit var figura1: ImageView
     lateinit var figura2: ImageView
     lateinit var figura3: ImageView
-    lateinit var figura4: ImageView
-    lateinit var figura5: ImageView
     lateinit var option1: ImageButton
     lateinit var option2: ImageButton
     lateinit var option3: ImageButton
@@ -36,8 +32,6 @@ class Sequence_stage1 : Fragment() {
         figura1 = rootView.findViewById(R.id.figure1)
         figura2 = rootView.findViewById(R.id.figure2)
         figura3 = rootView.findViewById(R.id.figure3)
-        figura4 = rootView.findViewById(R.id.figure4)
-        figura5 = rootView.findViewById(R.id.figure5)
         option1 = rootView.findViewById(R.id.option1)
         option2 = rootView.findViewById(R.id.option2)
         option3 = rootView.findViewById(R.id.option3)
@@ -46,11 +40,30 @@ class Sequence_stage1 : Fragment() {
 
         genSequence()
 
+        var puntos: Int = 0
+
+        option1.setOnClickListener {
+            if(option1.tag == figura1.tag){
+                puntos += 50
+                println("Esto son tus puntos: " + puntos)
+                genSequence()
+
+            }
+        }
+
         option2.setOnClickListener {
-            if(option2.tag == figura2.tag){
-                //Toast.makeText(this, "Pruebita", Toast.LENGTH_LONG).show()
-                win.visibility = View.VISIBLE
-                (activity as Sequence_game).passStage(passed)
+            if(option2.tag == figura1.tag){
+                puntos += 50
+                println("Esto son tus puntos: " + puntos)
+                genSequence()
+            }
+        }
+
+        option3.setOnClickListener {
+            if(option3.tag == figura1.tag){
+                puntos += 50
+                println("Esto son tus puntos: " + puntos)
+                genSequence()
             }
         }
 
@@ -61,22 +74,48 @@ class Sequence_stage1 : Fragment() {
     fun genSequence( ) {
 
         val randomIndex = Random.nextInt(0, FigureConstants.words.size)
-        val imageToUse = FigureConstants.words[randomIndex]
+
+        val imageToUse = FigureConstants.words[randomIndex] //3 "varawiiii!!!"
         val imageResource = resources.getIdentifier(imageToUse, null, context?.packageName)
-        val imageToUse2 = FigureConstants.words2[randomIndex]
+
+        val imageToUse2 = FigureConstants.words2[randomIndex] //2 "pocion"
         val imageResource2 = resources.getIdentifier(imageToUse2, null, context?.packageName)
-        val imageToUse3 = FigureConstants.words3[randomIndex]
+
+        val imageToUse3 = FigureConstants.words3[randomIndex] //1 "araña"
         val imageResource3 = resources.getIdentifier(imageToUse3, null, context?.packageName)
+
+        // Se llena la lista mutable con los valores de los imagesResourse
+        val list = mutableListOf(imageResource, imageResource2, imageResource3)
+        // ["pocion", "araña", "varawiiii!!!"]
+        val list2 = mutableListOf<Int>()
+
+        while (list.size > 0){
+
+            //Se genera un numero aleatorio 0 al tamaño de la listaMutable [2]
+            val randomIndex2 = Random.nextInt(0, list.size)
+            //Se obtiene ese valor de la lista mutable "araña"
+            val comparacion = list[randomIndex2]
+            //Cuando se obtiene el numero se remueve de la lista
+            list.removeAt(randomIndex2)
+            // ["pocion", "varawiiii!!!"]
+            // Se agrega el valor removido "araña" a un boton junto a su tag
+            list2.add(comparacion)
+
+        }
+
+        option1.setBackgroundResource(list2[0])
+        option2.setBackgroundResource(list2[1])
+        option3.setBackgroundResource(list2[2])
+
         figura1.setImageResource(imageResource)
-        figura2.setImageResource(imageResource)
+        figura2.setImageResource(imageResource3)
         figura3.setImageResource(imageResource2)
-        figura4.setImageResource(imageResource3)
-        figura5.setImageResource(imageResource3)
-        option1.setBackgroundResource(imageResource)
-        option2.setBackgroundResource(imageResource2)
-        option3.setBackgroundResource(imageResource3)
-        figura2.tag = imageResource2
-        option2.tag = imageResource2
+
+        //Se repite el procedimiento
+        figura1.tag = imageResource
+        option1.tag = list2[0]
+        option2.tag = list2[1]
+        option3.tag = list2[2]
 
     }
 

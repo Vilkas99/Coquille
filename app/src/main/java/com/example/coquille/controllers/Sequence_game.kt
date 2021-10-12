@@ -100,4 +100,13 @@ class Sequence_game : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun routeToPreview(view : View){
+        val intent = Intent(this, PreviewGame::class.java)
+        val nameGame :String = "sequence"
+        val b : Bundle = Bundle()
+        b.putString("indexArray", nameGame)
+        intent.putExtras(b)
+        startActivity(intent)
+    }
+
 }

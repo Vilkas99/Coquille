@@ -12,10 +12,10 @@ object Data {
     val cardCuentos3 = CardContent("El patito feo", 2, R.drawable.duck)
     val cardCuentos4 = CardContent("El pájaro y la ballena", 5, R.drawable.whale)
 
-    val cardSecuencia1 = CardContent("Prueba de la descripción ahhhhh D: SECUENCIA")
-    val cardSecuencia2 = CardContent("Hansel & SECUENCIA", 3, R.drawable.ic_fire)
-    val cardSecuencia3 = CardContent("Los 3 cochinitos", 2, R.drawable.ic_colorful_logo)
-    val cardSecuencia4 = CardContent("Prueba de juego aaa", 5, R.drawable.ic_fire)
+    val cardSecuencia1 = CardContent("Bienvenido al juego de la secuencia, pase")
+    val cardSecuencia2 = CardContent("Figuras", 1, R.drawable.ic_fire)
+    val cardSecuencia3 = CardContent("Dinosaurios", 3, R.drawable.ic_colorful_logo)
+    val cardSecuencia4 = CardContent("Harry Potter y la Cámara del Doctor Octopus", 5, R.drawable.ic_fire)
 
     val cardMemoria1 = CardContent("Prueba de la descripción ahhhhh D: MEMORIA")
     val cardMemoria2 = CardContent("Hansel & MEMORIA", 3, R.drawable.ic_candyhouse)

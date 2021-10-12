@@ -219,7 +219,7 @@ class PreviewGame() : AppCompatActivity() {
 
             }
             "Juego de colores? xd" -> {
-                val intent = Intent(this, BookGame::class.java)
+                val intent = Intent(this, Repeated_figures::class.java)
                 startActivity(intent)
             }
             else -> println("Juego inexistente")
