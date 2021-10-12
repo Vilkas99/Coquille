@@ -40,6 +40,8 @@ class Turtle : AppCompatActivity() {
     lateinit var waterView : View
     lateinit var slowMotionView : View
 
+    var padding  = 20
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -49,6 +51,7 @@ class Turtle : AppCompatActivity() {
         binding = ActivityTurtleBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
+        padding = -50
 
         //Current Pos
         positions = mutableListOf<View>()
@@ -57,24 +60,24 @@ class Turtle : AppCompatActivity() {
         currentPosView.setTag(currentPos)
 
         positions.add(currentPosView)
-        createAnimation(binding.circuloOrigin, R.raw.turtle, 30)
+        Utils.createAnimation(binding.circuloOrigin, R.raw.turtle, 30, padding)
 
         //Get FireElements
 
         val fire1 = Position(Utils.getId(binding.circulo7), "fire", 3, 1 )
         binding.circulo7.setTag(fire1)
         positions.add(binding.circulo7)
-        createAnimation(binding.circulo7, R.raw.fire_animation, 30)
+        Utils.createAnimation(binding.circulo7, R.raw.fire_animation, 30, padding)
 
         val fire2 = Position(Utils.getId(binding.circulo9), "fire", 2, 0)
         binding.circulo9.setTag(fire2)
         positions.add(binding.circulo9)
-        createAnimation(binding.circulo9, R.raw.fire_animation, 30)
+        Utils.createAnimation(binding.circulo9, R.raw.fire_animation, 30, padding)
 
         val fire3 = Position(Utils.getId(binding.circulo1), "fire", 0, 0)
         binding.circulo1.setTag(fire3)
         positions.add(binding.circulo1)
-        createAnimation(binding.circulo1, R.raw.fire_animation, 30)
+        Utils.createAnimation(binding.circulo1, R.raw.fire_animation, 30, padding)
 
         firePositions = mutableListOf(binding.circulo1, binding.circulo9, binding.circulo7)
 
@@ -82,12 +85,12 @@ class Turtle : AppCompatActivity() {
         val shark1 = Position(Utils.getId(binding.circulo8), "monkey", 3, 0)
         binding.circulo8.setTag(shark1)
         positions.add(binding.circulo8)
-        createAnimation(binding.circulo8, R.raw.shark, 30)
+        Utils.createAnimation(binding.circulo8, R.raw.shark, 30, padding)
 
         val shark2 = Position(Utils.getId(binding.circulo2), "monkey", 0, 2)
         binding.circulo2.setTag(shark2)
         positions.add(binding.circulo2)
-        createAnimation(binding.circulo2, R.raw.shark,30)
+        Utils.createAnimation(binding.circulo2, R.raw.shark,30, padding)
 
         sharkPositions = mutableListOf(binding.circulo8, binding.circulo2)
 
@@ -106,10 +109,10 @@ class Turtle : AppCompatActivity() {
         if( tag.state == "position"){
             if (gameState.handleInteraction("move",this, view)) {
                 currentPosView.setBackgroundResource(R.drawable.ic_pos_circle)
-                stopAnimation(currentPosView as LottieAnimationView)
+                Utils.stopAnimation(currentPosView as LottieAnimationView)
 
                 view.setBackgroundResource(R.drawable.ic_pos_circle)
-                createAnimation(view as LottieAnimationView, R.raw.turtle, 30)
+                Utils.createAnimation(view as LottieAnimationView, R.raw.turtle, 30, padding)
 
                 currentPosView = gameState.currentPosition
 
@@ -122,7 +125,7 @@ class Turtle : AppCompatActivity() {
                 firePositions = gameState.firePositions
 
                 view.setBackgroundResource(R.drawable.ic_pos_circle)
-                stopAnimation(view as LottieAnimationView)
+                Utils.stopAnimation(view as LottieAnimationView)
 
                 waterView.setBackgroundResource(R.drawable.habilidad_2_lock)
                 binding.puntosText.setText(gameState.points.toString())
@@ -133,8 +136,8 @@ class Turtle : AppCompatActivity() {
             if (gameState.handleInteraction("slowMotion", this, null)){
                 slowMotionView.setBackgroundResource(R.drawable.habilidad_3_lock)
 
-                stopAnimation(currentPosView as LottieAnimationView)
-                createAnimation(currentPosView as LottieAnimationView, R.raw.turtle_fire, 40)
+                Utils.stopAnimation(currentPosView as LottieAnimationView)
+                Utils.createAnimation(currentPosView as LottieAnimationView, R.raw.turtle_fire, 40, padding)
 
                 setMovementPosition(positions, true, false)
             }
@@ -142,8 +145,8 @@ class Turtle : AppCompatActivity() {
             if (gameState.handleInteraction("freezeMonkey",this, null)){
                 freezeMonkeyView.setBackgroundResource(R.drawable.habilidad_1_lock)
                 sharkPositions.forEach{ shark ->
-                    stopAnimation(shark as LottieAnimationView)
-                    createAnimation(shark as LottieAnimationView, R.raw.shark_freeze, 50)
+                    Utils.stopAnimation(shark as LottieAnimationView)
+                    Utils.createAnimation(shark as LottieAnimationView, R.raw.shark_freeze, 50, padding)
 
                 }
             }
@@ -157,17 +160,7 @@ class Turtle : AppCompatActivity() {
         }
     }
 
-    fun createAnimation(view : LottieAnimationView, animation: Int, repeatCount : Int){
-        view.setAnimation(animation)
-        view.playAnimation()
-        view.setPadding(-70, -70, -70, -70)
-        view.repeatCount = repeatCount;
-    }
 
-    fun stopAnimation(view: LottieAnimationView){
-        view.repeatCount = 0
-        view.setImageDrawable(null)
-    }
 
     fun createElements(myLayout: ConstraintLayout) {
         myLayout.forEach { view ->
@@ -283,15 +276,15 @@ class Turtle : AppCompatActivity() {
         if (gameState.currentState == "freeze"){
             if (gameState.freezeDuration == 0){
                 sharkPositions.forEach{ shark ->
-                    stopAnimation(shark as LottieAnimationView)
-                    createAnimation(shark as LottieAnimationView, R.raw.shark, 70)
+                    Utils.stopAnimation(shark as LottieAnimationView)
+                    Utils.createAnimation(shark as LottieAnimationView, R.raw.shark, 70, padding)
                 }
                 gameState.currentState = "normal"
             }
         } else if (gameState.currentState == "slow"){
             if (gameState.slowDuration == 0){
-                stopAnimation(currentPosView as LottieAnimationView)
-                createAnimation(currentPosView as LottieAnimationView, R.raw.turtle, 70)
+                Utils.stopAnimation(currentPosView as LottieAnimationView)
+                Utils.createAnimation(currentPosView as LottieAnimationView, R.raw.turtle, 70, padding)
                 gameState.currentState = "normal"
             }
         }
@@ -307,7 +300,7 @@ class Turtle : AppCompatActivity() {
         var data = newPossiblePosition.getTag() as Position
         data.state = "fire"
 
-        createAnimation(newPossiblePosition as LottieAnimationView, R.raw.fire_animation, 30)
+        Utils.createAnimation(newPossiblePosition as LottieAnimationView, R.raw.fire_animation, 30, padding)
         firePositions.add(newPossiblePosition)
         gameState.firePositions = firePositions
     }
@@ -324,11 +317,11 @@ class Turtle : AppCompatActivity() {
 
                 val originalData = view.getTag() as Position
                 originalData.state = "position"
-                stopAnimation(view as LottieAnimationView)
+                Utils.stopAnimation(view as LottieAnimationView)
 
                 val newSharkData = newPossibleSharkPos.getTag() as Position
                 newSharkData.state = "monkey"
-                createAnimation(newPossibleSharkPos as LottieAnimationView, R.raw.shark, 40)
+                Utils.createAnimation(newPossibleSharkPos as LottieAnimationView, R.raw.shark, 40, padding)
 
                 newSharks.add(newPossibleSharkPos)
             }

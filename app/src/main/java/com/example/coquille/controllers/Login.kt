@@ -6,9 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
 import com.example.coquille.R
+import com.example.coquille.databinding.ActivityLoginBinding
 
+import com.example.coquille.utils.Utils
 
 
 class Login : AppCompatActivity() {
@@ -17,6 +18,7 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val binding = ActivityLoginBinding.inflate(LayoutInflater.from(this))
 
     }
 
