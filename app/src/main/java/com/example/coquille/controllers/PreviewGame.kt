@@ -81,7 +81,7 @@ class PreviewGame() : AppCompatActivity() {
             }
             "tortuga" -> {
                 cardsGame = Data.getCard("Tortuga")
-                binding.gameTitle.setText("Juego de tortuga? xd")
+                binding.gameTitle.setText("Las aventuras de Tuga")
                 binding.iconHeader.setImageDrawable(resources.getDrawable(R.drawable.ic_tortuguita_logo))
 
                 binding.bodyDescription.setText(cardsGame[0].textCard)
@@ -178,8 +178,8 @@ class PreviewGame() : AppCompatActivity() {
                 val intent = Intent(this, Login::class.java)
                 startActivity(intent)
             }
-            "Juego de tortuga? xd" -> {
-                val intent = Intent(this, profile::class.java)
+            "Las aventuras de Tuga" -> {
+                val intent = Intent(this, Turtle::class.java)
                 startActivity(intent)
             }
             "Cuentos asombrosos" -> {
