@@ -7,14 +7,10 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
-import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.Guideline
-import androidx.core.view.forEach
 import com.airbnb.lottie.LottieAnimationView
 import com.example.coquille.R
 import com.example.coquille.databinding.ActivityTurtleBinding
+import com.example.coquille.models.games.Turtle.Level
 import com.example.coquille.models.games.Turtle.Position
 import com.example.coquille.models.games.Turtle.TurtleGame
 import com.example.coquille.utils.MySharedPreferences
@@ -36,11 +32,14 @@ class Turtle : AppCompatActivity() {
     lateinit var sharkPositions: MutableList<View>
 
     //Abilities
-    lateinit var freezeMonkeyView : View
+    lateinit var freezeSharkView : View
     lateinit var waterView : View
     lateinit var slowMotionView : View
 
-    var padding  = 20
+    //Levels
+    val level1 = TurtleLevel1_Fragment()
+
+    var padding  = -50
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,57 +50,42 @@ class Turtle : AppCompatActivity() {
         binding = ActivityTurtleBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        padding = -50
+        freezeSharkView = binding.freeze
+        val freezeValue = Position(Utils.getId(freezeSharkView), "freezeShark",0,0)
+        freezeSharkView.setTag(freezeValue)
 
-        //Current Pos
-        positions = mutableListOf<View>()
-        currentPosView = binding.circuloOrigin
-        var currentPos = Position(Utils.getId(currentPosView), "player", 0, 1)
-        currentPosView.setTag(currentPos)
+        waterView = binding.water
+        val waterValue = Position(Utils.getId(waterView), "water",0,0)
+        waterView.setTag(waterValue)
 
-        positions.add(currentPosView)
-        Utils.createAnimation(binding.circuloOrigin, R.raw.turtle, 30, padding)
+        slowMotionView = binding.slowMotion
+        val slowValue = Position(Utils.getId(slowMotionView), "slowMotion",0,0)
+        slowMotionView.setTag(slowValue)
 
-        //Get FireElements
 
-        val fire1 = Position(Utils.getId(binding.circulo7), "fire", 3, 1 )
-        binding.circulo7.setTag(fire1)
-        positions.add(binding.circulo7)
-        Utils.createAnimation(binding.circulo7, R.raw.fire_animation, 30, padding)
+        chooseLevel()
 
-        val fire2 = Position(Utils.getId(binding.circulo9), "fire", 2, 0)
-        binding.circulo9.setTag(fire2)
-        positions.add(binding.circulo9)
-        Utils.createAnimation(binding.circulo9, R.raw.fire_animation, 30, padding)
 
-        val fire3 = Position(Utils.getId(binding.circulo1), "fire", 0, 0)
-        binding.circulo1.setTag(fire3)
-        positions.add(binding.circulo1)
-        Utils.createAnimation(binding.circulo1, R.raw.fire_animation, 30, padding)
-
-        firePositions = mutableListOf(binding.circulo1, binding.circulo9, binding.circulo7)
-
-        //Get monkeyPositions
-        val shark1 = Position(Utils.getId(binding.circulo8), "monkey", 3, 0)
-        binding.circulo8.setTag(shark1)
-        positions.add(binding.circulo8)
-        Utils.createAnimation(binding.circulo8, R.raw.shark, 30, padding)
-
-        val shark2 = Position(Utils.getId(binding.circulo2), "monkey", 0, 2)
-        binding.circulo2.setTag(shark2)
-        positions.add(binding.circulo2)
-        Utils.createAnimation(binding.circulo2, R.raw.shark,30, padding)
-
-        sharkPositions = mutableListOf(binding.circulo8, binding.circulo2)
-
-        //Get all elements from XML
-        createElements(binding.mainLayout)
-
-        gameState = TurtleGame(currentPosView,  0, 120, firePositions, sharkPositions)
         timerSequence(50000,1000, this)
     }
 
     //TODO: Vincular los objetos con la interacción del usuario
+
+
+    fun chooseLevel() {
+        supportFragmentManager.beginTransaction().apply {
+            replace(binding.turtleLevel.id, level1)
+            commit()
+        }
+    }
+
+    fun setLevel(level : Level){
+        positions = level.positions
+        firePositions = level.firePos
+        sharkPositions = level.sharkPos
+        currentPosView = level.initialPos
+        gameState = TurtleGame(currentPosView,  0, 120, firePositions, sharkPositions)
+    }
 
 
     fun handleInteraction(view: View?){
@@ -145,9 +129,9 @@ class Turtle : AppCompatActivity() {
 
                 setMovementPosition(positions, true, false)
             }
-        } else if (tag.state == "freezeMonkey"){
-            if (gameState.handleInteraction("freezeMonkey",this, null)){
-                freezeMonkeyView.setBackgroundResource(R.drawable.habilidad_1_lock)
+        } else if (tag.state == "freezeShark"){
+            if (gameState.handleInteraction("freezeShark",this, null)){
+                freezeSharkView.setBackgroundResource(R.drawable.habilidad_1_lock)
                 sharkPositions.forEach{ shark ->
                     Utils.stopAnimation(shark as LottieAnimationView)
                     Utils.createAnimation(shark as LottieAnimationView, R.raw.shark_freeze, 50, padding)
@@ -167,49 +151,7 @@ class Turtle : AppCompatActivity() {
 
 
 
-    fun createElements(myLayout: ConstraintLayout) {
-        myLayout.forEach { view ->
-            val id = Utils.getId(view)
 
-            if (id == "com.example.coquille:id/water") {
-                waterView = view
-                val value = Position(Utils.getId(waterView), "water",0,0)
-                waterView.setTag(value)
-            }
-            else if (id == "com.example.coquille:id/freeze"){
-                freezeMonkeyView = view
-                val value = Position(Utils.getId(freezeMonkeyView), "freezeMonkey",0,0)
-                freezeMonkeyView.setTag(value)
-            }
-            else if (id == "com.example.coquille:id/slowMotion"){
-                slowMotionView = view
-                val value = Position(Utils.getId(slowMotionView), "slowMotion",0,0)
-                slowMotionView.setTag(value)
-            } else if(id == "com.example.coquille:id/wowIcon"){
-                print("Nice")
-            }
-            else {
-                if (!firePositions.contains(view) && !sharkPositions.contains(view) && currentPosView != view) {
-                    if (view !is Guideline && view !is CardView && view !is TextView ){
-                        val (row, col) = getRowAndCol(view.getTag() as String)
-                        val position = Position(id, "position", row, col)
-                        view.setTag(position)
-                        positions.add(view)
-                    }
-
-                }
-            }
-        }
-    }
-
-    fun getRowAndCol(tag : String) : Pair<Int, Int>{
-        val row = (tag[0].toInt() - '0'.toInt())
-        val col = (tag[2].toInt() - '0'.toInt())
-
-        val result = Pair(row, col)
-
-        return result
-    }
 
     fun timerSequence(time: Long, intervalo: Long, context : Context){
         var monkeyTime = 0
@@ -269,7 +211,7 @@ class Turtle : AppCompatActivity() {
         if (gameState.coolDownFreezeMonkey > 0) binding.cooldownFreeze.setText(gameState.coolDownFreezeMonkey.toString())
         else {
             binding.cooldownFreeze.text = ""
-            freezeMonkeyView.setBackgroundResource(R.drawable.habilidad_1)
+            freezeSharkView.setBackgroundResource(R.drawable.habilidad_1)
         }
 
         if (gameState.coolDownSlowMotion > 0) binding.cooldownSlowMotion.setText(gameState.coolDownSlowMotion.toString())

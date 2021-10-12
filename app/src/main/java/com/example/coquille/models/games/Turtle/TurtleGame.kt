@@ -87,7 +87,7 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
                 slowDuration = 6
                 return true
             }
-        } else if (nextState == "freezeMonkey"){
+        } else if (nextState == "freezeShark"){
             if (coolDownFreezeMonkey == 0){
                 currentState = "freeze"
                 coolDownFreezeMonkey = 10
