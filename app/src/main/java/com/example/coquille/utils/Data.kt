@@ -108,9 +108,9 @@ object Data {
        "Cada vez que la $ballena miraba un $pajaro volando alto en el cielo, pensaba en su $pajaro. Ella esperaba que él estuviera disfrutando de los cielos de esa manera.",
        "Y cada vez que el $pajaro veía una $ballena sumergiéndose profundo en el océano ($agua), pensaba en su $ballena. Él esperaba que ella estuviera disfrutando del océano de esa manera."
     )
-    val res1Pajaro = Question("¿De qué color es el pájaro?", arrayOf(cafe, azul, amarillo), 1, 5)
-    val res2Pajaro = Question("¿Qué les gusta comer a la ballena y al pájaro?", arrayOf(pez, pulpo, sandia), 0, 11)
-    val res3Pajaro = Question("Al final la ballena y el pájaro se pelearon", arrayOf(check, cross), 1, 26)
+    val res1Pajaro = Question("¿De qué color es el $pajaro?", arrayOf("Café ($cafe)", "Azul ($azul)", "Amarillo ($amarillo)"), 1, 5)
+    val res2Pajaro = Question("¿Qué les gusta comer a la $ballena y al $pajaro?", arrayOf("Pez ($pez)", "Pulpo ($pulpo)", "Sandías ($sandia)"), 0, 11)
+    val res3Pajaro = Question("Al final la $ballena y el $pajaro se pelearon", arrayOf("Verdadero ($check)", "Falso ($cross)"), 1, 26)
 
     val patitoFeo = arrayOf("En la granja había un gran alboroto: los polluelos de Mamá Pata ($pato) estaban rompiendo el cascarón.",
         "Uno a uno, comenzaron a salir. Mamá Pata ($pato) estaba tan emocionada con sus patitos ($patito) que no notó que uno de sus $huevo, permanecía intacto.",
@@ -125,8 +125,8 @@ object Data {
         "Él no era un $patito feo, sino un apuesto y joven $cisne. Ahora sabía por qué se veía tan diferente a sus hermanos y hermanas.",
         "¡Ellos eran $patito, pero él era un $cisne!"
     )
-    val res1Patito = Question("¿De qué color era el último patito que salió?", arrayOf(gris, naranja, amarillo), 0, 6)
-    val res2Patito = Question("¿Qué era realmente el patito feo?", arrayOf(pajaro, pato, cisne), 2, 12)
+    val res1Patito = Question("¿De qué color era el último patito ($patito) que salió?", arrayOf("Gris ($gris)", "Naranja ($naranja)", "Amarillo ($amarillo)"), 0, 6)
+    val res2Patito = Question("¿Qué era realmente el patito ($patito) feo?", arrayOf("Pájaro ($pajaro)", "Pato ($pato)", "Cisne ($cisne)"), 2, 12)
 
     val leonRatonCuento = arrayOf("En un día muy soleado ($sol), dormía plácidamente un $leon cuando un pequeño $raton pasó por su lado y lo despertó.",
         "El $leon tomó al $raton con sus enormes garras y cuando estaba a punto de aplastarlo, escuchó al $raton decirle: ",
@@ -136,7 +136,7 @@ object Data {
         "El $raton, fiel a su promesa, acudió en su ayuda. Sin tiempo($tiempo) que perder, comenzó a morder la red hasta dejar al $leon en libertad.",
         "El $leon agradeció al $raton por haberlo salvado y desde ese día comprendió que todos los seres son importantes($corazon)."
         )
-    val res1Raton = Question("¿Quién fue atrapado por la red de unos cazadores", arrayOf(raton, pez, leon), 2, 7)
+    val res1Raton = Question("¿Quién fue atrapado por la red de unos cazadores", arrayOf("Ratón ($raton)", "Pez ($pez)", "León ($leon)"), 2, 7)
 
 
     fun getEmojiByUnicode(unicode: Int): String{
