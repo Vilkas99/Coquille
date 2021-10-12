@@ -183,6 +183,7 @@
 
 
             <LinearLayout
+                android:id="@+id/layoutPage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="6"
@@ -197,8 +198,10 @@
                     android:fontFamily="@font/geosans"
                     android:padding="20dp"
                     android:text="espero no llorar cuando esto no funcione. Pero bueno qué se le puede hacer en esta vida mas que llorar y darle o llorar y morir soliot unu"
-                    android:textSize="30dp"
-                    />
+                    android:textSize="30dp"/>
+
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -222,6 +225,7 @@
 
     </androidx.cardview.widget.CardView>
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/itemHint"
         android:layout_width="85dp"
@@ -229,6 +233,7 @@
         android:stateListAnimator="@null"
         android:translationX="20dp"
         app:cardCornerRadius="50dp"
+        android:padding="10dp"
 
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
