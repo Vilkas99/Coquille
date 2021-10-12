@@ -64,7 +64,7 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
 
 
     fun handleInteraction(nextState : String , context: Context, payload : Any?) : Boolean{
-        if(nextState == "move" && playerState == "moving") {
+        if((nextState == "move" && (playerState == "moving" || currentState == "slow"))) {
             if (nextMovement(payload as View, context)){
                 playerState = "normal"
                 slowDuration = 0
@@ -165,5 +165,15 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
         }
 
         return false
+    }
+
+    fun returnNeighbour(positionsToEvaluate: MutableList<View> ) : MutableList<View>{
+        var mutableList = mutableListOf<View>()
+        positionsToEvaluate.forEach{ position ->
+            if(isANeighbour(position))
+                mutableList.add(position)
+        }
+
+        return mutableList
     }
 }
