@@ -110,6 +110,7 @@ class Turtle : AppCompatActivity() {
             if (gameState.handleInteraction("move",this, view)) {
                 currentPosView.setBackgroundResource(R.drawable.ic_pos_circle)
                 Utils.stopAnimation(currentPosView as LottieAnimationView)
+                Utils.stopAnimation(binding.wowIcon )
 
                 view.setBackgroundResource(R.drawable.ic_pos_circle)
                 Utils.createAnimation(view as LottieAnimationView, R.raw.turtle, 30, padding)
@@ -124,11 +125,14 @@ class Turtle : AppCompatActivity() {
             if (gameState.handleInteraction("removeFire",this, view)){
                 firePositions = gameState.firePositions
 
+
                 view.setBackgroundResource(R.drawable.ic_pos_circle)
                 Utils.stopAnimation(view as LottieAnimationView)
 
                 waterView.setBackgroundResource(R.drawable.habilidad_2_lock)
                 binding.puntosText.setText(gameState.points.toString())
+
+                randomNice()
 
             }
 
@@ -147,8 +151,9 @@ class Turtle : AppCompatActivity() {
                 sharkPositions.forEach{ shark ->
                     Utils.stopAnimation(shark as LottieAnimationView)
                     Utils.createAnimation(shark as LottieAnimationView, R.raw.shark_freeze, 50, padding)
-
                 }
+
+                randomNice()
             }
         } else if (tag.state == "player"){
             gameState.playerState = "moving"
@@ -180,6 +185,8 @@ class Turtle : AppCompatActivity() {
                 slowMotionView = view
                 val value = Position(Utils.getId(slowMotionView), "slowMotion",0,0)
                 slowMotionView.setTag(value)
+            } else if(id == "com.example.coquille:id/wowIcon"){
+                print("Nice")
             }
             else {
                 if (!firePositions.contains(view) && !sharkPositions.contains(view) && currentPosView != view) {
@@ -303,6 +310,18 @@ class Turtle : AppCompatActivity() {
         Utils.createAnimation(newPossiblePosition as LottieAnimationView, R.raw.fire_animation, 30, padding)
         firePositions.add(newPossiblePosition)
         gameState.firePositions = firePositions
+    }
+
+    fun randomNice(){
+        val nextIndexRandom = (0 until 10).random()
+        if (nextIndexRandom > 3){
+            val randomIndexAnimation = (0 until 2).random()
+            when (randomIndexAnimation){
+                0 -> Utils.createAnimation(binding.wowIcon, R.raw.nice_emoji, 1, 460)
+                1 -> Utils.createAnimation(binding.wowIcon, R.raw.epic_emoji, 1, 460)
+                2 -> Utils.createAnimation(binding.wowIcon, R.raw.love_emoji, 1, 460)
+            }
+        }
     }
 
     fun setSharkPositions(){

@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
+import com.airbnb.lottie.LottieAnimationView
 import com.example.coquille.R
+import com.example.coquille.utils.Utils
 
 
 class activity_home : AppCompatActivity() {
@@ -16,6 +18,8 @@ class activity_home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        Utils.createAnimation(findViewById<View>(R.id.racha_icon) as LottieAnimationView, R.raw.fire_animation, 10, -50)
 
     }
 

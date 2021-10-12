@@ -94,7 +94,7 @@
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <ImageView
+                <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/racha_icon"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
