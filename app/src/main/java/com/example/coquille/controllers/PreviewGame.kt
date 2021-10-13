@@ -20,6 +20,7 @@ import com.example.coquille.models.CardContent
 import com.example.coquille.utils.Data
 import android.widget.LinearLayout.LayoutParams;
 import com.example.coquille.controllers.Turtle.Turtle
+import com.example.coquille.controllers.Turtle.tutorial.TurtleTutorial
 
 class PreviewGame() : AppCompatActivity() {
 
@@ -178,7 +179,7 @@ class PreviewGame() : AppCompatActivity() {
                 startActivity(intent)
             }
             "Las aventuras de Tuga" -> {
-                val intent = Intent(this, Turtle::class.java)
+                var intent = Intent(this, Turtle::class.java)
                 val bTurtle  = Bundle()
                 var level = "tutorial"
 
@@ -186,6 +187,7 @@ class PreviewGame() : AppCompatActivity() {
                 when(card){
                     "com.example.coquille:id/card1" -> {
                         level = "tutorial"
+                        intent = Intent(this, TurtleTutorial::class.java)
                     }
                     "com.example.coquille:id/card2" -> {
                         level = "level1"

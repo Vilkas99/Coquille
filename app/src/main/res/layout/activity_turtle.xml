@@ -268,7 +268,15 @@
         app:layout_constraintBottom_toTopOf="@+id/middle_H_3"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/top_H_2" />
+        app:layout_constraintTop_toTopOf="@+id/top_H_2" >
 
+        <ImageView
+            android:id="@+id/returnToHome"
+            android:layout_width="62dp"
+            android:layout_height="38dp"
+            android:onClick="routeToHomeButton"
+            android:rotation="180"
+            android:src="@drawable/ic_flecha_correcta" />
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

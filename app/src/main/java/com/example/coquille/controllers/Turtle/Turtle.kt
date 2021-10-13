@@ -225,6 +225,11 @@ class Turtle : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun routeToHomeButton(view : View) {
+        val intent = Intent(this, activity_home::class.java)
+        startActivity(intent)
+    }
+
     fun evaluateCoolDown(){
         if (gameState.coolDownWater > 0) binding.cooldownWater.setText(gameState.coolDownWater.toString())
         else {
