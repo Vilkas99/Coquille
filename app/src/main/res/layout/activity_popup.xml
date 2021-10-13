@@ -9,8 +9,8 @@
     <ImageView
         android:id="@+id/resultadosImage"
         android:src="@drawable/ic_diamondorange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="center" />
     <TextView
         android:id="@+id/textResultados"
@@ -43,23 +43,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/botonResultados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/botonContinuar"
         android:paddingHorizontal="30dp"
         android:paddingVertical="11dp"
         android:elevation="12dp"
         android:layout_gravity="center"
-        android:background="@drawable/shape_linear_layout_yellow">
-        <TextView
-            android:textColor="#000000"
-            android:layout_width="wrap_content"
-            android:text="Continuar"
-            android:textSize="20sp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/geosans"/>
-    </LinearLayout>
+        android:background="@drawable/shape_linear_layout_yellow"
+        android:text="Continuar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    </Button>
 
 </LinearLayout>

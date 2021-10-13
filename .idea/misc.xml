@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/shape_linear_layout.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/shape_linear_layout_white.xml" value="0.3828125" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_book_game.xml" value="0.2753623188405797" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/drawable/shape_linear_layout_yellow.xml" value="0.3828125" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_book_game.xml" value="0.264" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_login.xml" value="0.2753623188405797" />
-        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_popup.xml" value="0.264" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/activity_popup.xml" value="0.1" />
+        <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/points_counter.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/popup_window.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/drawable/circle.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/Coquille/app/src/main/res/drawable/ic_circle.xml" value="0.19947916666666668" />
@@ -47,7 +49,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

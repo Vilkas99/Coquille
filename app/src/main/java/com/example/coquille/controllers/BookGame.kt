@@ -1,5 +1,6 @@
 package com.example.coquille.controllers
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,12 +17,15 @@ import android.os.Handler;
 import android.os.Looper
 import androidx.cardview.widget.CardView
 import com.example.coquille.models.Book.Book
+import com.example.coquille.utils.Popup
 
 
 class BookGame : AppCompatActivity() {
     private lateinit var binding: ActivityBookGameBinding
     lateinit var questionsLevel : Array<Question>
     lateinit var pagesLevel : Array<String>
+    lateinit var dialog : Dialog
+    lateinit var buttonClose : Button
 
     var indexCuento = 0;
     var indexPregunta = 0;
@@ -31,6 +35,8 @@ class BookGame : AppCompatActivity() {
     lateinit var textCuento : TextView
     var controlers = ViewElements(this)
     val handler = Handler(Looper.getMainLooper())
+    val b:Bundle = Bundle()
+    var listCorrect : Array<String> = arrayOf("¡Correcto!", "+20 Gemas")
 
     var game = Book(0,0)
 
@@ -42,7 +48,8 @@ class BookGame : AppCompatActivity() {
         val bundle =intent.getStringExtra("level").toString()
         textCuento= binding.textPage
         hintItem = binding.itemHint
-
+        dialog = Dialog(this)
+        //buttonClose = dialog.findViewById<Button>(R.id.botonContinuar)
 
         when(bundle){
             "El león y el ratón" -> {
@@ -96,7 +103,14 @@ class BookGame : AppCompatActivity() {
     fun checkAnswer(radioGroup: RadioGroup, button: MaterialButton){
         val radioID = radioGroup.checkedRadioButtonId
         if(radioID == questionsLevel[indexPregunta].correctAnswer){
-            Toast.makeText(applicationContext, "RESPUESTA CORRECTA :D", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Popup::class.java)
+            b.putString("titlePopup", listCorrect[0])
+            b.putString("bodyPopup", listCorrect[1])
+            intent.putExtras(b)
+            startActivity(intent)
+            /*buttonClose.setOnClickListener {
+                dialog.dismiss()
+            }*/
         } else {
             Toast.makeText(applicationContext, "RESPUESTA INCORRECTA D:", Toast.LENGTH_SHORT).show()
         }
