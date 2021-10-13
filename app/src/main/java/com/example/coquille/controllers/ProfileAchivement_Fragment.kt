@@ -21,13 +21,10 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
     lateinit var sharedPreferences: MySharedPreferences
 
     lateinit var primerLogro : ImageView
-    lateinit var segundoLogro : ImageView
 
     lateinit var primerLogroTitulo: TextView
-    lateinit var segundoLogroTitulo: TextView
 
     lateinit var primerLogroCosto: TextView
-    lateinit var segundoLogroCosto: TextView
 
     lateinit var usuario : User
 
@@ -37,13 +34,10 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
         sharedPreferences = MySharedPreferences(requireContext())
 
         primerLogroTitulo = rootView.findViewById(R.id.logro1Titulo)
-        segundoLogroTitulo = rootView.findViewById(R.id.logro2Titulo)
 
         primerLogro = rootView.findViewById(R.id.logro1)
-        segundoLogro = rootView.findViewById(R.id.logro2)
 
         primerLogroCosto = rootView.findViewById(R.id.logro1Costo)
-        segundoLogroCosto = rootView.findViewById(R.id.logro2Costo)
 
         usuario = Utils.getCurrentUser(requireContext())
 
@@ -60,18 +54,6 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
             }
         })
 
-        segundoLogro.setOnClickListener(object : View.OnClickListener {
-              override fun onClick(view: View?) {
-                if (lookForCollectable(segundoLogroTitulo.text.toString())){
-                    updateAvatarConfirmation(R.raw.profile_orc)
-                } else {
-                    val costo = Integer.parseInt(segundoLogroCosto.text.toString())
-                    val titulo = segundoLogroTitulo.text.toString()
-                    acquireCollectable(titulo, costo, R.drawable.ic_profile_pic_mage)
-                }
-
-            }
-        })
 
         return rootView
     }
@@ -134,6 +116,5 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
         val alert = builder.create()
         alert.show()
     }
-
 
 }

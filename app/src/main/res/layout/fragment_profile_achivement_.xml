@@ -1,36 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".controllers.ProfileInfo_Fragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_H_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_H_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_H_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_V_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_V_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".35" />
 
 
     <ImageView
-                android:id="@+id/logro1"
-                android:layout_width="298dp"
-                android:layout_height="121dp"
-                android:src="@drawable/ic_logro"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.357"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.263" />
-
-
-    <ImageView
-        android:id="@+id/logro2"
-        android:layout_width="301dp"
+        android:id="@+id/logro1"
+        android:layout_width="298dp"
         android:layout_height="121dp"
         android:src="@drawable/ic_logro"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/top_H_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logro1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/top_H_0"
+        app:layout_constraintVertical_bias="0.263" />
+
+
 
     <ImageView
         android:id="@+id/imageView6"
@@ -50,8 +74,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/maia2"
         android:text="Caballero de otro mundo"
-        android:textSize="20dp"
         android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/logro1"
         app:layout_constraintEnd_toEndOf="@+id/logro1"
         app:layout_constraintHorizontal_bias="0.454"
@@ -87,62 +111,8 @@
         app:layout_constraintTop_toBottomOf="@+id/logro1Titulo"
         app:layout_constraintVertical_bias="0.025" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="66dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/ic_profile_pic_mage"
-        app:layout_constraintBottom_toBottomOf="@+id/logro2"
-        app:layout_constraintEnd_toEndOf="@+id/logro2"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintStart_toStartOf="@+id/logro2"
-        app:layout_constraintTop_toBottomOf="@+id/logro1"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/logro2Titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/maia2"
-        android:text="Hechicera del saber"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/logro2"
-        app:layout_constraintEnd_toEndOf="@+id/logro2"
-        app:layout_constraintHorizontal_bias="0.462"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/logro1"
-        app:layout_constraintVertical_bias="0.288" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="34dp"
-        android:layout_height="38dp"
-        android:src="@drawable/ic_points"
-        app:layout_constraintBottom_toBottomOf="@+id/logro2"
-        app:layout_constraintEnd_toEndOf="@+id/logro2"
-        app:layout_constraintHorizontal_bias="0.317"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/logro2Titulo"
-        app:layout_constraintVertical_bias="0.472" />
-
-    <TextView
-        android:id="@+id/logro2Costo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:fontFamily="@font/maia2"
-        android:text="900"
-        android:textColor="@color/black"
-
-        android:textSize="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/logro2"
-        app:layout_constraintEnd_toEndOf="@+id/logro2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/logro2Titulo"
-        app:layout_constraintVertical_bias="0.49" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
