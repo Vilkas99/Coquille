@@ -50,11 +50,11 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
         primerLogro.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
                 if (lookForCollectable(primerLogroTitulo.text.toString())){
-                    updateAvatarConfirmation(R.drawable.ic_profile_pic_orc)
+                    updateAvatarConfirmation(R.raw.profile_orc)
                 } else {
                     val costo = Integer.parseInt(primerLogroCosto.text.toString())
                     val titulo = primerLogroTitulo.text.toString()
-                    acquireCollectable(titulo, costo, R.drawable.ic_profile_pic_orc)
+                    acquireCollectable(titulo, costo, R.raw.profile_orc)
                 }
 
             }
@@ -63,7 +63,7 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
         segundoLogro.setOnClickListener(object : View.OnClickListener {
               override fun onClick(view: View?) {
                 if (lookForCollectable(segundoLogroTitulo.text.toString())){
-                    updateAvatarConfirmation(R.drawable.ic_profile_pic_mage)
+                    updateAvatarConfirmation(R.raw.profile_orc)
                 } else {
                     val costo = Integer.parseInt(segundoLogroCosto.text.toString())
                     val titulo = segundoLogroTitulo.text.toString()
@@ -119,12 +119,12 @@ class ProfileAchivement_Fragment: Fragment(R.layout.fragment_profile_achivement_
         return false
     }
 
-    fun updateAvatarConfirmation(idDrawable : Int){
+    fun updateAvatarConfirmation(animation : Int){
         val builder = AlertDialog.Builder(requireContext())
         builder.setMessage("¿Te gustaría cambiar tu avatar?")
             .setCancelable(false)
             .setPositiveButton("Sí"){dialog, id ->
-                (activity as profile).updateAvatar(idDrawable)
+                (activity as profile).updateAvatar(animation)
 
             }
             .setNegativeButton("No"){ dialog, id ->

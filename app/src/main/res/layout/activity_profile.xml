@@ -151,7 +151,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.077" />
 
-        <ImageView
+        <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/userPic"
             android:layout_width="193dp"
             android:layout_height="214dp"
@@ -160,7 +160,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.361"
-            app:srcCompat="@drawable/ic_profilep_c_king" />
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

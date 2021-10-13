@@ -3,13 +3,14 @@ package com.example.coquille.utils
 import android.content.Context
 import android.view.View
 import android.widget.Toast
+import com.airbnb.lottie.LottieAnimationView
 import com.example.coquille.models.Collectable
 import com.example.coquille.models.User
 import com.google.gson.Gson
 
 object Utils {
 
-    val collectable1 = Collectable("ic_profile_pic_orc", 600, "Caballero de otro mundo")
+    val collectable1 = Collectable("R.raw.profile_orc", 600, "Caballero de otro mundo")
     val collectable2 = Collectable("ic_profile_pic_mage", 900, "Hechicera del saber" )
 
 
@@ -52,6 +53,18 @@ object Utils {
 
     @JvmStatic fun sendMessage(message: String, context: Context) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+    }
+
+    @JvmStatic fun createAnimation(view : LottieAnimationView, animation: Int, repeatCount : Int, padding : Int){
+        view.setAnimation(animation)
+        view.playAnimation()
+        view.setPadding(padding, padding, padding, padding)
+        view.repeatCount = repeatCount;
+    }
+
+    @JvmStatic fun stopAnimation(view: LottieAnimationView){
+        view.repeatCount = 0
+        view.setImageDrawable(null)
     }
 
 

@@ -9,17 +9,18 @@ import com.example.coquille.controllers.activity_home
 import com.example.coquille.models.abstracts.Game
 import com.example.coquille.utils.Utils
 
-class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositions: MutableList<View>,  monkeyPositions: MutableList<View> ): Game("Tortuguita", "¡El pantano se está incendiando! Apaga todos " + "los fuegos y evita a los changuitos antes de que se acabe el tiempo.") {
+class TurtleGame(level : Level, points :Int): Game("Tortuguita", "¡El pantano se está incendiando! Apaga todos " + "los fuegos y evita a los changuitos antes de que se acabe el tiempo.") {
 
-    var currentPosition = currentPosition
-    var firePositions = firePositions
-    var monkeyPositions = monkeyPositions
+    var currentPosition = level.initialPos
+    var firePositions = level.firePos
+    var sharkPositions = level.sharkPos
 
     var currentState = ""
     var playerState = ""
 
     var points = points
-    var totalTime = totalTime
+    var totalTime = level.totalTime
+    var currentTime = 0
 
     var coolDownWater = 0
     var coolDownSlowMotion = 0
@@ -64,7 +65,7 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
 
 
     fun handleInteraction(nextState : String , context: Context, payload : Any?) : Boolean{
-        if(nextState == "move" && playerState == "moving") {
+        if((nextState == "move" && (playerState == "moving" || currentState == "slow"))) {
             if (nextMovement(payload as View, context)){
                 playerState = "normal"
                 slowDuration = 0
@@ -87,7 +88,7 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
                 slowDuration = 6
                 return true
             }
-        } else if (nextState == "freezeMonkey"){
+        } else if (nextState == "freezeShark"){
             if (coolDownFreezeMonkey == 0){
                 currentState = "freeze"
                 coolDownFreezeMonkey = 10
@@ -100,7 +101,7 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
 
     fun nextMovement(nextPos : View, context : Context)  : Boolean {
         if (isANeighbour(nextPos) || currentState == "slow"){
-            if (!firePositions.contains(nextPos) && !monkeyPositions.contains(nextPos)){
+            if (!firePositions.contains(nextPos) && !sharkPositions.contains(nextPos)){
 
                 var posData = currentPosition.getTag() as Position
 
@@ -131,8 +132,8 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
             fireData.state = "position"
             firePos.setTag(fireData)
 
-            val nuevosPuntos = 200 - totalTime
-            points += nuevosPuntos
+            val nuevosPuntos = 70 - (currentTime)
+            points += nuevosPuntos.toInt()
 
             coolDownWater += 3
             Utils.sendMessage("¡Recibiste :" + nuevosPuntos.toString() + " puntos!", context)
@@ -165,5 +166,15 @@ class TurtleGame(currentPosition : View, points :Int, totalTime: Int, firePositi
         }
 
         return false
+    }
+
+    fun returnNeighbour(positionsToEvaluate: MutableList<View> ) : MutableList<View>{
+        var mutableList = mutableListOf<View>()
+        positionsToEvaluate.forEach{ position ->
+            if(isANeighbour(position))
+                mutableList.add(position)
+        }
+
+        return mutableList
     }
 }

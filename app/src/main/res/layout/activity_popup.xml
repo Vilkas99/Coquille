@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".utils.Popup">
+
+    <ImageView
+        android:id="@+id/resultadosImage"
+        android:src="@drawable/ic_diamondorange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/textResultados"
+        android:layout_gravity="center"
+        android:fontFamily="@font/maia2"
+        android:text="Resultados"
+        android:textSize="35sp"
+        android:textColor="#000000"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+        <ImageView
+            android:id="@+id/gemaGanada"
+            android:src="@drawable/ic_points"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/textGemasGanadas"
+            android:layout_gravity="center"
+            android:fontFamily="@font/geosans"
+            android:text="120 Gemas"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botonResultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="11dp"
+        android:elevation="12dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_linear_layout_yellow">
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:text="Continuar"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geosans"/>
+    </LinearLayout>
+
+</LinearLayout>
