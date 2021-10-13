@@ -34,7 +34,7 @@ class Popup : AppCompatActivity(){
     }
 
     fun hidePopup(view: View){
-
+        this.finish();
     }
 
     fun setInfo(title : String, body : String){
