@@ -102,16 +102,11 @@ class BookGame : AppCompatActivity() {
         val radioID = radioGroup.checkedRadioButtonId
         if(radioID == questionsLevel[indexPregunta].correctAnswer){
             val intent = Intent(this, Popup::class.java)
-            var buttonClose = dialog.findViewById<Button>(R.id.botonContinuar)
             b.putString("titlePopup", listCorrect[0])
             b.putString("bodyPopup", listCorrect[1])
             intent.putExtras(b)
             startActivity(intent)
-            buttonClose.setOnClickListener (object : View.OnClickListener{
-                override fun onClick(p0: View?) {
-                    dialog.dismiss()
-                }
-            })
+
         } else {
             Toast.makeText(applicationContext, "RESPUESTA INCORRECTA D:", Toast.LENGTH_SHORT).show()
         }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popLayout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -52,7 +53,6 @@
         android:layout_gravity="center"
         android:background="@drawable/shape_linear_layout_yellow"
         android:text="Continuar"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         >
