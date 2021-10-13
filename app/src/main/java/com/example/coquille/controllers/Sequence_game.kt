@@ -18,9 +18,12 @@ import com.example.coquille.databinding.ActivitySequenceGameBinding
 import kotlin.random.Random
 import com.example.coquille.models.Sequence
 import com.example.coquille.utils.FigureConstants
+import com.example.coquille.utils.MySharedPreferences
+import com.example.coquille.utils.Utils
 
 class Sequence_game : AppCompatActivity() {
 
+    private val mySharedPreferences : MySharedPreferences = MySharedPreferences(this)
     private lateinit var binding: ActivitySequenceGameBinding
     val infoFragment = Sequence_stage1()
     val infoFragment2 = Sequence_stage2()
@@ -38,37 +41,12 @@ class Sequence_game : AppCompatActivity() {
                 commit()
             }
 
-        val sequence = Sequence(
-            0,
-            0,
-            R.drawable.ic_square,
-            R.drawable.ic_square,
-            R.drawable.ic_triangle,
-            R.drawable.ic_circle,
-            R.drawable.ic_circle,
-            R.drawable.ic_square,
-            R.drawable.ic_triangle,
-            R.drawable.ic_circle,
-            "Haz ganado",
-            "Haz perdido:("
-        )
 
-        timerSequence(20000, 1000)
 
         println("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
         println(infoFragment.passed)
 
 
-    }
-
-    fun passStage(pass: Boolean){
-        var pass = true.apply {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.host, infoFragment2)
-                commit()
-            }
-            println(this)
-        }
     }
 
     fun passStage2(pass: Boolean){
@@ -81,24 +59,8 @@ class Sequence_game : AppCompatActivity() {
         }
     }
 
-    fun timerSequence(time: Long, intervalo: Long){
-        object : CountDownTimer(time, intervalo) {
-            override fun onTick(p0: Long) {
-                binding.timer.setText("00:" + p0 / 1000)
-            }
 
-            override fun onFinish() {
-                infoFragment.lost.visibility = View.VISIBLE
-            }
-        }.start()
-    }
 
-    fun routeToPreviewScreen(view: View) {
-        val player = MediaPlayer.create(this, R.raw.sequence_sound)
-        player.start()
-        val intent = Intent(this, preview_sequence::class.java)
-        startActivity(intent)
-    }
 
     fun routeToPreview(view : View){
         val intent = Intent(this, PreviewGame::class.java)

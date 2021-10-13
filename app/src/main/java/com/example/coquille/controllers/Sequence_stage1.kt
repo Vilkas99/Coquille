@@ -1,6 +1,7 @@
 package com.example.coquille.controllers
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,9 @@ import androidx.navigation.Navigation
 import com.example.coquille.R
 import com.example.coquille.utils.FigureConstants
 import kotlin.random.Random
+import com.example.coquille.models.Sequence
+import com.example.coquille.utils.MySharedPreferences
+import com.example.coquille.utils.Utils
 
 
 class Sequence_stage1 : Fragment() {
@@ -22,9 +26,14 @@ class Sequence_stage1 : Fragment() {
     lateinit var option1: ImageButton
     lateinit var option2: ImageButton
     lateinit var option3: ImageButton
+    lateinit var puntos: TextView
     lateinit var win: TextView
     lateinit var lost: TextView
+    lateinit var timer: TextView
+    lateinit var gameState: Sequence
     var passed: Boolean = false
+    var hola: String = ""
+    var adios: Int = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_sequence_stage, container, false)
@@ -35,37 +44,23 @@ class Sequence_stage1 : Fragment() {
         option1 = rootView.findViewById(R.id.option1)
         option2 = rootView.findViewById(R.id.option2)
         option3 = rootView.findViewById(R.id.option3)
+        puntos = rootView.findViewById(R.id.puntos)
         win = rootView.findViewById(R.id.gameWonTextView)
         lost = rootView.findViewById(R.id.gameLostTextView)
+        timer = rootView.findViewById(R.id.timer)
 
         genSequence()
 
         var puntos: Int = 0
 
-        option1.setOnClickListener {
-            if(option1.tag == figura1.tag){
-                puntos += 50
-                println("Esto son tus puntos: " + puntos)
-                genSequence()
 
-            }
-        }
+        gameState = Sequence(10, 0, figura1, figura2, figura3, option1, option2, option3, "O P T I M O", "B O L U D O")
 
-        option2.setOnClickListener {
-            if(option2.tag == figura1.tag){
-                puntos += 50
-                println("Esto son tus puntos: " + puntos)
-                genSequence()
-            }
-        }
+        validateOption(figura1, option1)
+        validateOption(figura1, option2)
+        validateOption(figura1, option3)
 
-        option3.setOnClickListener {
-            if(option3.tag == figura1.tag){
-                puntos += 50
-                println("Esto son tus puntos: " + puntos)
-                genSequence()
-            }
-        }
+        timerSequence(20000, 1000, hola, adios)
 
         return rootView
     }
@@ -117,6 +112,47 @@ class Sequence_stage1 : Fragment() {
         option2.tag = list2[1]
         option3.tag = list2[2]
 
+    }
+
+    fun validateOption(image: ImageView, option: ImageButton) {
+        option.setOnClickListener {
+            if(option.tag == image.tag){
+                var puntitos: Int = 0
+                puntitos = gameState.calculatePoints()
+                updatePuntuation(puntitos)
+                genSequence()
+            }
+        }
+
+    }
+
+    fun updatePuntuation(points: Int){
+        puntos.text = points.toString()
+    }
+
+    fun userPoints(){
+        val user = Utils.getCurrentUser(context.applicationContext)
+        user.points += adios
+        mySharedPreferences.editData(user, "currentUser")
+    }
+
+    fun timerSequence(time: Long, intervalo: Long, yolo: String, adiu: Int){
+        object : CountDownTimer(time, intervalo) {
+            override fun onTick(p0: Long) {
+                timer.setText("00:" + p0 / 1000)
+            }
+
+            override fun onFinish() {
+                lost.visibility = View.VISIBLE
+                option1.setOnClickListener(null)
+                option2.setOnClickListener(null)
+                option3.setOnClickListener(null)
+                hola = puntos.text.toString()
+                adios = hola.toInt()
+                println(hola)
+
+            }
+        }.start()
     }
 
 }
