@@ -25,7 +25,6 @@ class BookGame : AppCompatActivity() {
     lateinit var questionsLevel : Array<Question>
     lateinit var pagesLevel : Array<String>
     lateinit var dialog : Dialog
-    lateinit var buttonClose : Button
 
     var indexCuento = 0;
     var indexPregunta = 0;
@@ -49,7 +48,6 @@ class BookGame : AppCompatActivity() {
         textCuento= binding.textPage
         hintItem = binding.itemHint
         dialog = Dialog(this)
-        //buttonClose = dialog.findViewById<Button>(R.id.botonContinuar)
 
         when(bundle){
             "El león y el ratón" -> {
@@ -104,13 +102,16 @@ class BookGame : AppCompatActivity() {
         val radioID = radioGroup.checkedRadioButtonId
         if(radioID == questionsLevel[indexPregunta].correctAnswer){
             val intent = Intent(this, Popup::class.java)
+            var buttonClose = dialog.findViewById<Button>(R.id.botonContinuar)
             b.putString("titlePopup", listCorrect[0])
             b.putString("bodyPopup", listCorrect[1])
             intent.putExtras(b)
             startActivity(intent)
-            /*buttonClose.setOnClickListener {
-                dialog.dismiss()
-            }*/
+            buttonClose.setOnClickListener (object : View.OnClickListener{
+                override fun onClick(p0: View?) {
+                    dialog.dismiss()
+                }
+            })
         } else {
             Toast.makeText(applicationContext, "RESPUESTA INCORRECTA D:", Toast.LENGTH_SHORT).show()
         }
