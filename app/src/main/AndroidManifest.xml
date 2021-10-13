@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coquille">
-      <activity
+        <activity
+            android:name=".utils.Popup"
+            android:theme="@style/Popup"
+            android:exported="true" />
+        <activity
             android:name=".controllers.BookGame"
             android:exported="true" />
         <activity
@@ -38,20 +42,16 @@
             android:exported="true" />
         <activity
             android:name=".controllers.activity_home"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"/>
         <activity
             android:name=".controllers.preview_sequence"
             android:exported="true" />
         <activity
             android:name=".controllers.Sequence_game"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".controllers.MemoryGameActivity"
-            android:exported="true"></activity>
-        android:exported="true" />
-
+            android:exported="true" />
     </application>
 
 </manifest>
