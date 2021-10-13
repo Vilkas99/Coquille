@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Coquille">
         <activity
+<<<<<<< HEAD
             android:name=".controllers.Turtle.tutorial.TurtleTutorial"
+=======
+            android:name=".utils.Popup"
+            android:theme="@style/Popup"
+>>>>>>> 53379123da3221935c2ac6acf4fc6003f2efc485
             android:exported="true" />
         <activity
             android:name=".controllers.BookGame"
@@ -41,7 +46,11 @@
             android:exported="true" />
         <activity
             android:name=".controllers.activity_home"
+<<<<<<< HEAD
             android:exported="true"></activity>
+=======
+            android:exported="true"/>
+>>>>>>> 53379123da3221935c2ac6acf4fc6003f2efc485
         <activity
             android:name=".controllers.preview_sequence"
             android:exported="true" />
