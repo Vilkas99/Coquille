@@ -7,10 +7,16 @@ import com.airbnb.lottie.LottieAnimationView
 import com.example.coquille.R
 import com.example.coquille.utils.Utils
 
-class Level {
+class Level(totalTime : Long, timeForSharks : Int, timeForFire : Int) {
     var positions = mutableListOf<View>()
     var firePos = mutableListOf<View>()
     var sharkPos = mutableListOf<View>()
+
+    var totalTime = totalTime
+    var timeForSharks = timeForSharks
+    var timeForFire = timeForFire
+
+
     lateinit var initialPos : View
 
 

@@ -1,20 +1,13 @@
-package com.example.coquille.controllers
+package com.example.coquille.controllers.Turtle.levels
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.Guideline
-import androidx.core.view.forEach
-import com.airbnb.lottie.LottieAnimationView
 import com.example.coquille.R
+import com.example.coquille.controllers.Turtle.Turtle
 import com.example.coquille.models.games.Turtle.Level
-import com.example.coquille.models.games.Turtle.Position
-import com.example.coquille.utils.Utils
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,10 +27,10 @@ class TurtleLevel1_Fragment : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_turtle_level1, container, false)
 
-        val level = Level()
+        val level = Level(50000, 10, 15)
         level.createElements(rootView.findViewById(R.id.level1Main))
 
-        (activity as Turtle).setLevel(level)
+        (activity as Turtle).setCurrentLevel(level)
 
         return rootView
     }

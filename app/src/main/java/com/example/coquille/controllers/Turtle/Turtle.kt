@@ -1,4 +1,4 @@
-package com.example.coquille.controllers
+package com.example.coquille.controllers.Turtle
 
 import android.content.Context
 import android.content.Intent
@@ -7,8 +7,12 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
+import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.example.coquille.R
+import com.example.coquille.controllers.Turtle.levels.TurtleLevel1_Fragment
+import com.example.coquille.controllers.Turtle.levels.TurtleLvl2Fragment
+import com.example.coquille.controllers.activity_home
 import com.example.coquille.databinding.ActivityTurtleBinding
 import com.example.coquille.models.games.Turtle.Level
 import com.example.coquille.models.games.Turtle.Position
@@ -36,8 +40,12 @@ class Turtle : AppCompatActivity() {
     lateinit var waterView : View
     lateinit var slowMotionView : View
 
-    //Levels
-    val level1 = TurtleLevel1_Fragment()
+    //Level fragments
+    val level1Fragment = TurtleLevel1_Fragment()
+    val level2Fragment = TurtleLvl2Fragment()
+
+    //currentLevel
+    lateinit var myLevel : Level
 
     var padding  = -50
 
@@ -66,25 +74,41 @@ class Turtle : AppCompatActivity() {
         chooseLevel()
 
 
-        timerSequence(50000,1000, this)
+
     }
 
     //TODO: Vincular los objetos con la interacción del usuario
 
 
     fun chooseLevel() {
+        var currentLevel = level1Fragment as Fragment
+        val bundle =intent.getStringExtra("turtleLevel").toString()
+
+        when(bundle){
+            "level1" ->
+                currentLevel = level1Fragment
+
+            "level2" ->
+                currentLevel = level2Fragment
+
+        }
+
         supportFragmentManager.beginTransaction().apply {
-            replace(binding.turtleLevel.id, level1)
+            replace(binding.turtleLevel.id, currentLevel)
             commit()
         }
     }
 
-    fun setLevel(level : Level){
+    fun setCurrentLevel(level : Level){
         positions = level.positions
         firePositions = level.firePos
         sharkPositions = level.sharkPos
         currentPosView = level.initialPos
-        gameState = TurtleGame(currentPosView,  0, 120, firePositions, sharkPositions)
+        gameState = TurtleGame(level, 0)
+
+        myLevel = level
+
+        timerSequence(level.totalTime as Long,1000, this)
     }
 
 
@@ -154,7 +178,7 @@ class Turtle : AppCompatActivity() {
 
 
     fun timerSequence(time: Long, intervalo: Long, context : Context){
-        var monkeyTime = 0
+        var sharkTime = 0
         var fireTime = 0
         object : CountDownTimer(time, intervalo) {
             override fun onTick(p0: Long) {
@@ -170,17 +194,17 @@ class Turtle : AppCompatActivity() {
                     }
 
                     gameState.removeCoolDown()
-                    gameState.totalTime += 1
+                    gameState.currentTime    += 1
 
-                    monkeyTime += 1
+                    sharkTime += 1
                     fireTime += 1
 
-                    if (monkeyTime >= 5 && (gameState.currentState != "freeze" && gameState.currentState != "slow") ){
+                    if (sharkTime >= myLevel.timeForSharks && (gameState.currentState != "freeze" && gameState.currentState != "slow") ){
                         setSharkPositions()
-                        monkeyTime = 0
+                        sharkTime = 0
                     }
 
-                    if (fireTime >= 15 && (gameState.currentState != "freeze" && gameState.currentState != "slow")){
+                    if (fireTime >= myLevel.timeForFire && (gameState.currentState != "freeze" && gameState.currentState != "slow")){
                         setFirePositions()
                         fireTime = 0
                     }
@@ -287,7 +311,7 @@ class Turtle : AppCompatActivity() {
                 newSharks.add(newPossibleSharkPos)
             }
             sharkPositions = newSharks
-            gameState.monkeyPositions = newSharks
+            gameState.sharkPositions = newSharks
         }
 
     }

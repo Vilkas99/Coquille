@@ -13,7 +13,7 @@
             android:name=".controllers.BookGame"
             android:exported="true" />
         <activity
-            android:name=".controllers.Turtle"
+            android:name=".controllers.Turtle.Turtle"
             android:exported="true" />
         <activity
             android:name=".controllers.PreviewGame"
