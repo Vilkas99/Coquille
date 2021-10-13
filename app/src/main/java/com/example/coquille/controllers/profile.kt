@@ -39,19 +39,11 @@ class profile : AppCompatActivity() {
         sharedPref = MySharedPreferences(this)
 
 
-
-
-        val collectables = MutableList(1){Collectable("asdasd", 20, "wuajaaaaa")}
-        val settings = Settings()
-        val user = User("Prueba", "asdawdqw", R.raw.profile_king, 1900, collectables, settings )
-
-        sharedPref.saveData(user, "currentUser")
-
         currentUser = Utils.getCurrentUser(this)
         binding.userName.setText(currentUser.userName)
         binding.userPoints.setText(currentUser.points.toString())
 
-        Utils.createAnimation(binding.userPic, user.profilePic, 10, -5)
+        Utils.createAnimation(binding.userPic, currentUser.profilePic, 10, -5)
 
 
 
