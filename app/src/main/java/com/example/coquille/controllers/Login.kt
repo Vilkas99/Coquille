@@ -8,8 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import com.example.coquille.R
 import com.example.coquille.databinding.ActivityLoginBinding
-
-import com.example.coquille.utils.Utils
+import com.example.coquille.utils.Popup
 
 
 class Login : AppCompatActivity() {
