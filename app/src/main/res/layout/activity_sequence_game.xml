@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controllers.Sequence_stage1">
+    tools:context=".controllers.Sequence.levels.Sequence_stage1">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_1"
@@ -32,7 +32,7 @@
             android:elevation="12dp"
             android:stateListAnimator="@null"
             android:text=""
-            android:onClick="routeToPreviewScreen"
+            android:onClick="routeToPreview"
             android:textColor="#000000"
             android:textSize="12sp"
             android:translationX="10dp"
@@ -69,86 +69,16 @@
     </androidx.cardview.widget.CardView>
 
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_3"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="296dp"
-        android:stateListAnimator="@null"
-        android:translationX="-90dp"
-        android:translationY="-280dp"
-        app:cardBackgroundColor="?colorPrimary"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/points"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/maia2"
-            android:hint="@string/lv_1"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#000000"
-            android:textSize="25sp"
-            android:translationX="50dp"
-            android:translationY="15dp">
-
-        </TextView>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_4"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-100dp"
-        android:translationX="15dp"
-        app:cardBackgroundColor="?colorPrimary"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/timer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/maia2"
-            android:hint="@string/_00_00"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#000000"
-            android:textSize="25sp"
-            android:translationX="40dp"
-            android:translationY="15dp">
-
-        </TextView>
-
-    </androidx.cardview.widget.CardView>
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/host"
-        android:layout_width="409dp"
-        android:layout_height="572dp"
+        android:layout_width="407dp"
+        android:layout_height="658dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view_1"
-        app:layout_constraintVertical_bias="0.978"/>
+        app:layout_constraintVertical_bias="0.978" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

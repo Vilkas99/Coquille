@@ -10,13 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Coquille">
         <activity
-            android:name=".controllers.Turtle.tutorial.TurtleTutorial"
-            android:exported="true"
-            />
-            <activity
-            android:name=".utils.Popup"
-            android:theme="@style/Popup"
+            android:name=".controllers.Colorful.repeated_figuresLvl3"
             android:exported="true" />
+        <activity
+            android:name=".controllers.Colorful.repeated_figuresLvl2"
+            android:exported="true" />
+        <activity
+            android:name=".controllers.Turtle.tutorial.TurtleTutorial"
+            android:exported="true" />
+        <activity
+            android:name=".utils.Popup"
+            android:exported="true"
+            android:theme="@style/Popup" />
         <activity
             android:name=".controllers.BookGame"
             android:exported="true" />
@@ -46,12 +51,21 @@
             android:exported="true" />
         <activity
             android:name=".controllers.activity_home"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".controllers.preview_sequence"
             android:exported="true" />
         <activity
-            android:name=".controllers.Sequence_game"
+            android:name=".controllers.Sequence.Sequence_game"
+            android:exported="true" />
+        <activity
+            android:name=".controllers.Colorful.Repeated_figures"
+            android:exported="true" />
+        <activity
+            android:name=".controllers.Colorful.Repeated_figuresLvl2"
+            android:exported="true" />
+        <activity
+            android:name=".controllers.Colorful.Repeated_figuresLvl3"
             android:exported="true" />
         <activity
             android:name=".controllers.MemoryGameActivity"
