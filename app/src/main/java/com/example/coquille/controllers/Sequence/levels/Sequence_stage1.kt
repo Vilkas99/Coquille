@@ -1,4 +1,4 @@
-package com.example.coquille.controllers
+package com.example.coquille.controllers.Sequence.levels
 
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -19,7 +19,7 @@ import com.example.coquille.utils.Utils
 
 
 class Sequence_stage1 : Fragment() {
-
+    
     lateinit var figura1: ImageView
     lateinit var figura2: ImageView
     lateinit var figura3: ImageView
@@ -59,8 +59,6 @@ class Sequence_stage1 : Fragment() {
         validateOption(figura1, option1)
         validateOption(figura1, option2)
         validateOption(figura1, option3)
-
-        timerSequence(20000, 1000, hola, adios)
 
         return rootView
     }
@@ -128,31 +126,6 @@ class Sequence_stage1 : Fragment() {
 
     fun updatePuntuation(points: Int){
         puntos.text = points.toString()
-    }
-
-    fun userPoints(){
-        val user = Utils.getCurrentUser(context.applicationContext)
-        user.points += adios
-        mySharedPreferences.editData(user, "currentUser")
-    }
-
-    fun timerSequence(time: Long, intervalo: Long, yolo: String, adiu: Int){
-        object : CountDownTimer(time, intervalo) {
-            override fun onTick(p0: Long) {
-                timer.setText("00:" + p0 / 1000)
-            }
-
-            override fun onFinish() {
-                lost.visibility = View.VISIBLE
-                option1.setOnClickListener(null)
-                option2.setOnClickListener(null)
-                option3.setOnClickListener(null)
-                hola = puntos.text.toString()
-                adios = hola.toInt()
-                println(hola)
-
-            }
-        }.start()
     }
 
 }

@@ -2,8 +2,6 @@ package com.example.coquille.models
 
 import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.Toast
-import com.example.coquille.controllers.Sequence_stage1
 
 
 class Sequence constructor(timer: Int, points: Int, figure1: ImageView, figure2: ImageView, figure3: ImageView, option1: ImageButton, option2: ImageButton, option3: ImageButton, gameWon: String, gameLost: String) {
@@ -24,5 +22,7 @@ class Sequence constructor(timer: Int, points: Int, figure1: ImageView, figure2:
 
         return points
     }
+
+
 
 }

@@ -1,37 +1,35 @@
-package com.example.coquille.controllers
+package com.example.coquille.controllers.Colorful
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.Drawable
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout.LayoutParams;
-import android.view.Gravity
-import android.content.res.Resources
 import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.coquille.R
+import com.example.coquille.controllers.PreviewGame
 import com.example.coquille.databinding.ActivityRepeatedFiguresBinding
+import com.example.coquille.databinding.ActivityRepeatedFiguresLvl2Binding
+import com.example.coquille.databinding.ActivityRepeatedFiguresLvl3Binding
 import com.example.coquille.utils.FigureConstants
 import com.example.coquille.utils.HeartSystem
+import com.example.coquille.utils.MySharedPreferences
+import com.example.coquille.utils.Utils
 import kotlin.random.Random
 
-class Repeated_figures : AppCompatActivity() {
+class Repeated_figuresLvl3 : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRepeatedFiguresBinding
+    private val mySharedPreferences : MySharedPreferences = MySharedPreferences(this)
+    private lateinit var binding: ActivityRepeatedFiguresLvl3Binding
     private lateinit var heartViews : List<ImageView>
     private lateinit var hearts : HeartSystem
+    var points: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_repeated_figures)
-        binding = ActivityRepeatedFiguresBinding.inflate(LayoutInflater.from(this))
+        setContentView(R.layout.activity_repeated_figures_lvl3)
+        binding = ActivityRepeatedFiguresLvl3Binding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
         //Hearts system
@@ -39,8 +37,6 @@ class Repeated_figures : AppCompatActivity() {
         hearts = HeartSystem(3, heartViews)
 
         genSequence()
-
-        var points: Int = 0
 
         binding.imageR1.setOnClickListener {
             if(binding.button.tag == binding.imageR1.tag && hearts.currentHearts > 0){
@@ -114,6 +110,114 @@ class Repeated_figures : AppCompatActivity() {
             }
         }
 
+        binding.imageR7.setOnClickListener {
+            if(binding.button.tag == binding.imageR7.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR8.setOnClickListener {
+            if(binding.button.tag == binding.imageR8.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR9.setOnClickListener {
+            if(binding.button.tag == binding.imageR9.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR10.setOnClickListener {
+            if(binding.button.tag == binding.imageR10.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR11.setOnClickListener {
+            if(binding.button.tag == binding.imageR11.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR12.setOnClickListener {
+            if(binding.button.tag == binding.imageR12.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR13.setOnClickListener {
+            if(binding.button.tag == binding.imageR13.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR14.setOnClickListener {
+            if(binding.button.tag == binding.imageR14.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
+        binding.imageR15.setOnClickListener {
+            if(binding.button.tag == binding.imageR15.tag && hearts.currentHearts > 0){
+                points += 50
+                binding.textPoints.text = points.toString()
+                println("Estos son tus puntos boludo: " + points)
+                genSequence()
+            }
+            else{
+                hearts.reduceHeart()
+            }
+        }
+
         timerSequence(10000, 1000)
 
     }
@@ -132,7 +236,7 @@ class Repeated_figures : AppCompatActivity() {
         val imageResource3 = resources.getIdentifier(imageToUse3, null, packageName)
 
         // Se llena la lista mutable con los valores de los imagesResourse
-        val list = mutableListOf(imageResource, imageResource2, imageResource2, imageResource2, imageResource3, imageResource3)
+        val list = mutableListOf(imageResource, imageResource2, imageResource2, imageResource2, imageResource3, imageResource3, imageResource2, imageResource3, imageResource3, imageResource2, imageResource2, imageResource2, imageResource3, imageResource3, imageResource2)
         // ["pocion", "araña", "varawiiii!!!"]
         val list2 = mutableListOf<Int>()
 
@@ -156,6 +260,15 @@ class Repeated_figures : AppCompatActivity() {
         binding.imageR4.setBackgroundResource(list2[3])
         binding.imageR5.setBackgroundResource(list2[4])
         binding.imageR6.setBackgroundResource(list2[5])
+        binding.imageR7.setBackgroundResource(list2[6])
+        binding.imageR8.setBackgroundResource(list2[7])
+        binding.imageR9.setBackgroundResource(list2[8])
+        binding.imageR10.setBackgroundResource(list2[9])
+        binding.imageR11.setBackgroundResource(list2[10])
+        binding.imageR12.setBackgroundResource(list2[11])
+        binding.imageR13.setBackgroundResource(list2[12])
+        binding.imageR14.setBackgroundResource(list2[13])
+        binding.imageR15.setBackgroundResource(list2[14])
 
         binding.button.tag = imageResource
 
@@ -165,6 +278,15 @@ class Repeated_figures : AppCompatActivity() {
         binding.imageR4.tag = list2[3]
         binding.imageR5.tag = list2[4]
         binding.imageR6.tag = list2[5]
+        binding.imageR7.tag = list2[6]
+        binding.imageR8.tag = list2[7]
+        binding.imageR9.tag = list2[8]
+        binding.imageR10.tag = list2[9]
+        binding.imageR11.tag = list2[10]
+        binding.imageR12.tag = list2[11]
+        binding.imageR13.tag = list2[12]
+        binding.imageR14.tag = list2[13]
+        binding.imageR15.tag = list2[14]
 
     }
 
@@ -190,8 +312,17 @@ class Repeated_figures : AppCompatActivity() {
                 binding.imageR4.setOnClickListener(null)
                 binding.imageR5.setOnClickListener(null)
                 binding.imageR6.setOnClickListener(null)
+                binding.imageR7.setOnClickListener(null)
+                binding.imageR8.setOnClickListener(null)
+                binding.imageR9.setOnClickListener(null)
+                userPoints()
             }
         }.start()
     }
 
+    fun userPoints(){
+        val user = Utils.getCurrentUser(this)
+        user.points += points
+        mySharedPreferences.editData(user, "currentUser")
+    }
 }

@@ -31,8 +31,8 @@ object Data {
 
     val cardDibuja1 = CardContent("Arranca por la derecha el astro del futbol mundial")
     val cardDibuja2 = CardContent("Dibujo", 1, R.drawable.ic_candyhouse)
-    val cardDibuja3 = CardContent("owo", 3, R.drawable.ic_colorful_logo)
-    val cardDibuja4 = CardContent("Prueba de juego aaa", 5, R.drawable.ic_fire)
+    val cardDibuja3 = CardContent("Dibujo", 3, R.drawable.ic_colorful_logo)
+    val cardDibuja4 = CardContent("Khe-so :O", 5, R.drawable.ic_fire)
 
     val cardsCuentos = arrayOf(cardCuentos1, cardCuentos2, cardCuentos3, cardCuentos4)
     val cardsDibuja = arrayOf(cardDibuja1, cardDibuja2, cardDibuja3, cardDibuja4)
