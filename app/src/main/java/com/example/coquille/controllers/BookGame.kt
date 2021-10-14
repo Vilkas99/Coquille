@@ -27,7 +27,6 @@ class BookGame : AppCompatActivity() {
     lateinit var questionsLevel: Array<Question>
     lateinit var pagesLevel: Array<String>
     lateinit var dialog: Dialog
-    lateinit var myPopup: Popup
 
     var indexCuento = 0;
     var indexPregunta = 0;
@@ -37,7 +36,6 @@ class BookGame : AppCompatActivity() {
     var controlers = ViewElements(this)
     val handler = Handler(Looper.getMainLooper())
     val b: Bundle = Bundle()
-    var listCorrect: Array<String> = arrayOf("¡Correcto!", "+20 Gemas")
     private val mySharedPreferences : MySharedPreferences = MySharedPreferences(this)
 
 
@@ -51,7 +49,7 @@ class BookGame : AppCompatActivity() {
         val bundle =intent.getStringExtra("level").toString()
         textCuento= binding.textPage
         dialog = Dialog(this)
-        myPopup = Popup()
+
 
         binding.points.setText(game.points.toString())
 
@@ -104,34 +102,33 @@ class BookGame : AppCompatActivity() {
     fun checkAnswer(radioGroup: RadioGroup, button: MaterialButton){
         val radioID = radioGroup.checkedRadioButtonId
         if(radioID == questionsLevel[indexPregunta].correctAnswer){
-            val intent = Intent(this, myPopup::class.java)
-            b.putString("titlePopup", listCorrect[0])
-            b.putString("bodyPopup", listCorrect[1])
-            myPopup
+            val intent = Intent(this, Popup::class.java)
+            b.putString("titlePopup", "Correcto!")
+            b.putString("customized", "")
+            b.putString("bodyPopup", "70 Gemas")
             intent.putExtras(b)
             startActivity(intent)
-            super.onPause()
             game.updatePoints(70)
             binding.points.setText(game.points.toString())
-
         } else {
-            val intent = Intent(this, myPopup::class.java)
+            val intent = Intent(this, Popup::class.java)
             super.onPause()
-            b.putString("titlePopup", "Incorrecto, respuesta correcta:")
-            b.putString("bodyPopup", questionsLevel[indexPregunta].textAnswers[questionsLevel[indexPregunta].correctAnswer])
+            b.putString("titlePopup", "Incorrecto")
+            b.putString("bodyPopup", "")
+            b.putString("customized","Respuesta correcta:"+ questionsLevel[indexPregunta].textAnswers[questionsLevel[indexPregunta].correctAnswer])
             intent.putExtras(b)
             startActivity(intent)
         }
-
-
-        if(game.finishedGame(pagesLevel, questionsLevel[indexPregunta].indexQuestion)){
-            Toast.makeText(applicationContext, "LECTURA TERMINADA :D", Toast.LENGTH_SHORT).show()
-            back()
-        } else{
-            indexPregunta++
-            controlers.backToStory(binding.layoutPage, radioGroup, button)
-            currentPage(indexCuento, textCuento)
-        }
+        handler.postDelayed({
+            if(game.finishedGame(pagesLevel, questionsLevel[indexPregunta].indexQuestion)){
+                Toast.makeText(applicationContext, "LECTURA TERMINADA :D", Toast.LENGTH_SHORT).show()
+                back()
+            } else{
+                indexPregunta++
+                controlers.backToStory(binding.layoutPage, radioGroup, button)
+                currentPage(indexCuento, textCuento)
+            }
+        }, 2500)
 
     }
 

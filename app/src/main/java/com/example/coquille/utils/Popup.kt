@@ -2,9 +2,12 @@ package com.example.coquille.utils
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.TextView
 import com.example.coquille.R
 import com.example.coquille.controllers.BookGame
 import com.example.coquille.databinding.ActivityPopupBinding
@@ -17,25 +20,28 @@ class Popup : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityPopupBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+        val handler = Handler(Looper.getMainLooper())
 
-        var screenMeasures = DisplayMetrics()
-        windowManager.defaultDisplay.getMetrics(screenMeasures)
-
-        var width = screenMeasures.widthPixels
-        var height = screenMeasures.heightPixels
-
-        window.setLayout((width*0.8).roundToInt(), (height*0.31).roundToInt())
 
         val title =intent.getStringExtra("titlePopup").toString()
         val body =intent.getStringExtra("bodyPopup").toString()
-        setInfo(title, body)
+        val customized = intent.getStringExtra("customized").toString()
+
+        if(customized.length!=0){
+            binding.gemaGanada.visibility = View.GONE
+            setInfo(title, customized)
+        } else{
+            binding.gemaGanada.visibility = View.VISIBLE
+            setInfo(title, body)
+        }
+
+        handler.postDelayed({this.finish()}, 2000)
+
 
 
     }
 
-    fun hidePopup(view: View)  {
-        this.finish()
-    }
+
 
     fun setInfo(title : String, body : String){
         binding.textResultados.setText(title)

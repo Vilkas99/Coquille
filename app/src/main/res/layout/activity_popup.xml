@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/popLayout"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".utils.Popup">
 
     <ImageView
@@ -12,12 +13,14 @@
         android:src="@drawable/ic_diamondorange"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:paddingTop="10dp"/>
     <TextView
         android:id="@+id/textResultados"
         android:layout_gravity="center"
         android:fontFamily="@font/maia2"
         android:text="Resultados"
+        android:textAlignment="center"
         android:textSize="35sp"
         android:textColor="#000000"
 
@@ -27,35 +30,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:paddingHorizontal="50dp"
+        android:paddingBottom="20dp"
+        >
         <ImageView
             android:id="@+id/gemaGanada"
             android:src="@drawable/ic_points"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            />
         <TextView
             android:id="@+id/textGemasGanadas"
             android:layout_gravity="center"
             android:fontFamily="@font/geosans"
             android:text="120 Gemas"
+            android:textAlignment="center"
             android:textSize="30sp"
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <Button
-        android:id="@+id/botonContinuar"
-        android:onClick="hidePopup"
-        android:paddingHorizontal="30dp"
-        android:paddingVertical="11dp"
-        android:elevation="12dp"
-        android:layout_gravity="center"
-        android:background="@drawable/shape_linear_layout_yellow"
-        android:text="Continuar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
-    </Button>
 
 </LinearLayout>
