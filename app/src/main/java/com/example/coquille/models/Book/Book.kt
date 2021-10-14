@@ -11,4 +11,8 @@ class Book(points : Int, hints : Int) {
         return pagesLevel.size == questionIndex
     }
 
+    fun updatePoints(puntos : Int){
+        points += puntos
+    }
+
 }
