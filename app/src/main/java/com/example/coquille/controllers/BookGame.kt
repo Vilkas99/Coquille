@@ -17,25 +17,29 @@ import android.os.Handler;
 import android.os.Looper
 import androidx.cardview.widget.CardView
 import com.example.coquille.models.Book.Book
+import com.example.coquille.utils.MySharedPreferences
 import com.example.coquille.utils.Popup
+import com.example.coquille.utils.Utils
 
 
 class BookGame : AppCompatActivity() {
     private lateinit var binding: ActivityBookGameBinding
-    lateinit var questionsLevel : Array<Question>
-    lateinit var pagesLevel : Array<String>
-    lateinit var dialog : Dialog
+    lateinit var questionsLevel: Array<Question>
+    lateinit var pagesLevel: Array<String>
+    lateinit var dialog: Dialog
+    lateinit var myPopup: Popup
 
     var indexCuento = 0;
     var indexPregunta = 0;
-    lateinit var backPage : ImageView
-    lateinit var nextPage : ImageView
-    lateinit var hintItem : CardView
-    lateinit var textCuento : TextView
+    lateinit var backPage: ImageView
+    lateinit var nextPage: ImageView
+    lateinit var textCuento: TextView
     var controlers = ViewElements(this)
     val handler = Handler(Looper.getMainLooper())
-    val b:Bundle = Bundle()
-    var listCorrect : Array<String> = arrayOf("¡Correcto!", "+20 Gemas")
+    val b: Bundle = Bundle()
+    var listCorrect: Array<String> = arrayOf("¡Correcto!", "+20 Gemas")
+    private val mySharedPreferences : MySharedPreferences = MySharedPreferences(this)
+
 
     var game = Book(0,0)
 
@@ -46,8 +50,10 @@ class BookGame : AppCompatActivity() {
 
         val bundle =intent.getStringExtra("level").toString()
         textCuento= binding.textPage
-        hintItem = binding.itemHint
         dialog = Dialog(this)
+        myPopup = Popup()
+
+        binding.points.setText(game.points.toString())
 
         when(bundle){
             "El león y el ratón" -> {
@@ -57,7 +63,6 @@ class BookGame : AppCompatActivity() {
                 binding.iconHeader.setImageDrawable(resources.getDrawable(R.drawable.lion))
                 backPage = binding.backPage
                 nextPage = binding.nextPage
-                game.hints = 1
                 currentPage(indexCuento, textCuento)
             }
 
@@ -68,7 +73,6 @@ class BookGame : AppCompatActivity() {
                 binding.iconHeader.setImageDrawable(resources.getDrawable(R.drawable.duck))
                 backPage = binding.backPage
                 nextPage = binding.nextPage
-                game.hints = 1
                 currentPage(indexCuento, textCuento)
             }
 
@@ -79,7 +83,6 @@ class BookGame : AppCompatActivity() {
                 binding.iconHeader.setImageDrawable(resources.getDrawable(R.drawable.whale))
                 backPage = binding.backPage
                 nextPage = binding.nextPage
-                game.hints = 2
                 currentPage(indexCuento, textCuento)
             }
             else -> println("Nivel inexistente")
@@ -101,26 +104,35 @@ class BookGame : AppCompatActivity() {
     fun checkAnswer(radioGroup: RadioGroup, button: MaterialButton){
         val radioID = radioGroup.checkedRadioButtonId
         if(radioID == questionsLevel[indexPregunta].correctAnswer){
-            val intent = Intent(this, Popup::class.java)
+            val intent = Intent(this, myPopup::class.java)
             b.putString("titlePopup", listCorrect[0])
             b.putString("bodyPopup", listCorrect[1])
+            myPopup
             intent.putExtras(b)
             startActivity(intent)
+            super.onPause()
+            game.updatePoints(70)
+            binding.points.setText(game.points.toString())
 
         } else {
-            Toast.makeText(applicationContext, "RESPUESTA INCORRECTA D:", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, myPopup::class.java)
+            super.onPause()
+            b.putString("titlePopup", "Incorrecto, respuesta correcta:")
+            b.putString("bodyPopup", questionsLevel[indexPregunta].textAnswers[questionsLevel[indexPregunta].correctAnswer])
+            intent.putExtras(b)
+            startActivity(intent)
         }
-        handler.postDelayed({
-            if(game.finishedGame(pagesLevel, questionsLevel[indexPregunta].indexQuestion)){
-                Toast.makeText(applicationContext, "LECTURA TERMINADA :D", Toast.LENGTH_SHORT).show()
-                back()
-            } else{
-                indexPregunta++
-                controlers.backToStory(binding.layoutPage, radioGroup, button)
-                currentPage(indexCuento, textCuento)
-            }
 
-            }, 1000)
+
+        if(game.finishedGame(pagesLevel, questionsLevel[indexPregunta].indexQuestion)){
+            Toast.makeText(applicationContext, "LECTURA TERMINADA :D", Toast.LENGTH_SHORT).show()
+            back()
+        } else{
+            indexPregunta++
+            controlers.backToStory(binding.layoutPage, radioGroup, button)
+            currentPage(indexCuento, textCuento)
+        }
+
     }
 
     fun createQuestion(){
@@ -140,9 +152,7 @@ class BookGame : AppCompatActivity() {
             createQuestion()
             backPage.visibility = View.GONE
             nextPage.visibility = View.GONE
-            hintItem.visibility = View.VISIBLE
         } else{
-            hintItem.visibility = View.GONE
             checkIndexPages(index, backPage, nextPage)
             pageID.setText(pagesLevel[index])
         }
@@ -159,6 +169,12 @@ class BookGame : AppCompatActivity() {
         }
     }
 
+    fun userPoints(){
+        val user = Utils.getCurrentUser(this)
+        user.points += game.points
+        mySharedPreferences.editData(user, "currentUser")
+    }
+
     fun back(){
         val intent = Intent(this, PreviewGame::class.java)
         val nameGame :String = "book"
@@ -169,7 +185,9 @@ class BookGame : AppCompatActivity() {
     }
 
     fun routeToPreview(view : View){
+        userPoints()
         back()
     }
+
 }
 

@@ -226,42 +226,5 @@
     </androidx.cardview.widget.CardView>
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/itemHint"
-        android:layout_width="85dp"
-        android:layout_height="35dp"
-        android:stateListAnimator="@null"
-        android:translationX="20dp"
-        app:cardCornerRadius="50dp"
-        android:padding="10dp"
-
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/second_horizontal_guideline"
-        app:layout_constraintVertical_bias="0.542"
-        app:cardBackgroundColor="#FFE68F">
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="3dp"
-
-            android:contentDescription="@string/todo9"
-            app:srcCompat="@drawable/ic_pouch" />
-        <TextView
-            android:id="@+id/numberHints"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="35dp"
-            android:fontFamily="@font/geosans"
-            android:text="X2"
-            android:textSize="20sp" />
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

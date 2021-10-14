@@ -6,11 +6,11 @@ import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import com.example.coquille.R
+import com.example.coquille.controllers.BookGame
 import com.example.coquille.databinding.ActivityPopupBinding
 import kotlin.math.roundToInt
 
 class Popup : AppCompatActivity(){
-
     private lateinit var binding: ActivityPopupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,8 +33,8 @@ class Popup : AppCompatActivity(){
 
     }
 
-    fun hidePopup(view: View){
-        this.finish();
+    fun hidePopup(view: View)  {
+        this.finish()
     }
 
     fun setInfo(title : String, body : String){
