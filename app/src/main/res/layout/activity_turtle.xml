@@ -22,15 +22,20 @@
         app:layout_constraintGuide_percent=".12" />
 
 
-
-
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/middle_H_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".85" />
+        app:layout_constraintGuide_percent=".87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_H_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".83" />
+
 
 
 
@@ -220,7 +225,8 @@
         app:layout_constraintEnd_toStartOf="@+id/top_V_2"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/top_V_1"
-        app:layout_constraintTop_toTopOf="@+id/middle_H_2"
+
+        app:layout_constraintTop_toTopOf="@+id/middle_H_4"
         app:layout_constraintVertical_bias="1.0" />
 
 
@@ -236,7 +242,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.386"
         app:layout_constraintStart_toStartOf="@+id/top_V_2"
-        app:layout_constraintTop_toBottomOf="@+id/circulo_2"
+
+        app:layout_constraintTop_toTopOf="@+id/middle_H_4"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -250,7 +257,7 @@
         app:layout_constraintBottom_toTopOf="@+id/freeze"
         app:layout_constraintEnd_toStartOf="@+id/top_V_1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circulo_1" />
+        app:layout_constraintTop_toTopOf="@+id/middle_H_4" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/wowIcon"

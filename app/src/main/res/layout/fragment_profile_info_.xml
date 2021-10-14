@@ -1,23 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".controllers.ProfileInfo_Fragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_H_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_H_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_H_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_H_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_V_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_V_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".80" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_username_layout"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginBottom="264dp"
         android:hint="Nombre de usuario"
         app:boxStrokeColor="#12DFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/top_H_1"
+        app:layout_constraintEnd_toStartOf="@+id/top_V_1"
 
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/top_V_0"
+        app:layout_constraintTop_toTopOf="@+id/top_H_0"
         app:startIconDrawable="@drawable/ic_user_icon"
         app:startIconTint="#12DFFF">
 
@@ -33,21 +76,19 @@
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_username_layout"
-        app:layout_constraintVertical_bias="0.059"
+        app:layout_constraintBottom_toTopOf="@+id/top_H_2"
+        app:layout_constraintEnd_toStartOf="@+id/top_V_1"
+        app:layout_constraintStart_toStartOf="@+id/top_V_0"
+        app:layout_constraintTop_toTopOf="@+id/top_H_1"
         app:startIconDrawable="@drawable/ic_key_icon"
         app:startIconTint="#12DFFF">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_password"
-            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white" />
+            android:backgroundTint="@color/white"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -63,11 +104,11 @@
         android:textColor="#000000"
         android:textSize="12sp"
         app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/top_H_3"
+        app:layout_constraintEnd_toStartOf="@+id/top_V_1"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_password_layout"
+        app:layout_constraintStart_toStartOf="@+id/top_V_0"
+        app:layout_constraintTop_toTopOf="@+id/top_H_2"
         app:layout_constraintVertical_bias="0.165"
         app:strokeColor="?colorPrimary" />
 
