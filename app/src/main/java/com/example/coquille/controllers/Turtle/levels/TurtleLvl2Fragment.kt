@@ -17,9 +17,13 @@ class TurtleLvl2Fragment : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_turtle_lvl2, container, false)
 
+        //Generamos un nuevo nivel con un tiempo total de 30 segundos, un rango de 5 segundos para la aparición de tiburones, y uno de 8 para la de fuegos
         val level = Level(30000, 5, 8)
+
+        //Ejecutamos la función "createElements" de nuestro nivel, brindándole el id del Layout en cuestión
         level.createElements(rootView.findViewById(R.id.level1Main))
 
+        //Llamamos a la función setCurrentLevel de la actividad "Turtle" pasándole el nivel en cuestión
         (activity as Turtle).setCurrentLevel(level)
 
         return rootView

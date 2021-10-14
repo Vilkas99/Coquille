@@ -45,10 +45,12 @@ class TurtleTutorial : AppCompatActivity() {
         binding = ActivityTurtleTutorialBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
+        //Llamamos a la función "initialSetup"
         initialSetup()
 
     }
 
+    //Esta función se encarga de establecer la relación de los objetos XML con las variables en cuestión
     fun initialSetup(){
         posInicial = binding.mainPos
         posActual = posInicial
@@ -56,6 +58,7 @@ class TurtleTutorial : AppCompatActivity() {
         sharkPos = binding.topLeft
         firePos = binding.topRight
 
+        //Al inicio, establecemos todos los poderes como invisibles.
         water = binding.waterTuto
         water.visibility = View.INVISIBLE
 
@@ -69,6 +72,7 @@ class TurtleTutorial : AppCompatActivity() {
         description = binding.descriptionTuto
     }
 
+    //Función ejecutada por el botón de "Continuar" que se encarga de determinar cual será el siguiente tutorial, de acuerdo al estado del juego
     fun nextTuto(view: View){
         when(tutoState){
             "initial"->
@@ -93,35 +97,54 @@ class TurtleTutorial : AppCompatActivity() {
         }
     }
 
+    //Función que se encarga de desplazar a la tortuga
     fun moveTuga(view: View){
+        //Si nos encontramops el segundo tutorial
         if(tutoState == "secondTuto"){
+            //Establecemos el nuevo estado del tutorial
             tutoState = "thirdTuto"
+            //Pintamos de color naranja las posiciones disponibles
             binding.leftPos.setBackgroundResource(R.drawable.ic_next_pos_circle)
             binding.rightPos.setBackgroundResource(R.drawable.ic_next_pos_circle)
             binding.topPos.setBackgroundResource(R.drawable.ic_next_pos_circle)
+            //Hacemos invisible el botón
             button.visibility = View.INVISIBLE
+            //Colocamos un nuevo texto como descripción
             description.setText("¡Podrás notar que ahora los circulos se colorearon de naranja! Eso significa que pudes moverte a ellos; haz 'tap' en alguno de ellos para mover a 'Tuga'")
-        } else if(tutoState == "ninethTuto"){
+        } else if(tutoState == "ninethTuto"){ //Si nos encontramos en el noveno tutorial...
+            //Modificamos el background de la habilidad de agua, con el objetivo de representar que ha sido utilizada
             water.setBackgroundResource(R.drawable.habilidad_2_lock)
+            //Detenemos la animación que se estuviese ejcutando en la posición inicial
             Utils.stopAnimation(posInicial)
+            //Llamaos a la función para el noveno tutorial
             ninethTuto()
         }
     }
 
+    //Función que se encarga de colocar a la tortuga en el lugar que le corresponde
     fun placeTuga(view: View){
+        //Si nos encontramos en el tercer tutorial
         if(tutoState == "thirdTuto"){
+
+            //Las posiciones anteriormente disponibles las colocamos con el circulo azul, para denotar que ya no estamos en movimiento
             binding.leftPos.setBackgroundResource(R.drawable.ic_pos_circle)
             binding.rightPos.setBackgroundResource(R.drawable.ic_pos_circle)
             binding.topPos.setBackgroundResource(R.drawable.ic_pos_circle)
 
+            //Establecemos que la posición actual será aquella con la que interactuó el usuario
             posActual = view as LottieAnimationView
+            //Detenemos la animación que se estuviese ejecutando en la posición inicial
             Utils.stopAnimation(posInicial)
+            //Creamos una animación en la posición actual para denotar el desplazamiento de la tortuga
             Utils.createAnimation(view as LottieAnimationView, R.raw.turtle, 100, -50)
+            //Cambiamos el estado del tutorial
             tutoState = "fourthTuto"
+            //Ejecutamos el cuarto tutorial
             fourthTuto()
         }
     }
 
+    //Función que se encarga de congelar al tiburón ejecutando la animación de congelado en la posición del tiburón
     fun freezeShark(view: View){
         if(tutoState == "sixthTuto"){
             Utils.createAnimation(sharkPos, R.raw.shark_freeze, 100, -50)
@@ -131,6 +154,7 @@ class TurtleTutorial : AppCompatActivity() {
         }
     }
 
+    //Función que se encarga de pintar la posición del fuego de naranja cuando el usuario hace click en el poder de agua
     fun tapOnWater(view: View){
         if (tutoState == "eightTuto"){
             posInicial.setBackgroundResource(R.drawable.ic_next_pos_circle)
@@ -139,6 +163,7 @@ class TurtleTutorial : AppCompatActivity() {
         }
     }
 
+    //Función que se encarga de pintar de naranaja todas las posiciones disponibles, después de haber utilizado la habilidad de "slow"
     fun tapOnSlow(view: View){
         if(tutoState == "twelfthTuto"){
             Utils.createAnimation(posActual, R.raw.turtle_fire, 100, -50)
@@ -154,7 +179,7 @@ class TurtleTutorial : AppCompatActivity() {
         }
     }
 
-
+    //Funciones que modifican el texto de la descripción de acuerdo al tutorial en cuestión.
     fun firstTuto(){
         Utils.createAnimation(posInicial,   R.raw.turtle, 200, -50)
         button.setText("Siguiente")
