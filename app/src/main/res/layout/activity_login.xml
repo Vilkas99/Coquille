@@ -54,7 +54,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment"
-        android:name="com.example.coquille.RegisterFragment"
+        android:name="com.example.coquille.controllers.RegisterFragment"
         android:layout_width="match_parent"
         android:layout_height="460dp"
         app:layout_constraintBottom_toBottomOf="parent"

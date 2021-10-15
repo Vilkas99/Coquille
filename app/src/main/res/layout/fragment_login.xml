@@ -6,7 +6,7 @@
     android:layout_height="460dp"
     android:orientation="vertical"
     android:layout_gravity="bottom"
-    tools:context=".RegisterFragment">
+    tools:context=".controllers.RegisterFragment">
 
 
     <androidx.cardview.widget.CardView
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.064">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_useranme"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario"
@@ -34,13 +34,13 @@
             app:startIconTint="#12DFFF">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
@@ -49,6 +49,7 @@
             app:startIconTint="#12DFFF">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white" />
@@ -78,7 +79,6 @@
         android:layout_marginTop="120dp"
         android:layout_marginEnd="28dp"
         android:elevation="12dp"
-        android:onClick="routeToHome"
         android:text="ingresar"
         android:textColor="#000000"
         android:textSize="12sp"

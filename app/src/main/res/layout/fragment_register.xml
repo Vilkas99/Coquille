@@ -6,7 +6,7 @@
     android:layout_height="460dp"
     android:orientation="vertical"
     android:layout_gravity="bottom"
-    tools:context=".RegisterFragment">
+    tools:context=".controllers.RegisterFragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.256">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_useranme"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario"
@@ -45,13 +45,14 @@
             app:startIconTint="#12DFFF">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_password"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
@@ -60,13 +61,15 @@
             app:startIconTint="#12DFFF">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_password_verify"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirmar contraseña"
@@ -75,6 +78,8 @@
             app:startIconTint="#12DFFF">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password_verify"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white" />
