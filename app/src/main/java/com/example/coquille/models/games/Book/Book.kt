@@ -1,9 +1,8 @@
 package com.example.coquille.models.games.Book
 
 
-class Book(points : Int, hints : Int) {
+class Book(points : Int) {
     var points = points
-    var hints = hints
 
 
 
