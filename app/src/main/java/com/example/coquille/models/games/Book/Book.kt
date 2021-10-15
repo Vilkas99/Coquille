@@ -1,4 +1,4 @@
-package com.example.coquille.models.Book
+package com.example.coquille.models.games.Book
 
 
 class Book(points : Int, hints : Int) {

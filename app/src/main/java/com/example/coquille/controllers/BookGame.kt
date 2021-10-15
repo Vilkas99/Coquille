@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import com.example.coquille.models.Book.ViewElements
+import com.example.coquille.models.games.Book.ViewElements
 import android.widget.*
 import com.example.coquille.R
 import com.example.coquille.databinding.ActivityBookGameBinding
@@ -15,7 +15,7 @@ import com.google.android.material.button.MaterialButton
 import android.os.Handler;
 import android.os.Looper
 import androidx.cardview.widget.CardView
-import com.example.coquille.models.Book.Book
+import com.example.coquille.models.games.Book.Book
 
 
 class BookGame : AppCompatActivity() {
