@@ -8,7 +8,7 @@ import com.example.coquille.models.Collectable
 import com.example.coquille.models.User
 import com.google.gson.Gson
 
-object Utils {
+object  Utils {
 
     val collectable1 = Collectable("R.raw.profile_orc", 600, "Caballero de otro mundo")
     val collectable2 = Collectable("ic_profile_pic_mage", 900, "Hechicera del saber" )

@@ -52,5 +52,6 @@
     <string name="limitar_tiempo_de_juego_titlle">Limitar tiempo de juego</string>
     <string name="you_won">You Won!</string>
     <string name="you_lost">You Lost!</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
 
 </resources>
