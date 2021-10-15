@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="460dp"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    tools:context=".RegisterFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="282dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_useranme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de usuario"
+            app:boxStrokeColor="#12DFFF"
+            app:startIconDrawable="@drawable/ic_user_icon"
+            app:startIconTint="#12DFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:translationY="60dp"
+            app:startIconDrawable="@drawable/ic_key_icon"
+            app:startIconTint="#12DFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RadioButton
+        android:id="@+id/radio_button_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="120dp"
+        android:buttonTint="?colorSecondaryVariant"
+        android:checked="true"
+        android:text="Recuérdame"
+        app:layout_constraintEnd_toStartOf="@+id/confirmButton"
+        app:layout_constraintTop_toBottomOf="@+id/card_view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="28dp"
+        android:elevation="12dp"
+        android:onClick="routeToHome"
+        android:text="ingresar"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view"
+        app:strokeColor="?colorPrimary" />
+
+    <TextView
+        android:id="@+id/Registrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/geosans_light"
+        android:text="Registrarse"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:onClick="routeToHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmButton"
+        app:layout_constraintVertical_bias="0.362"
+        tools:text="Registrarse" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/blob_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Registrarse"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/blob_1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

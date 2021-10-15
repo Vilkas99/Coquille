@@ -23,22 +23,20 @@ import com.example.coquille.utils.Utils
 
 
 class BookGame : AppCompatActivity() {
+    var controlers = ViewElements(this)
+    private val mySharedPreferences : MySharedPreferences = MySharedPreferences(this)
+
     private lateinit var binding: ActivityBookGameBinding
+    val handler = Handler(Looper.getMainLooper())
+    val b: Bundle = Bundle()
+
     lateinit var questionsLevel: Array<Question>
     lateinit var pagesLevel: Array<String>
-    lateinit var dialog: Dialog
-
     var indexCuento = 0;
     var indexPregunta = 0;
     lateinit var backPage: ImageView
     lateinit var nextPage: ImageView
     lateinit var textCuento: TextView
-    var controlers = ViewElements(this)
-    val handler = Handler(Looper.getMainLooper())
-    val b: Bundle = Bundle()
-    private val mySharedPreferences : MySharedPreferences = MySharedPreferences(this)
-
-
     var game = Book(0,0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +46,6 @@ class BookGame : AppCompatActivity() {
 
         val bundle =intent.getStringExtra("level").toString()
         textCuento= binding.textPage
-        dialog = Dialog(this)
 
 
         binding.points.setText(game.points.toString())

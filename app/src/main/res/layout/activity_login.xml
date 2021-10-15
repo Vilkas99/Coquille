@@ -25,123 +25,8 @@
         app:layout_constraintVertical_bias="0.069" />
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/confirmButton"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:elevation="12dp"
-        android:onClick="routeToHome"
-        android:soundEffectsEnabled="false"
-        android:stateListAnimator="@null"
-        android:text="Ingresar"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.889"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view"
-        app:layout_constraintVertical_bias="0.381"
-        app:strokeColor="?colorPrimary" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="282dp"
-        android:layout_height="128dp"
-        android:layout_gravity="center"
-        android:stateListAnimator="@null"
-        android:translationY="-100dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_title"
-        app:layout_constraintVertical_bias="0.391">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_useranme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre de usuario"
-            app:boxStrokeColor="#12DFFF"
-            app:startIconDrawable="@drawable/ic_user_icon"
-            app:startIconTint="#12DFFF">
 
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:translationY="70dp"
-            app:startIconDrawable="@drawable/ic_key_icon"
-            app:startIconTint="#12DFFF">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white" />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-
-    <RadioButton
-        android:id="@+id/radio_button_remember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="Recuérdame"
-        android:buttonTint="?colorSecondaryVariant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/confirmButton"
-        app:layout_constraintHorizontal_bias="0.367"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/Registrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registrarse"
-        android:fontFamily="@font/geosans_light"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmButton"
-        app:layout_constraintVertical_bias="0.53"
-        tools:text="Registrarse" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/blob_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Registrarse"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio_button_remember"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/blob_1" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -166,6 +51,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo_coquille" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment"
+        android:name="com.example.coquille.RegisterFragment"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
