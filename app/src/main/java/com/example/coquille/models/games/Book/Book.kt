@@ -1,4 +1,4 @@
-package com.example.coquille.models.Book
+package com.example.coquille.models.games.Book
 
 
 class Book(points : Int, hints : Int) {
@@ -9,6 +9,10 @@ class Book(points : Int, hints : Int) {
 
     fun finishedGame(pagesLevel: Array<String>, questionIndex : Int) : Boolean{
         return pagesLevel.size == questionIndex
+    }
+
+    fun updatePoints(puntos : Int){
+        points += puntos
     }
 
 }
