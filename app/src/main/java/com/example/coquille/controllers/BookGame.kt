@@ -143,6 +143,7 @@ class BookGame : AppCompatActivity() {
                 //We show in screen the toast letting the user know that the reading is finished
                 Toast.makeText(applicationContext, "LECTURA TERMINADA :D", Toast.LENGTH_SHORT).show()
                 //We call the function back to return to the preview screen of the game
+                back()
             } else{ //Reading not finished yet
                 //We increase the index of the questions of the reading
                 indexPregunta++
@@ -203,13 +204,16 @@ class BookGame : AppCompatActivity() {
         }
     }
 
+    //Function that saves the points won locally
     fun userPoints(){
         val user = Utils.getCurrentUser(this)
         user.points += game.points
         mySharedPreferences.editData(user, "currentUser")
     }
 
+    //Function that saves the total points of the user locally and goes back to the preview game
     fun back(){
+        userPoints()
         val intent = Intent(this, PreviewGame::class.java)
         val nameGame :String = "book"
         val b : Bundle = Bundle()
@@ -218,6 +222,7 @@ class BookGame : AppCompatActivity() {
         startActivity(intent)
     }
 
+    //Function implemented when the "back" button is tapped
     fun routeToPreview(view : View){
         userPoints()
         back()
