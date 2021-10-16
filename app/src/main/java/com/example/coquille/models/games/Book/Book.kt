@@ -1,16 +1,14 @@
 package com.example.coquille.models.games.Book
 
-
-class Book(points : Int, hints : Int) {
+//Controller used to handle the points of the game
+class Book(points : Int) {
     var points = points
-    var hints = hints
 
-
-
+    //Function that determines if the reading is finished or not
     fun finishedGame(pagesLevel: Array<String>, questionIndex : Int) : Boolean{
         return pagesLevel.size == questionIndex
     }
-
+    //Function that updates the user's points
     fun updatePoints(puntos : Int){
         points += puntos
     }

@@ -11,11 +11,15 @@ import androidx.core.content.res.ResourcesCompat
 import com.example.coquille.R
 import com.google.android.material.button.MaterialButton
 
+//Controller that updates the elements of the game
 class ViewElements(context: Context) {
     val context = context
 
+    //Function that creates a radio group with the array of answers correspondent
     fun createRadioGroup(answer : Array<String>) : RadioGroup {
+        //Initializing the radio group
         var radioGroupAnswer = RadioGroup(context)
+        //Setting the features of the radio group
         radioGroupAnswer.layoutParams = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT,
         ).apply {
@@ -24,6 +28,7 @@ class ViewElements(context: Context) {
             gravity = Gravity.CENTER
         }
         var j = 0
+        //Creating and adding to the radioGroup the correspondent radioButtons with the answers of the question
         for(i in answer){
             var radioButtonAnswer = RadioButton(context)
             radioButtonAnswer.setTypeface(ResourcesCompat.getFont(context, R.font.geosans))
@@ -42,8 +47,11 @@ class ViewElements(context: Context) {
         return radioGroupAnswer
     }
 
+    //Function that creates the button for the verification of an answer
     fun createButton() : MaterialButton {
+        //Initializing the button
         var buttonConfirm = MaterialButton(context)
+        //Setting the features of the button
         buttonConfirm.setTypeface(ResourcesCompat.getFont(context, R.font.geosans))
         buttonConfirm.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT,
         ).apply {
@@ -59,6 +67,7 @@ class ViewElements(context: Context) {
         return buttonConfirm
     }
 
+    //Function that removes the elements created for the question to continue with the reading
     fun backToStory(layout : LinearLayout, radioGroup: RadioGroup, button : MaterialButton){
         layout.orientation = LinearLayout.VERTICAL
         layout.removeView(radioGroup)
