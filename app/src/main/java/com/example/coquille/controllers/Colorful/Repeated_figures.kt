@@ -49,7 +49,6 @@ class Repeated_figures : AppCompatActivity() {
             if(binding.backButton.tag == binding.imageR1.tag && hearts.currentHearts > 0){
                 points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -63,7 +62,6 @@ class Repeated_figures : AppCompatActivity() {
             if(binding.backButton.tag == binding.imageR2.tag && hearts.currentHearts > 0){
                 points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -77,7 +75,6 @@ class Repeated_figures : AppCompatActivity() {
             if(binding.backButton.tag == binding.imageR3.tag && hearts.currentHearts > 0){
                 points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -91,7 +88,6 @@ class Repeated_figures : AppCompatActivity() {
             if(binding.backButton.tag == binding.imageR4.tag && hearts.currentHearts > 0){
                 points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -105,7 +101,6 @@ class Repeated_figures : AppCompatActivity() {
             if(binding.backButton.tag == binding.imageR5.tag && hearts.currentHearts > 0){
                 points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -119,7 +114,6 @@ class Repeated_figures : AppCompatActivity() {
             if(binding.backButton.tag == binding.imageR6.tag && hearts.currentHearts > 0){
                 points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
