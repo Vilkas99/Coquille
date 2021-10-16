@@ -39,7 +39,7 @@ class Repeated_figures : AppCompatActivity() {
 
 
         binding.imageR1.setOnClickListener {
-            if(binding.button.tag == binding.imageR1.tag && hearts.currentHearts > 0){
+            if(binding.backButton.tag == binding.imageR1.tag && hearts.currentHearts > 0){
                 points += 50
                 binding.textPoints.text = points.toString()
                 println("Estos son tus puntos boludo: " + points)
@@ -51,7 +51,7 @@ class Repeated_figures : AppCompatActivity() {
         }
 
         binding.imageR2.setOnClickListener {
-            if(binding.button.tag == binding.imageR2.tag && hearts.currentHearts > 0){
+            if(binding.backButton.tag == binding.imageR2.tag && hearts.currentHearts > 0){
                 points += 50
                 binding.textPoints.text = points.toString()
                 println("Estos son tus puntos boludo: " + points)
@@ -63,7 +63,7 @@ class Repeated_figures : AppCompatActivity() {
         }
 
         binding.imageR3.setOnClickListener {
-            if(binding.button.tag == binding.imageR3.tag && hearts.currentHearts > 0){
+            if(binding.backButton.tag == binding.imageR3.tag && hearts.currentHearts > 0){
                 points += 50
                 binding.textPoints.text = points.toString()
                 println("Estos son tus puntos boludo: " + points)
@@ -75,7 +75,7 @@ class Repeated_figures : AppCompatActivity() {
         }
 
         binding.imageR4.setOnClickListener {
-            if(binding.button.tag == binding.imageR4.tag && hearts.currentHearts > 0){
+            if(binding.backButton.tag == binding.imageR4.tag && hearts.currentHearts > 0){
                 points += 50
                 binding.textPoints.text = points.toString()
                 println("Estos son tus puntos boludo: " + points)
@@ -87,7 +87,7 @@ class Repeated_figures : AppCompatActivity() {
         }
 
         binding.imageR5.setOnClickListener {
-            if(binding.button.tag == binding.imageR5.tag && hearts.currentHearts > 0){
+            if(binding.backButton.tag == binding.imageR5.tag && hearts.currentHearts > 0){
                 points += 50
                 binding.textPoints.text = points.toString()
                 println("Estos son tus puntos boludo: " + points)
@@ -99,7 +99,7 @@ class Repeated_figures : AppCompatActivity() {
         }
 
         binding.imageR6.setOnClickListener {
-            if(binding.button.tag == binding.imageR6.tag && hearts.currentHearts > 0){
+            if(binding.backButton.tag == binding.imageR6.tag && hearts.currentHearts > 0){
                 points += 50
                 binding.textPoints.text = points.toString()
                 println("Estos son tus puntos boludo: " + points)
@@ -110,21 +110,21 @@ class Repeated_figures : AppCompatActivity() {
             }
         }
 
-        timerSequence(10000, 1000)
+        timerSequence(15000, 1000)
 
     }
 
     fun genSequence( ) {
 
-        val randomIndex = Random.nextInt(0, FigureConstants.words.size)
+        val randomIndex = Random.nextInt(0, FigureConstants.colorfulLvl1_1.size)
 
-        val imageToUse = FigureConstants.words[randomIndex] //3 "varawiiii!!!"
+        val imageToUse = FigureConstants.colorfulLvl1_1[randomIndex] //3 "varawiiii!!!"
         val imageResource = resources.getIdentifier(imageToUse, null, packageName)
 
-        val imageToUse2 = FigureConstants.words2[randomIndex] //2 "pocion"
+        val imageToUse2 = FigureConstants.colorfulLvl1_2[randomIndex] //2 "pocion"
         val imageResource2 = resources.getIdentifier(imageToUse2, null, packageName)
 
-        val imageToUse3 = FigureConstants.words3[randomIndex] //1 "araña"
+        val imageToUse3 = FigureConstants.colorfulLvl1_3[randomIndex] //1 "araña"
         val imageResource3 = resources.getIdentifier(imageToUse3, null, packageName)
 
         // Se llena la lista mutable con los valores de los imagesResourse
@@ -153,7 +153,7 @@ class Repeated_figures : AppCompatActivity() {
         binding.imageR5.setBackgroundResource(list2[4])
         binding.imageR6.setBackgroundResource(list2[5])
 
-        binding.button.tag = imageResource
+        binding.backButton.tag = imageResource
 
         binding.imageR1.tag = list2[0]
         binding.imageR2.tag = list2[1]

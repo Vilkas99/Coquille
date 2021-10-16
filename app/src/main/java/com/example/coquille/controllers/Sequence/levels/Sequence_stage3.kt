@@ -74,15 +74,15 @@ class Sequence_stage3 : Fragment(R.layout.fragment_sequence_stage3) {
 
     fun genSequence( ) {
 
-        val randomIndex = Random.nextInt(0, FigureConstants.words.size)
+        val randomIndex = Random.nextInt(0, FigureConstants.colorfulLvl3_1.size)
 
-        val imageToUse = FigureConstants.words[randomIndex] //3 "varawiiii!!!"
+        val imageToUse = FigureConstants.colorfulLvl3_1[randomIndex] //3 "varawiiii!!!"
         val imageResource = resources.getIdentifier(imageToUse, null, context?.packageName)
 
-        val imageToUse2 = FigureConstants.words2[randomIndex] //2 "pocion"
+        val imageToUse2 = FigureConstants.colorfulLvl3_2[randomIndex] //2 "pocion"
         val imageResource2 = resources.getIdentifier(imageToUse2, null, context?.packageName)
 
-        val imageToUse3 = FigureConstants.words3[randomIndex] //1 "araña"
+        val imageToUse3 = FigureConstants.colorfulLvl3_3[randomIndex] //1 "araña"
         val imageResource3 = resources.getIdentifier(imageToUse3, null, context?.packageName)
 
         // Se llena la lista mutable con los valores de los imagesResourse
@@ -130,15 +130,15 @@ class Sequence_stage3 : Fragment(R.layout.fragment_sequence_stage3) {
 
     fun genSequence2( ) {
 
-        val randomIndex = Random.nextInt(0, FigureConstants.words.size)
+        val randomIndex = Random.nextInt(0, FigureConstants.colorfulLvl3_1.size)
 
-        val imageToUse = FigureConstants.words[randomIndex] //3 "varawiiii!!!"
+        val imageToUse = FigureConstants.colorfulLvl3_4[randomIndex] //3 "varawiiii!!!"
         val imageResource = resources.getIdentifier(imageToUse, null, context?.packageName)
 
-        val imageToUse2 = FigureConstants.words2[randomIndex] //2 "pocion"
+        val imageToUse2 = FigureConstants.colorfulLvl3_5[randomIndex] //2 "pocion"
         val imageResource2 = resources.getIdentifier(imageToUse2, null, context?.packageName)
 
-        val imageToUse3 = FigureConstants.words3[randomIndex] //1 "araña"
+        val imageToUse3 = FigureConstants.colorfulLvl3_6[randomIndex] //1 "araña"
         val imageResource3 = resources.getIdentifier(imageToUse3, null, context?.packageName)
 
         // Se llena la lista mutable con los valores de los imagesResourse
@@ -186,15 +186,15 @@ class Sequence_stage3 : Fragment(R.layout.fragment_sequence_stage3) {
 
     fun genSequence3( ) {
 
-        val randomIndex = Random.nextInt(0, FigureConstants.words.size)
+        val randomIndex = Random.nextInt(0, FigureConstants.colorfulLvl3_1.size)
 
-        val imageToUse = FigureConstants.words[randomIndex] //3 "varawiiii!!!"
+        val imageToUse = FigureConstants.colorfulLvl3_1[randomIndex] //3 "varawiiii!!!"
         val imageResource = resources.getIdentifier(imageToUse, null, context?.packageName)
 
-        val imageToUse2 = FigureConstants.words2[randomIndex] //2 "pocion"
+        val imageToUse2 = FigureConstants.colorfulLvl3_3[randomIndex] //2 "pocion"
         val imageResource2 = resources.getIdentifier(imageToUse2, null, context?.packageName)
 
-        val imageToUse3 = FigureConstants.words3[randomIndex] //1 "araña"
+        val imageToUse3 = FigureConstants.colorfulLvl3_6[randomIndex] //1 "araña"
         val imageResource3 = resources.getIdentifier(imageToUse3, null, context?.packageName)
 
         // Se llena la lista mutable con los valores de los imagesResourse

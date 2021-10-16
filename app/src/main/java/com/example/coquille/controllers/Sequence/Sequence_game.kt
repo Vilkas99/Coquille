@@ -60,7 +60,7 @@ class Sequence_game() : AppCompatActivity() {
                     replace(R.id.host, currentLevel)
                     commit()
                 }
-            timerSequenceLvl2(15000, 1000, infoFragment2.hola, infoFragment2.adios)
+            timerSequenceLvl2(35000, 1000, infoFragment2.hola, infoFragment2.adios)
         }
         else if(currentLevel == infoFragment){
             supportFragmentManager.beginTransaction()
@@ -76,7 +76,7 @@ class Sequence_game() : AppCompatActivity() {
                     replace(R.id.host, currentLevel)
                     commit()
                 }
-            timerSequenceLvl3(15000, 1000, infoFragment.hola, infoFragment.adios)
+            timerSequenceLvl3(55000, 1000, infoFragment.hola, infoFragment.adios)
         }
 
     }
@@ -122,7 +122,6 @@ class Sequence_game() : AppCompatActivity() {
                 infoFragment2.hola = infoFragment2.puntos.text.toString()
                 infoFragment2.adios = infoFragment2.hola.toInt()
                 userPoints2()
-
             }
         }.start()
     }

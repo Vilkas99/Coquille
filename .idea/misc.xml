@@ -15,12 +15,18 @@
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_achivement_.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/fragment_profile_info_.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/laddy/Documents/Tec21/5to_semestre/SeguridadInformatica/AplicaionesMoviles/Coquille/app/src/main/res/layout/level_cards.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_chicory.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_dragon.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_flecha_correcta.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_heart.xml" value="0.2703125" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_king1.xml" value="0.1" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_orchid.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_profilep_c_king.xml" value="0.2703125" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_pygmy_hippo.xml" value="0.2703125" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_reindeer.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_sequence.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_square.xml" value="0.2703125" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_succulent.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_tortuguita_logo.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_triangle.xml" value="0.2703125" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/drawable/ic_uestionmark.xml" value="0.2703125" />
@@ -31,9 +37,9 @@
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_preview_game.xml" value="0.162534435261708" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_preview_sequence.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_profile.xml" value="0.1" />
-        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_repeated_figures.xml" value="0.4" />
-        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_repeated_figures_lvl2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_repeated_figures_lvl3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_repeated_figures.xml" value="0.2" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_repeated_figures_lvl2.xml" value="0.264" />
+        <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_repeated_figures_lvl3.xml" value="0.4" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_sequence_game.xml" value="0.264" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_settings.xml" value="0.1" />
         <entry key="..\:/Users/ref2k/Desktop/Android/Coquille/app/src/main/res/layout/activity_turtle.xml" value="0.25416666666666665" />
