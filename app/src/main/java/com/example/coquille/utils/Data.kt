@@ -12,10 +12,10 @@ object Data {
     val cardCuentos3 = CardContent("El patito feo", 2, R.drawable.duck)
     val cardCuentos4 = CardContent("El pájaro y la ballena", 5, R.drawable.whale)
 
-    val cardSecuencia1 = CardContent("Bienvenido al juego de la secuencia, pase")
-    val cardSecuencia2 = CardContent("Figuras", 1, R.drawable.ic_fire)
-    val cardSecuencia3 = CardContent("Dinosaurios", 3, R.drawable.ic_colorful_logo)
-    val cardSecuencia4 = CardContent("Harry Potter y la Cámara del Doctor Octopus", 5, R.drawable.ic_fire)
+    val cardSecuencia1 = CardContent("Bienvenido al juego de la secuencia, analiza los patrones y selecciona la siguiente figura que lo completa")
+    val cardSecuencia2 = CardContent("Bosque encantado", 1, R.drawable.ic_fire)
+    val cardSecuencia3 = CardContent("Edad Media", 3, R.drawable.ic_colorful_logo)
+    val cardSecuencia4 = CardContent("Animales", 5, R.drawable.ic_fire)
 
     val cardMemoria1 = CardContent("Prueba de la descripción ahhhhh D: MEMORIA")
     val cardMemoria2 = CardContent("Hansel & MEMORIA", 3, R.drawable.ic_candyhouse)
@@ -29,10 +29,10 @@ object Data {
     val cardTortuga4 = CardContent("¡Maestro de las llamas!", 5, R.drawable.ic_fire)
 
 
-    val cardDibuja1 = CardContent("Arranca por la derecha el astro del futbol mundial")
-    val cardDibuja2 = CardContent("Dibujo", 1, R.drawable.ic_candyhouse)
-    val cardDibuja3 = CardContent("Dibujo", 3, R.drawable.ic_colorful_logo)
-    val cardDibuja4 = CardContent("Khe-so :O", 5, R.drawable.ic_fire)
+    val cardDibuja1 = CardContent("Observa detenidamente y selecciona la imagen que es diferente a todas las demás.")
+    val cardDibuja2 = CardContent("Plantas", 1, R.drawable.ic_candyhouse)
+    val cardDibuja3 = CardContent("Fantasia", 3, R.drawable.ic_colorful_logo)
+    val cardDibuja4 = CardContent("Zoo", 5, R.drawable.ic_fire)
 
     val cardsCuentos = arrayOf(cardCuentos1, cardCuentos2, cardCuentos3, cardCuentos4)
     val cardsDibuja = arrayOf(cardDibuja1, cardDibuja2, cardDibuja3, cardDibuja4)
