@@ -17,10 +17,10 @@ object Data {
     val cardSecuencia3 = CardContent("Edad Media", 3, R.drawable.ic_colorful_logo)
     val cardSecuencia4 = CardContent("Animales", 5, R.drawable.ic_fire)
 
-    val cardMemoria1 = CardContent("Prueba de la descripción ahhhhh D: MEMORIA")
-    val cardMemoria2 = CardContent("Hansel & MEMORIA", 3, R.drawable.ic_candyhouse)
-    val cardMemoria3 = CardContent("Los 3 cochinitos", 2, R.drawable.ic_colorful_logo)
-    val cardMemoria4 = CardContent("Prueba de juego aaa", 5, R.drawable.ic_fire)
+    val cardMemoria1 = CardContent("Encuentra los todos los pares de tarjetas que puedas sin equivocarte y pon a prueba tu memoria. ¡Encuéntralos todos para ganar un bonus!")
+    val cardMemoria2 = CardContent("Normal", 2, R.drawable.ic_candyhouse)
+    val cardMemoria3 = CardContent("Difícil", 3, R.drawable.ic_colorful_logo)
+    val cardMemoria4 = CardContent("Experto", 5, R.drawable.ic_fire)
 
 
     val cardTortuga1 = CardContent("¡Bievenid@ al juego de la tortuga! ¡Apaga todos los fuegos con tus poderes de tortuga antes de que se acabe el tiempo! Cuidado con los changos porque ellos no te quieren dejar pasar")

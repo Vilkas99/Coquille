@@ -3,10 +3,16 @@ package com.example.coquille.utils
 import android.content.Context
 import android.view.View
 import android.widget.Toast
+import androidx.work.*
 import com.airbnb.lottie.LottieAnimationView
 import com.example.coquille.models.Collectable
+import com.example.coquille.models.DateInt
 import com.example.coquille.models.User
+import com.example.coquille.workers.EndStreakWorkerContext
+import com.example.coquille.workers.PlayNotificationWorker
 import com.google.gson.Gson
+import java.time.LocalDateTime
+import java.util.concurrent.TimeUnit
 
 object  Utils {
 
@@ -47,6 +53,19 @@ object  Utils {
         return dummy
     }
 
+    @JvmStatic fun getCurrentDateInt() : DateInt {
+
+        var now = LocalDateTime.now()
+        return DateInt(now.year, now.monthValue, now.dayOfMonth, now.hour, now.minute)
+
+    }
+    @JvmStatic fun getCurrentUserLastPlayedDate(context: Context) : LocalDateTime{
+
+        var userD = getCurrentUser(context).lastPlayedDate
+        return LocalDateTime.of(userD.year, userD.month, userD.day, userD.hour, userD.minute)
+
+    }
+
     @JvmStatic fun getId(view: View) : String{
         if (view.id == View.NO_ID) return "no-id"
         else return view.resources.getResourceName(view.id)
@@ -67,6 +86,25 @@ object  Utils {
         view.repeatCount = 0
         view.setImageDrawable(null)
     }
+
+    @JvmStatic fun setStreakNotification(context: Context){
+        val work = OneTimeWorkRequestBuilder<PlayNotificationWorker>()
+            .setInitialDelay(20, TimeUnit.HOURS)
+            .build()
+        val workManager = WorkManager.getInstance(context)
+        workManager.enqueue(work)
+    }
+
+    @JvmStatic fun setEndStreakWorker(context: Context){
+
+        val work = PeriodicWorkRequestBuilder<EndStreakWorkerContext>(1, TimeUnit.DAYS)
+            .build()
+        val workerManager = WorkManager.getInstance(context)
+        workerManager.enqueueUniquePeriodicWork("endStreak_coquille", ExistingPeriodicWorkPolicy.REPLACE, work)
+
+
+    }
+
 
 
 }

@@ -7,6 +7,6 @@ class User constructor(userName: String, password: String, profilePic: Int, poin
     var points = points
     var collectables = collectables
     var settings = settings
-
+    var lastPlayedDate: DateInt = DateInt()
 
 }

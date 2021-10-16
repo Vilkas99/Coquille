@@ -3,20 +3,19 @@ package com.example.coquille.models
 import com.example.coquille.R
 import com.example.coquille.models.abstracts.Game
 
-class MemoryGame(difficulty : Int = 0) : Game("Memorama", "dummy.jpg"){
-
+class MemoryGame(private val difficulty: Int = 0) : Game("Memorama", "dummy.jpg"){
 
     private lateinit var cards : Array<MemoryGameCard>
     private val cardImages : Array<Int> = arrayOf(R.drawable.ic_unicorn, R.drawable.ic_spider, R.drawable.ic_fairy, R.drawable.ic_dragon, R.drawable.ic_centaur,
-    R.drawable.ic_food, R.drawable.ic_spell_book, R.drawable.ic_castle/*, R.drawable.ic_bow*/)
+    R.drawable.ic_food, R.drawable.ic_spell_book, R.drawable.ic_castle, R.drawable.ic_bow, R.drawable.ic_map, R.drawable.ic_dragon_egg, R.drawable.ic_potion,
+    R.drawable.ic_pouch, R.drawable.ic_treant_tree, R.drawable.ic_crystal, R.drawable.ic_scroll_paper, R.drawable.ic_armor)
     var lastSelectedCard = -1
     var pastSelectedCard = -1
     var clearedPairs = 0
     var hearts = 3
     var points = 0
-    val pointsPerPair = 10
+    private val pointsPerPair = 12 + (5*difficulty)
     var userWon = false
-    val difficulty = difficulty
 
     init {
         setCardsForGame()
@@ -24,8 +23,8 @@ class MemoryGame(difficulty : Int = 0) : Game("Memorama", "dummy.jpg"){
 
     private fun setCardsForGame(){
 
-
-        cards = Array(16) { MemoryGameCard() }
+        cardImages.shuffle()
+        cards = Array(12 + (difficulty*4)) { MemoryGameCard() }
         var i = 0
         var j = 0
 
@@ -87,9 +86,13 @@ class MemoryGame(difficulty : Int = 0) : Game("Memorama", "dummy.jpg"){
         return points
     }
 
+    fun getGracePeriod() : Long{
+        return 6500 - (difficulty.toLong() * 750)
+    }
+
     fun isGamedOver() : Boolean {
 
-        if(clearedPairs == cardImages.size) {
+        if(clearedPairs == cards.size/2) {
             userWon = true
             return true
         }

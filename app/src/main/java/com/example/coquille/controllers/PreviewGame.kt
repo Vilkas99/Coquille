@@ -95,7 +95,7 @@ class PreviewGame() : AppCompatActivity() {
             }
             "memory" -> {
                 cardsGame = Data.getCard("Memoria")
-                binding.gameTitle.setText("Juego de memoria? xd")
+                binding.gameTitle.setText("Memorama")
                 binding.iconHeader.setImageDrawable(resources.getDrawable(R.drawable.memory_logo))
 
                 binding.bodyDescription.setText(cardsGame[0].textCard)
@@ -350,9 +350,28 @@ class PreviewGame() : AppCompatActivity() {
 
                 startActivity(intent)
             }
-            "Juego de memoria? xd" -> {
-                val intent = Intent(this, Login::class.java)
+            "Memorama" -> {
+
+                val intent = Intent(this, MemoryGameActivity::class.java)
+                var bMemoryGame = Bundle()
+                var level = 0
+
+                when (card) {
+                    "com.example.coquille:id/card1" -> {
+                        level = 0
+                    }
+                    "com.example.coquille:id/card2" -> {
+                        level = 1
+                    }
+                    "com.example.coquille:id/card3" -> {
+                        level = 2
+                    }
+                    else -> println("Nivel inexistente")
+                }
+
+                intent.putExtra("level", level)
                 startActivity(intent)
+
             }
             "Las aventuras de Tuga" -> {
                 var intent = Intent(this, Turtle::class.java)
