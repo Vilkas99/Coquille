@@ -56,7 +56,7 @@ object  Utils {
     @JvmStatic fun getCurrentDateInt() : DateInt {
 
         var now = LocalDateTime.now()
-        return DateInt(now.year, now.monthValue, now.dayOfMonth, now.hour, now.minute)
+        return DateInt()
 
     }
     @JvmStatic fun getCurrentUserLastPlayedDate(context: Context) : LocalDateTime{
@@ -98,6 +98,7 @@ object  Utils {
     @JvmStatic fun setEndStreakWorker(context: Context){
 
         val work = PeriodicWorkRequestBuilder<EndStreakWorkerContext>(1, TimeUnit.DAYS)
+            .setInitialDelay(1, TimeUnit.DAYS)
             .build()
         val workerManager = WorkManager.getInstance(context)
         workerManager.enqueueUniquePeriodicWork("endStreak_coquille", ExistingPeriodicWorkPolicy.REPLACE, work)
