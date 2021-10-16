@@ -5,7 +5,131 @@
     android:layout_height="match_parent"
     tools:context=".controllers.Sequence.levels.Sequence_stage1">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/third_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fourth_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.69" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifth_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sixth_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_5"
@@ -13,12 +137,10 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.174"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_13"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_11"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_9"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -40,12 +162,10 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_13"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_15"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_12"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_9"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -67,12 +187,10 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.174"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_14"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_11"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_17"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -94,12 +212,10 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_13"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_16"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_9"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -115,52 +231,16 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/gameWonTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:rotation="-45"
-        android:text="@string/you_won"
-        android:textColor="#44BB44"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/gameLostTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:rotation="-45"
-        android:text="@string/you_lost"
-        android:textColor="#BB4444"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:visibility="visible" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_2"
         android:layout_width="281dp"
         android:layout_height="82dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_10"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_18"
         tools:ignore="MissingConstraints">
 
         <ImageButton
@@ -206,17 +286,15 @@
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="548dp"
         android:stateListAnimator="@null"
-        android:translationX="0dp"
-        android:translationY="0dp"
         app:cardBackgroundColor="?colorPrimary"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/card_view_4"
+        app:layout_constraintBottom_toBottomOf="@+id/third_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/first_vertical_guideline"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/second_vertical_guideline">
 
         <TextView
             android:id="@+id/puntos"
@@ -245,11 +323,11 @@
         app:cardBackgroundColor="?colorPrimary"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/sixth_vertical_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fourth_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/fifth_vertical_guideline"
         app:layout_constraintVertical_bias="0.101"
         tools:ignore="MissingConstraints">
 
