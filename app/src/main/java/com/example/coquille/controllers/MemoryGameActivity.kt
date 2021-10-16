@@ -70,7 +70,7 @@ class MemoryGameActivity : AppCompatActivity(){
         val pixelsBetweenItems = 50
         layoutManager = GridLayoutManager(this, numberOfColumns)
         recyclerView.layoutManager = layoutManager
-        recyclerView.addItemDecoration(GridSpacingItemDecoration(numberOfColumns, (pixelsBetweenItems / resources.displayMetrics.density).toInt(), true))
+        recyclerView.addItemDecoration(GridSpacingItemDecoration(numberOfColumns, (pixelsBetweenItems / resources.displayMetrics.density).toInt()))
 
         //Se muestran primero todas las cartas del juego para que el usuario pueda recordarlas
         Handler(Looper.getMainLooper()).postDelayed({
@@ -170,12 +170,16 @@ class MemoryGameActivity : AppCompatActivity(){
      */
     private fun handleGameOver(){
 
+        //Se guardan los puntos
         val user = Utils.getCurrentUser(this)
         user.points += gameState.getObtainedPoints()
         mySharedPreferences.editData(user, "currentUser")
+
+        //Actualizamos los temporizadores para ayudar al usuario a mantener la racha
         Utils.setEndStreakWorker(this)
         Utils.setStreakNotification(this)
 
+        //Preparamos el PopUp que reporta los puntos que ganó el usuario
         var bundle = Bundle()
         val intent = Intent(this, Popup::class.java)
         val text = if (gameState.didUserWon()) {
@@ -184,24 +188,32 @@ class MemoryGameActivity : AppCompatActivity(){
             "Perdiste"
         }
 
-        Log.d("gameover", "si llegó no mames")
         bundle.putString("titlePopup", "Fin del juego\n$text")
         bundle.putString("bodyPopup", "Obtuviste ${gameState.points} puntos")
         bundle.putString("customized", "")
         intent.putExtras(bundle)
-        startActivity(intent)
+        startActivity(intent) //Mostramos el popup
 
     }
 
+    /*
+    Función que ejecuta la animación de girar las cartas y mostrar la otra cara.
+    @param context : Context -> Contexto actual
+    @param visibleView : View -> La cara que queremos hacer visible.
+    @param inVisibleView : View -> La cara que queremos ocultar.
+     */
     private fun flipCard(context: Context, visibleView: View, inVisibleView: View) {
 
         visibleView.visibility = View.VISIBLE
 
+        //Ajustamos la distancia de cámara simulada a la vista
         val scale = context.resources.displayMetrics.density
         val cameraDist = 8000 * scale
 
         visibleView.cameraDistance = cameraDist
         inVisibleView.cameraDistance = cameraDist
+
+        //Asignamos las animaciones a su vista correspondiente
 
         val flipOutAnimatorSet = AnimatorInflater.loadAnimator(context, R.animator.flip_out_card) as AnimatorSet
         flipOutAnimatorSet.setTarget(inVisibleView)
@@ -212,44 +224,43 @@ class MemoryGameActivity : AppCompatActivity(){
         flipOutAnimatorSet.start()
         flipInAnimatorSet.start()
 
+        //Ocultamos la vista cuando se acaban las animaciones
         flipInAnimatorSet.doOnEnd { inVisibleView.visibility = View.GONE }
 
     }
 
-
-    class GridSpacingItemDecoration(private val spanCount: Int, private val spacing: Int, private val includeEdge: Boolean):
+    /*
+    Clase que se encarga de realizar el cálculo de la posición para las cartas dentro de su contenedor
+     */
+    class GridSpacingItemDecoration(private val spanCount: Int, private val spacing: Int):
         ItemDecoration()
     {
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-            val position = parent.getChildAdapterPosition(view) // item position
-            val column = position % spanCount // item column
-            if (includeEdge) {
+
+            val position = parent.getChildAdapterPosition(view) // Posición del item dentro de la RV
+            val column = position % spanCount // La columna donde irá el item actual
                 outRect.left =
                     spacing - column * spacing / spanCount // spacing - column * ((1f / spanCount) * spacing)
                 outRect.right =
                     (column + 1) * spacing / spanCount // (column + 1) * ((1f / spanCount) * spacing)
-                if (position < spanCount) { // top edge
+                if (position < spanCount) { // Si no está en la fila de arriba, ponle margen arriba
                     outRect.top = spacing
                 }
-                outRect.bottom = spacing // item bottom
-            } else {
-                outRect.left = column * spacing / spanCount // column * ((1f / spanCount) * spacing)
-                outRect.right =
-                    spacing - (column + 1) * spacing / spanCount // spacing - (column + 1) * ((1f /    spanCount) * spacing)
-                if (position >= spanCount) {
-                    outRect.top = spacing // item top
-                }
-            }
+                outRect.bottom = spacing // Margen de abajo
+
         }
     }
 
+    // Función para volver a la vista previa al juego, ligada al botón de la esquina superior izquierda
     private fun back(){
+
         val intent = Intent(this, PreviewGame::class.java)
         val nameGame = "memory"
         val b = Bundle()
         b.putString("indexArray", nameGame)
         intent.putExtras(b)
         startActivity(intent)
+
     }
 
 
