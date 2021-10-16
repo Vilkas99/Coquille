@@ -1,5 +1,7 @@
 package com.example.coquille.utils
 
+/*Objeto con una lista de la ruta de las imagenes que se utilizan en los patrones de los juegos de
+* Secuencia y Colores (Figuras repetidas)*/
 object FigureConstants {
     val words = listOf(
         "@drawable/ic_circle",

@@ -1,10 +1,12 @@
-package com.example.coquille.models
+package com.example.coquille.models.games.Sequence
 
 import android.widget.ImageButton
 import android.widget.ImageView
 
-
+//Constructor inicial de la clase de Secuencia
 class Sequence constructor(timer: Int, points: Int, figure1: ImageView, figure2: ImageView, figure3: ImageView, option1: ImageButton, option2: ImageButton, option3: ImageButton, gameWon: String, gameLost: String) {
+
+    //Declaración de las variables
     var timer = timer
     var points = points
     var figure1 = figure1
@@ -16,9 +18,10 @@ class Sequence constructor(timer: Int, points: Int, figure1: ImageView, figure2:
     var gameLost = gameLost
     var gameWon = gameWon
 
+    //Función para manejar los puntos; aumentando los puntos y regresando el valor.
     fun calculatePoints(): Int{
         points += 50
-        println("Pruebita pruebita owo: " + points)
+        println("Correcto: " + points)
 
         return points
     }
