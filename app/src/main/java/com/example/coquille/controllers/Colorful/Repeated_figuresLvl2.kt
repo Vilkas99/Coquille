@@ -11,6 +11,7 @@ import com.example.coquille.R
 import com.example.coquille.controllers.PreviewGame
 import com.example.coquille.databinding.ActivityRepeatedFiguresBinding
 import com.example.coquille.databinding.ActivityRepeatedFiguresLvl2Binding
+import com.example.coquille.models.games.Colorful.Colorful
 import com.example.coquille.utils.*
 import kotlin.random.Random
 
@@ -22,6 +23,7 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
     private lateinit var binding: ActivityRepeatedFiguresLvl2Binding
     private lateinit var heartViews : List<ImageView>
     private lateinit var hearts : HeartSystem
+    lateinit var gameState : Colorful
     //Variables que permiten acceder al Bundle y a los puntos.
     val b: Bundle = Bundle()
     var points: Int = 0
@@ -37,15 +39,17 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         heartViews = listOf(findViewById(R.id.memory_card_first_heart), findViewById(R.id.memory_card_second_heart), findViewById(R.id.memory_card_third_heart))
         hearts = HeartSystem(3, heartViews)
 
+        //Inicialización del contructor
+        gameState = Colorful(25000,0)
+
         //Funcion para generar la secuencia del nivel de manera aleatoria.
         genSequence()
 
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR1.setOnClickListener {
             if(binding.backButton.tag == binding.imageR1.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -57,9 +61,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR2.setOnClickListener {
             if(binding.backButton.tag == binding.imageR2.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -71,9 +74,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR3.setOnClickListener {
             if(binding.backButton.tag == binding.imageR3.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -85,9 +87,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR4.setOnClickListener {
             if(binding.backButton.tag == binding.imageR4.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -99,9 +100,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR5.setOnClickListener {
             if(binding.backButton.tag == binding.imageR5.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -113,9 +113,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR6.setOnClickListener {
             if(binding.backButton.tag == binding.imageR6.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -127,9 +126,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR7.setOnClickListener {
             if(binding.backButton.tag == binding.imageR7.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -141,9 +139,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR8.setOnClickListener {
             if(binding.backButton.tag == binding.imageR8.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.
@@ -155,9 +152,8 @@ class Repeated_figuresLvl2 : AppCompatActivity() {
         //Mediante un Listener se determina la respuesta correcta y la cantidad de corazones disponibles.
         binding.imageR9.setOnClickListener {
             if(binding.backButton.tag == binding.imageR9.tag && hearts.currentHearts > 0){
-                points += 50
+                points = gameState.calculatePoints()
                 binding.textPoints.text = points.toString()
-                println("Estos son tus puntos boludo: " + points)
                 genSequence()
             }
             //En caso de que la respuesta sea incorrecta, se resta un corazón, de los 3 disponibles.

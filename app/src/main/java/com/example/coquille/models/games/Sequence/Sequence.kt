@@ -20,7 +20,7 @@ class Sequence constructor(timer: Int, points: Int, figure1: ImageView, figure2:
 
     //Función para manejar los puntos; aumentando los puntos y regresando el valor.
     fun calculatePoints(): Int{
-        points += 50
+        points += 23
         println("Correcto: " + points)
 
         return points
