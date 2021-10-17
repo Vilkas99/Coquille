@@ -13,14 +13,14 @@ object Data {
     val cardCuentos4 = CardContent("El pájaro y la ballena", 5, R.drawable.whale)
 
     val cardSecuencia1 = CardContent("Bienvenido al juego de la secuencia, analiza los patrones y selecciona la siguiente figura que lo completa")
-    val cardSecuencia2 = CardContent("Bosque encantado", 1, R.drawable.ic_fire)
-    val cardSecuencia3 = CardContent("Edad Media", 3, R.drawable.ic_colorful_logo)
-    val cardSecuencia4 = CardContent("Animales", 5, R.drawable.ic_fire)
+    val cardSecuencia2 = CardContent("Bosque encantado", 2, R.drawable.ic_tree)
+    val cardSecuencia3 = CardContent("Viaje a la edad media", 3, R.drawable.ic_castle)
+    val cardSecuencia4 = CardContent("Animales curiosos", 5, R.drawable.ic_peacock)
 
     val cardMemoria1 = CardContent("Encuentra los todos los pares de tarjetas que puedas sin equivocarte y pon a prueba tu memoria. ¡Encuéntralos todos para ganar un bonus!")
-    val cardMemoria2 = CardContent("Normal", 2, R.drawable.ic_candyhouse)
-    val cardMemoria3 = CardContent("Difícil", 3, R.drawable.ic_colorful_logo)
-    val cardMemoria4 = CardContent("Experto", 5, R.drawable.ic_fire)
+    val cardMemoria2 = CardContent("Normal", 2, R.drawable.ic_camel)
+    val cardMemoria3 = CardContent("Difícil", 3, R.drawable.ic_crab)
+    val cardMemoria4 = CardContent("Nivel Experto", 5, R.drawable.ic_fire)
 
 
     val cardTortuga1 = CardContent("¡Bievenid@ al juego de la tortuga! ¡Apaga todos los fuegos con tus poderes de tortuga antes de que se acabe el tiempo! Cuidado con los changos porque ellos no te quieren dejar pasar")
@@ -30,9 +30,9 @@ object Data {
 
 
     val cardDibuja1 = CardContent("Observa detenidamente y selecciona la imagen que es diferente a todas las demás.")
-    val cardDibuja2 = CardContent("Plantas", 1, R.drawable.ic_candyhouse)
-    val cardDibuja3 = CardContent("Fantasia", 3, R.drawable.ic_colorful_logo)
-    val cardDibuja4 = CardContent("Zoo", 5, R.drawable.ic_fire)
+    val cardDibuja2 = CardContent("En busca de plantas", 1, R.drawable.ic_chinese_evergreen)
+    val cardDibuja3 = CardContent("Un mundo fantástico", 3, R.drawable.ic_dragon)
+    val cardDibuja4 = CardContent("¡En marcha!", 5, R.drawable.ic_husky_dog)
 
     val cardsCuentos = arrayOf(cardCuentos1, cardCuentos2, cardCuentos3, cardCuentos4)
     val cardsDibuja = arrayOf(cardDibuja1, cardDibuja2, cardDibuja3, cardDibuja4)

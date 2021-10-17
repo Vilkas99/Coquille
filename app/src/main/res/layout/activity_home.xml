@@ -369,9 +369,9 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="200dp"
             android:fontFamily="@font/geosans"
-            android:text="@string/tiulo"
+            android:text="Figuras repetidas"
             android:textColor="#000000"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
     </androidx.cardview.widget.CardView>
 

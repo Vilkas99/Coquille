@@ -214,6 +214,8 @@ class BookGame : AppCompatActivity() {
     //Function that saves the total points of the user locally and goes back to the preview game
     fun back(){
         userPoints()
+        Utils.setEndStreakWorker(this)
+        Utils.setStreakNotification(this)
         val intent = Intent(this, PreviewGame::class.java)
         val nameGame :String = "book"
         val b : Bundle = Bundle()
@@ -224,7 +226,6 @@ class BookGame : AppCompatActivity() {
 
     //Function implemented when the "back" button is tapped
     fun routeToPreview(view : View){
-        userPoints()
         back()
     }
 
