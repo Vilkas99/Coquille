@@ -6,19 +6,16 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
+import android.widget.ImageButton
 import com.example.coquille.R
 import com.example.coquille.databinding.ActivityLoginBinding
-import com.example.coquille.models.Collectable
-import com.example.coquille.models.Settings
-import com.example.coquille.models.User
-import com.example.coquille.utils.MySharedPreferences
 
 
 class Login : AppCompatActivity() {
 
     val register = RegisterFragment()
     val login = LoginFragment()
+    val aboutme = AboutMe()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +38,13 @@ class Login : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun routeAboutMe() {
+        val player = MediaPlayer.create(this, R.raw.login_sound)
+        player.start()
+        val intent = Intent(this, AboutMe::class.java)
+        startActivity(intent)
+    }
+
 
     fun passStage(pass : Boolean){
          var pass = true.apply {
@@ -55,6 +59,15 @@ class Login : AppCompatActivity() {
         var pass = true.apply {
             supportFragmentManager.beginTransaction().apply{
                 replace(R.id.fragment, login)
+                commit()
+            }
+        }
+    }
+
+    fun passStage3(pass : Boolean){
+        var pass = true.apply {
+            supportFragmentManager.beginTransaction().apply{
+                replace(R.id.fragment, aboutme)
                 commit()
             }
         }

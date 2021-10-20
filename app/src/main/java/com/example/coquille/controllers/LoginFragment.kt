@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import com.example.coquille.R
 import com.example.coquille.models.User
@@ -22,6 +23,7 @@ import java.lang.reflect.Type
 class LoginFragment : Fragment() {
     lateinit var buttonRegister : TextView
     lateinit var buttonLogin : Button
+    lateinit var aboutMe: ImageButton
     lateinit var nameField : TextInputEditText
     lateinit var passwordField : TextInputEditText
     var bool = false
@@ -36,6 +38,11 @@ class LoginFragment : Fragment() {
         buttonLogin = rootView.findViewById(R.id.confirmButton)
         buttonLogin.setOnClickListener {
             login()
+        }
+
+        aboutMe = rootView.findViewById(R.id.aboutMe)
+        aboutMe.setOnClickListener {
+            (activity as Login).passStage3(true)
         }
 
         nameField = rootView.findViewById(R.id.input_username)
