@@ -114,6 +114,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="7dp"
+                    android:textColor="@color/gray_400"
                     android:text="@string/restingRecommendationsDescription"
                     android:textIsSelectable="false"
                     android:textSize="16sp" />
@@ -168,6 +169,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="7dp"
+                    android:textColor="@color/gray_400"
                     android:text="@string/restingRecommendationsDescription"
                     android:textIsSelectable="false"
                     android:textSize="16sp">
@@ -225,6 +227,7 @@
                     android:layout_alignParentEnd="true"
                     android:hint="Minutos máximos de juego"
                     android:imeOptions="actionDone"
+                    android:textColor="@color/gray_400"
                     android:inputType="number"
                     android:lines="1"
                     android:maxLines="1"

@@ -248,7 +248,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia2"
-            android:hint="Colorful"
+            android:hint="Figuras"
             android:textColor="#FFFFFF"
             android:textColorHint="#000000"
             android:textSize="35sp"
@@ -272,6 +272,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_4"
         android:layout_width="130dp"
+        android:backgroundTint="@color/amarilloMain"
         android:layout_height="50dp"
         android:layout_gravity="center"
         app:cardBackgroundColor="?colorPrimary"
@@ -315,6 +316,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
+        android:backgroundTint="@color/white"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_10"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_8"
@@ -333,6 +335,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_13"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_12"
         app:layout_constraintHorizontal_bias="0.766"
@@ -350,6 +353,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_21"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_19"
         app:layout_constraintHorizontal_bias="0.794"
@@ -367,6 +371,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_17"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_15"
         app:layout_constraintHorizontal_bias="0.353"
@@ -384,6 +389,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_29"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_27"
         app:layout_constraintHorizontal_bias="0.915"
@@ -401,6 +407,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_25"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_23"
         app:layout_constraintHorizontal_bias="0.148"
@@ -418,6 +425,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_5"
         android:layout_width="130dp"
+        android:backgroundTint="@color/amarilloMain"
         android:layout_height="50dp"
         android:layout_gravity="center"
         app:cardBackgroundColor="?colorPrimary"

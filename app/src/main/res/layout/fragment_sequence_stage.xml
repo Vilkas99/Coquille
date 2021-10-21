@@ -134,6 +134,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_5"
+        android:backgroundTint="@color/white"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -160,6 +161,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_7"
         android:layout_width="50dp"
+        android:backgroundTint="@color/white"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
@@ -200,6 +202,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:contentDescription="@string/todo_1"
+            android:backgroundTint="@color/white"
             android:src="@drawable/ic_uestionmark"
             tools:ignore="ImageContrastCheck">
 
@@ -222,6 +225,7 @@
         <ImageView
             android:id="@+id/figure3"
             android:layout_width="40dp"
+            android:backgroundTint="@color/white"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:contentDescription="@string/todo"

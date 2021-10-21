@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="460dp"
     android:background="@color/white"
+
     android:orientation="vertical"
     android:layout_gravity="bottom"
     tools:context=".controllers.RegisterFragment">
@@ -30,6 +31,7 @@
         android:layout_height="175dp"
         android:layout_gravity="center"
         app:cardCornerRadius="4dp"
+        android:backgroundTint="@color/white"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +54,7 @@
                 android:id="@+id/input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:backgroundTint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,6 +73,7 @@
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:backgroundTint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,6 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirmar contraseña"
+            android:textColorHint="@color/black"
             android:translationY="120dp"
             app:startIconDrawable="@drawable/ic_key_icon"
             app:startIconTint="#12DFFF">
@@ -88,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:inputType="textPassword"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,6 +104,7 @@
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/amarilloMain"
         android:layout_gravity="center"
         android:elevation="12dp"
         android:onClick="routeToHome"
@@ -120,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/geosans"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

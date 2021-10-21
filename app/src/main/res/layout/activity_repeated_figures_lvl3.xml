@@ -472,6 +472,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_4"
         android:layout_width="130dp"
+        android:backgroundTint="@color/amarilloMain"
         android:layout_height="50dp"
         android:layout_gravity="center"
         app:cardBackgroundColor="?colorPrimary"
@@ -538,6 +539,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_9"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_8"
         app:layout_constraintHorizontal_bias="0.044"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
         app:layout_constraintTop_toTopOf="@+id/vertical_guideline_10"
         app:layout_constraintVertical_bias="0.417">
@@ -552,6 +554,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_21"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_20"
         app:layout_constraintHorizontal_bias="0.901"
@@ -569,6 +572,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_37"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_36"
         app:layout_constraintHorizontal_bias="0.974"
@@ -586,6 +590,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_25"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_24"
         app:layout_constraintHorizontal_bias="0.138"
@@ -603,6 +608,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_61"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_60"
         app:layout_constraintHorizontal_bias="0.721"
@@ -625,6 +631,7 @@
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline_39"
         app:layout_constraintTop_toTopOf="@+id/vertical_guideline_42"
+        android:backgroundTint="@color/white"
         app:layout_constraintVertical_bias="0.783">
 
         <ImageButton
@@ -640,6 +647,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         app:cardBackgroundColor="?colorPrimary"
+        android:backgroundTint="@color/amarilloMain"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/third_vertical_guideline"
@@ -667,6 +675,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_13"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_12"
         app:layout_constraintHorizontal_bias="0.392"
@@ -684,6 +693,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_17"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_16"
         app:layout_constraintHorizontal_bias="0.662"
@@ -701,6 +711,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_29"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_28"
         app:layout_constraintHorizontal_bias="0.392"
@@ -718,6 +729,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_65"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_64"
         app:layout_constraintHorizontal_bias="0.955"
@@ -735,6 +747,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_45"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_44"
         app:layout_constraintHorizontal_bias="0.469"
@@ -752,6 +765,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_33"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_32"
         app:layout_constraintHorizontal_bias="0.682"
@@ -769,6 +783,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_49"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_48"
         app:layout_constraintHorizontal_bias="0.906"
@@ -786,6 +801,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_57"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_56"
         app:layout_constraintHorizontal_bias="0.392"
@@ -803,6 +819,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/vertical_guideline_53"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline_52"
         app:layout_constraintHorizontal_bias="0.082"
@@ -825,7 +842,7 @@
         android:layout_marginTop="100dp"
         android:stateListAnimator="@null"
         android:translationY="-100dp"
-        app:cardBackgroundColor="?colorSecondary"
+        app:cardBackgroundColor="@color/azulMain"
         app:cardCornerRadius="4dp"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -848,7 +865,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maia2"
-            android:hint="Colorful"
+            android:hint="Figuras"
             android:textColor="#FFFFFF"
             android:textColorHint="#000000"
             android:textSize="35sp"

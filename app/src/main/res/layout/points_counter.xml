@@ -62,6 +62,7 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/geosans_light"
                 android:text="1000"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideline5"
                 app:layout_constraintStart_toEndOf="@id/pointsImageView"
