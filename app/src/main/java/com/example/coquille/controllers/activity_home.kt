@@ -47,15 +47,19 @@ class activity_home : AppCompatActivity() {
     }
 
     fun routeToConfig(view: View) {
-        val player = MediaPlayer.create(this, R.raw.settings_sound)
-        player.start()
+        if(Utils.getCurrentUser(this).settings.sfx) {
+            val player = MediaPlayer.create(this, R.raw.settings_sound)
+            player.start()
+        }
         val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 
     fun routeToProfile(view: View) {
-        val player = MediaPlayer.create(this, R.raw.profile_sound)
-        player.start()
+        if(Utils.getCurrentUser(this).settings.sfx){
+            val player = MediaPlayer.create(this, R.raw.profile_sound)
+            player.start()
+        }
         val intent = Intent(this, profile::class.java)
         startActivity(intent)
     }
@@ -74,8 +78,11 @@ class activity_home : AppCompatActivity() {
 
     fun routeToPreview(view: View ){
         val nameCard = view.resources.getResourceName(view.id)
-        val player = MediaPlayer.create(this, R.raw.sequence_sound)
-        player.start()
+        if(Utils.getCurrentUser(this).settings.sfx){
+            val player = MediaPlayer.create(this, R.raw.sequence_sound)
+            player.start()
+        }
+
 
         when(nameCard){
             "com.example.coquille:id/sequence_button" -> {

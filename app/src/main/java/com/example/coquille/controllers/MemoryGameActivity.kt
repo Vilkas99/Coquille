@@ -8,7 +8,6 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -27,11 +26,11 @@ class MemoryGameActivity : AppCompatActivity(){
     private lateinit var pointsView: View
     private var ignoringInput: Boolean = true
     private lateinit var recyclerView: RecyclerView //Vista que mostrará las cartas
-    private lateinit var layoutManager : GridLayoutManager //LayoutManager que se encargará de ordenar las cartas en una matriz
+    private lateinit var layoutManager : GridLayoutManager //Encargado de ordenar las cartas en una matriz
     private lateinit var heartViews : List<ImageView>
     private lateinit var hearts : HeartSystem
     private lateinit var points : PointsSystem
-    private lateinit var adapter : MemoryGameViewAdapter
+    private lateinit var adapter : MemoryGameCardAdapter
     private lateinit var gameState : MemoryGame
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +46,8 @@ class MemoryGameActivity : AppCompatActivity(){
 
         //Hearts system - Conexión con las ImageView que muestran los contenedores de corazón
         //que representan las vidas del usuario
-        heartViews = listOf(findViewById(R.id.memory_card_first_heart), findViewById(R.id.memory_card_second_heart), findViewById(R.id.memory_card_third_heart))
+        heartViews = listOf(findViewById(R.id.memory_card_first_heart),
+            findViewById(R.id.memory_card_second_heart), findViewById(R.id.memory_card_third_heart))
         hearts = HeartSystem(3, heartViews)
 
         //Points system - Conexión con la vista que despliega los puntos del usuario
@@ -59,7 +59,10 @@ class MemoryGameActivity : AppCompatActivity(){
           a utilizar y qué atributos y comportamiento tendrán al ser tocadas.
          */
         recyclerView = findViewById(R.id.cardsRecyclerView)
-        adapter = MemoryGameViewAdapter(gameState.getCards()){firstView: View, secondView: View, indexOfSelectedCard : Int -> this.onCardSelection(firstView, secondView, indexOfSelectedCard)}
+        adapter = MemoryGameCardAdapter(gameState.getCards()) {
+                firstView: View, secondView: View, indexOfSelectedCard : Int ->
+                this.onCardSelection(firstView, secondView, indexOfSelectedCard)
+        }
         recyclerView.adapter = adapter
 
         /*Layout Manager y decoración para el RecyclerView
@@ -70,7 +73,8 @@ class MemoryGameActivity : AppCompatActivity(){
         val pixelsBetweenItems = 50
         layoutManager = GridLayoutManager(this, numberOfColumns)
         recyclerView.layoutManager = layoutManager
-        recyclerView.addItemDecoration(GridSpacingItemDecoration(numberOfColumns, (pixelsBetweenItems / resources.displayMetrics.density).toInt()))
+        recyclerView.addItemDecoration(GridSpacingItemDecoration(numberOfColumns,
+            (pixelsBetweenItems / resources.displayMetrics.density).toInt()))
 
         //Se muestran primero todas las cartas del juego para que el usuario pueda recordarlas
         Handler(Looper.getMainLooper()).postDelayed({
@@ -111,7 +115,8 @@ class MemoryGameActivity : AppCompatActivity(){
 
         //Si estamos ignorando la entrada, o el par de la carta tocada ya fue dscubierto o
         //se volvió a tocar la última carta tocada, no hacemos nada y esperamos la siguiente entrada
-        if(ignoringInput || gameState.getCards()[indexOfSelectedCard].isCleared() || gameState.getPastSelectedCardIndex() == indexOfSelectedCard){
+        if(ignoringInput || gameState.isCardCleared(indexOfSelectedCard) ||
+            gameState.getPastSelectedCardIndex() == indexOfSelectedCard){
             return
         }
 
@@ -120,13 +125,8 @@ class MemoryGameActivity : AppCompatActivity(){
             gameState.setCardAsSelected(indexOfSelectedCard)
         }
 
-        //Decidir qué cara de la carta será la que haremos visible. Se hará la visible la que
-        if(firstView.visibility == View.GONE){
-            flipCard(this, firstView, secondView)
-        }
-        else{
-            flipCard(this, secondView, firstView)
-        }
+        //Hacemos la cara frontal de la carta visible
+        flipCard(this, firstView, secondView)
 
         //Preguntamos al estado del juego si la última carta seleccionada y la que acaba de tocar
         //el usuario son la misma
@@ -147,11 +147,14 @@ class MemoryGameActivity : AppCompatActivity(){
 
                 }, 1000)
 
+                //Bloqueamos la entrada del usuario hasta que las animaciones terminen por completo
+                //para evitar bugs visuales.
                 Handler(Looper.getMainLooper()).postDelayed({ ignoringInput = false }, 1480)
 
             }
 
-            //Si forman un par o tocó una carta que ya fue volteada, dejamos las tarjetas como están
+            //Si forman un par o no hay carta con la cual comparar
+            // o tocó una carta que ya fue volteada, dejamos las tarjetas como están
             1, 2 -> {}
 
         }
@@ -215,10 +218,12 @@ class MemoryGameActivity : AppCompatActivity(){
 
         //Asignamos las animaciones a su vista correspondiente
 
-        val flipOutAnimatorSet = AnimatorInflater.loadAnimator(context, R.animator.flip_out_card) as AnimatorSet
+        val flipOutAnimatorSet = AnimatorInflater.loadAnimator(context, R.animator.flip_out_card)
+                as AnimatorSet
         flipOutAnimatorSet.setTarget(inVisibleView)
 
-        val flipInAnimatorSet = AnimatorInflater.loadAnimator(context, R.animator.flip_in_card) as AnimatorSet
+        val flipInAnimatorSet = AnimatorInflater.loadAnimator(context, R.animator.flip_in_card)
+                as AnimatorSet
         flipInAnimatorSet.setTarget(visibleView)
 
         flipOutAnimatorSet.start()
@@ -251,7 +256,8 @@ class MemoryGameActivity : AppCompatActivity(){
         }
     }
 
-    // Función para volver a la vista previa al juego, ligada al botón de la esquina superior izquierda
+    // Función para volver a la vista previa al juego,
+    // ligada al botón de la esquina superior izquierda
     private fun back(){
 
         val intent = Intent(this, PreviewGame::class.java)
