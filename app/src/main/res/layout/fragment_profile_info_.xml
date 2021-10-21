@@ -52,7 +52,7 @@
         android:id="@+id/input_username_layout"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-
+        android:textColorHint="@color/black"
         android:hint="Nombre de usuario"
         app:boxStrokeColor="#12DFFF"
         app:layout_constraintBottom_toTopOf="@+id/top_H_1"
@@ -76,6 +76,7 @@
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/top_H_2"
         app:layout_constraintEnd_toStartOf="@+id/top_V_1"
         app:layout_constraintStart_toStartOf="@+id/top_V_0"
@@ -97,6 +98,7 @@
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:elevation="12dp"
+        android:backgroundTint="@color/amarilloMain"
         android:stateListAnimator="@null"
         android:text="Guardar"
 

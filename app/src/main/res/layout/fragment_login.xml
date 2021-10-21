@@ -6,6 +6,7 @@
     android:layout_height="460dp"
     android:orientation="vertical"
     android:layout_gravity="bottom"
+    android:background="@color/white"
     tools:context=".controllers.RegisterFragment">
 
 

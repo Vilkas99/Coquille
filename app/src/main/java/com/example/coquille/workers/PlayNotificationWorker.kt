@@ -19,7 +19,6 @@ class PlayNotificationWorker(context: Context, parameters: WorkerParameters) :
         val pendingIntent: PendingIntent = PendingIntent.getActivity(applicationContext, 0, intent, 0)
 
         var builder = NotificationCompat.Builder(applicationContext, 1235322435.toString())
-            .setSmallIcon(R.drawable.notifications_icon)
             .setContentTitle("¡Ven a jugar y supérate a ti mismo!")
             .setContentText("Practica tu atención y mantén tu racha diaria \uD83D\uDD25")
             .setContentIntent(pendingIntent)

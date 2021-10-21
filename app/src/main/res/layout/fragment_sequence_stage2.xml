@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controllers.Sequence.levels.Sequence_stage2">
+    tools:context=".controllers.Sequence.levels.Sequence_stage2"
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/first_vertical_guideline"
@@ -249,6 +250,7 @@
         android:id="@+id/card_view_2"
         android:layout_width="281dp"
         android:layout_height="82dp"
+        android:backgroundTint="@color/white"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
         app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_10"
@@ -297,6 +299,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_3"
+        android:backgroundTint="@color/amarilloMain"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -332,6 +335,7 @@
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
+        android:backgroundTint="@color/amarilloMain"
         android:stateListAnimator="@null"
         android:translationX="0dp"
         android:translationY="0dp"

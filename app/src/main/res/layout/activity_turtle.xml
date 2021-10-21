@@ -61,6 +61,7 @@
         android:layout_gravity="center"
         app:cardCornerRadius="4dp"
         app:cardElevation="10dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toTopOf="@id/top_H_2"
         app:layout_constraintEnd_toStartOf="@id/top_V_1"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +69,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:backgroundTint="@color/teal_200"
             android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.Guideline
@@ -100,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="25dp"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/puntos_V_2"
                 app:layout_constraintStart_toStartOf="@id/puntos_icono"
@@ -144,6 +147,7 @@
                 android:layout_height="wrap_content"
                 android:text="2:24"
                 android:textSize="25dp"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tiempo_V_1"

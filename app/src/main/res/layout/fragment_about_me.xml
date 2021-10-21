@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controllers.AboutMe">
+    tools:context=".controllers.AboutMe"
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_guideline_7"
@@ -121,10 +122,11 @@
     <TextView
         android:id="@+id/textView23"
         android:layout_width="325dp"
-        android:layout_height="243dp"
+        android:layout_height="273dp"
         android:fontFamily="@font/geosans"
-        android:text="Coquille \n \n Aplicación móvil para el mejoramiento en la atencion a niños con TDAH. \n Elaborado por: \n \nMyroslava Sánchez Andrade \n Uziel Humberto López Meneses \n Víctor Alfonso Mancera Ososrio \n Fernando de la Torre Rodriguez"
+        android:text="Coquille \n \n Aplicación móvil para el mejoramiento en la atencion a niños con TDAH. \n Elaborado por: \n \nMyroslava Sánchez Andrade \n Uziel Humberto López Meneses \n Víctor Alfonso Mancera Ososrio \n Fernando de la Torre Rodriguez \n Pack de iconos: https://www.freepik.es/iconos-gratis/hada_14342601.htm#page=1query=fantasyposition=34from_view=search"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_10"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
@@ -175,6 +177,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/geosans"
         android:text="Acerca de"
+        android:textColor="@color/black"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_13"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_15"

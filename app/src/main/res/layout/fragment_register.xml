@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="460dp"
+    android:background="@color/white"
     android:orientation="vertical"
     android:layout_gravity="bottom"
     tools:context=".controllers.RegisterFragment">
@@ -14,6 +15,8 @@
         android:paddingBottom="18dp"
         android:text="Llena todos los campos"
         android:textSize="17dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/card_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.279"
@@ -40,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario"
+            android:textColorHint="@color/black"
             app:boxStrokeColor="#12DFFF"
             app:startIconDrawable="@drawable/ic_user_icon"
             app:startIconTint="#12DFFF">
@@ -56,6 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
+            android:textColorHint="@color/black"
             android:translationY="60dp"
             app:startIconDrawable="@drawable/ic_key_icon"
             app:startIconTint="#12DFFF">
@@ -79,10 +84,12 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_password_verify"
-                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white" />
+                android:backgroundTint="@color/white"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.cardview.widget.CardView>

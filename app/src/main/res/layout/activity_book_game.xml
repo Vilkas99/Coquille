@@ -105,6 +105,7 @@
 
         <LinearLayout
             android:id="@+id/body_preview"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="8.8"
@@ -115,6 +116,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/white"
         android:id="@+id/card_view_logout"
         android:layout_width="120dp"
         android:layout_height="35dp"
@@ -143,6 +145,7 @@
             android:layout_marginStart="60dp"
             android:fontFamily="@font/geosans"
             android:text="120"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
@@ -191,6 +194,7 @@
                 android:gravity="center">
 
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/textPage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

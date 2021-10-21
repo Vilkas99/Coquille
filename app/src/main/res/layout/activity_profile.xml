@@ -140,6 +140,7 @@
             android:stateListAnimator="@null"
             app:cardCornerRadius="50dp"
             app:cardElevation="10dp"
+            android:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

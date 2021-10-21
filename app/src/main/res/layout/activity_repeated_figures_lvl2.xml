@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".controllers.Colorful.Repeated_figuresLvl2">
 
     <androidx.constraintlayout.widget.Guideline
