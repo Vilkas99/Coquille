@@ -22,7 +22,7 @@ class MySharedPreferences constructor(context: Context) { //TODO: Corregir todo 
 
         editor.apply{
                 putString(key, json)
-                commit()
+                apply()
         }
     }
 
