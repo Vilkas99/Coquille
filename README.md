@@ -1,2 +1,2 @@
 # Coquille
-El desarrollo de la aplicación se encuentra en la branch "Dev"
+Aplicación desarrollada para TC2007B.1
