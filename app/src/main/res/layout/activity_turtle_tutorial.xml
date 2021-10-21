@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulMain">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_H_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_H_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".30" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_H_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/low_H_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/low_H_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_V_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_V_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".65" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/low_H_1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tuto_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/maia2"
+                android:text="Tutorial"
+                android:textSize="40dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.095" />
+
+            <TextView
+                android:id="@+id/description_tuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="En este tutorial aprenderás cómo jugar a las aventuras de tuga."
+                android:textAlignment="center"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tuto_title"
+                app:layout_constraintVertical_bias="0.166" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="130dp"
+                android:layout_height="43dp"
+                android:backgroundTint="@color/rojoMain"
+                android:onClick="nextTuto"
+                android:text="Comenzar"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_tuto"
+                app:layout_constraintVertical_bias="0.728" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/mainPos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="moveTuga"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_pos_circle"
+        app:layout_constraintBottom_toTopOf="@+id/middle_H_2"
+        app:layout_constraintEnd_toStartOf="@+id/middle_V_2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/middle_V_1"
+        app:layout_constraintTop_toTopOf="@+id/middle_H_1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/leftPos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="placeTuga"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_pos_circle"
+        app:layout_constraintBottom_toTopOf="@+id/middle_H_2"
+        app:layout_constraintEnd_toStartOf="@+id/middle_V_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/middle_H_1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/rightPos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="placeTuga"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_pos_circle"
+        app:layout_constraintBottom_toTopOf="@+id/middle_H_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middle_V_2"
+        app:layout_constraintTop_toTopOf="@+id/middle_H_1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/topPos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="placeTuga"
+        android:src="@drawable/ic_pos_circle"
+        app:layout_constraintBottom_toTopOf="@+id/middle_H_1"
+        app:layout_constraintEnd_toStartOf="@+id/middle_V_2"
+        app:layout_constraintStart_toStartOf="@+id/middle_V_1"
+        app:layout_constraintTop_toTopOf="@+id/middle_H_0" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/topLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_pos_circle"
+        app:layout_constraintBottom_toTopOf="@+id/middle_H_1"
+        app:layout_constraintEnd_toStartOf="@+id/middle_V_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/middle_H_0" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/topRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_pos_circle"
+        app:layout_constraintBottom_toTopOf="@+id/middle_H_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middle_V_2"
+        app:layout_constraintTop_toTopOf="@+id/middle_H_0" />
+
+    <View
+        android:id="@+id/freezeTuto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/habilidad_1"
+        android:onClick="freezeShark"
+        app:layout_constraintBottom_toTopOf="@+id/low_H_1"
+        app:layout_constraintEnd_toStartOf="@+id/middle_V_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/low_H_2" />
+
+    <View
+        android:id="@+id/waterTuto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="tapOnWater"
+        android:background="@drawable/habilidad_2"
+        app:layout_constraintBottom_toTopOf="@+id/low_H_1"
+        app:layout_constraintEnd_toStartOf="@+id/middle_V_2"
+        app:layout_constraintStart_toStartOf="@+id/middle_V_1"
+        app:layout_constraintTop_toTopOf="@+id/low_H_2" />
+
+    <View
+        android:id="@+id/slowMotionTuto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="tapOnSlow"
+        android:background="@drawable/habilidad_3"
+        app:layout_constraintBottom_toTopOf="@+id/low_H_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/middle_V_2"
+        app:layout_constraintTop_toTopOf="@+id/low_H_2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/returnToHome"
+        android:layout_width="73dp"
+        android:layout_height="66dp"
+        android:rotation="180"
+        android:onClick="routeToHomeBut"
+        android:src="@drawable/ic_flecha_correcta"
+        app:layout_constraintBottom_toTopOf="@+id/middle_H_0"
+        app:layout_constraintEnd_toStartOf="@+id/middle_V_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,15 +9,78 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coquille">
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".controllers.Turtle.tutorial.TurtleTutorial"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.Popup"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Popup" />
+        <activity
+            android:name=".controllers.BookGame"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.Turtle.Turtle"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.PreviewGame"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.profile"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.SettingsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.Login"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".controllers.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.activity_home"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.preview_sequence"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.Sequence.Sequence_game"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.Colorful.Repeated_figures"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.Colorful.Repeated_figuresLvl2"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.Colorful.Repeated_figuresLvl3"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.MemoryGameActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

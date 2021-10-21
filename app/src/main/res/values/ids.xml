@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="middle_H_0" type="id" />
+    <item name="low_H_1" type="id" />
+    <item name="low_H_2" type="id" />
+    <item name="middle_V_1" type="id" />
+    <item name="middle_V_2" type="id" />
+    <item name="leftPos" type="id" />
+    <item name="rightPos" type="id" />
+    <item name="topPos" type="id" />
+    <item name="topLeft" type="id" />
+    <item name="topRight" type="id" />
+    <item name="slowMotionTuto" type="id" />
+    <item name="waterTuto" type="id" />
+    <item name="freezeTuto" type="id" />
+</resources>

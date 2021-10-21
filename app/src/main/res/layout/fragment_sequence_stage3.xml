@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controllers.Sequence.levels.Sequence_stage3">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/third_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fourth_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.69" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifth_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sixth_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.71" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_13"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_11"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_9"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_9"
+            android:src="@drawable/ic_square"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_13"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_16"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_15"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_9"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_8"
+            android:src="@drawable/ic_triangle"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_13"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_12"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_9"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_circle"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_2"
+        android:background="@color/white"
+        android:layout_width="281dp"
+        android:layout_height="82dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_10"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_14"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/option1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_square"
+            android:contentDescription="@string/todo_5"
+            android:translationX="10dp"
+            android:translationY="15dp"
+            tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/option2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_triangle"
+            android:contentDescription="@string/todo_4"
+            android:translationX="110dp"
+            android:translationY="15dp"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/option3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_circle"
+            android:contentDescription="@string/todo_3"
+            android:translationX="210dp"
+            android:translationY="15dp"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageButton>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_3"
+        android:backgroundTint="@color/amarilloMain"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationX="0dp"
+        android:translationY="0dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/third_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/first_vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/second_vertical_guideline">
+
+        <TextView
+            android:id="@+id/puntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia2"
+            android:hint="0"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="25sp"
+            android:translationX="55dp"
+            android:translationY="15dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_4"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/amarilloMain"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        android:translationX="0dp"
+        android:translationY="0dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/sixth_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fourth_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/fifth_vertical_guideline"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/timer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maia2"
+            android:hint="@string/_00_00"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="25sp"
+            android:translationX="40dp"
+            android:translationY="15dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_17"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_22"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_12"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_21"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure12"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_8"
+            android:src="@drawable/ic_uestionmark"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_18"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_11"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_17"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_1"
+            android:src="@drawable/ic_square"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view16"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_18"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_12"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_17"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_1"
+            android:src="@drawable/ic_circle"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view15"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_20"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_11"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_19"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_1"
+            android:src="@drawable/ic_square"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_18"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_16"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_15"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_17"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_8"
+            android:src="@drawable/ic_triangle"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_21"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_20"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_16"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_15"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_19"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_8"
+            android:src="@drawable/ic_triangle"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_22"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_22"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_16"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_15"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_21"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure11"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_8"
+            android:src="@drawable/ic_triangle"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_20"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_8"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_12"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_19"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_1"
+            android:src="@drawable/ic_circle"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_guideline_22"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_11"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintTop_toTopOf="@+id/vertical_guideline_21"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/figure10"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo_1"
+            android:src="@drawable/ic_square"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
