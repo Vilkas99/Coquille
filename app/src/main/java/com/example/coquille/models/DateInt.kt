@@ -1,11 +1,13 @@
 package com.example.coquille.models
 
+import java.time.LocalDateTime
+
 class DateInt() {
 
-    var year : Int = 2021
-    var month : Int = 10
-    var day : Int = 11
-    var hour : Int = 0
-    var minute : Int = 0
+    var year : Int = LocalDateTime.now().year
+    var month : Int = LocalDateTime.now().monthValue
+    var day : Int = LocalDateTime.now().dayOfYear
+    var hour : Int = LocalDateTime.now().hour
+    var minute : Int = LocalDateTime.now().minute
 
 }
