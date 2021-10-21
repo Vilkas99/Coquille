@@ -26,6 +26,7 @@ import com.example.coquille.controllers.Colorful.Repeated_figuresLvl3
 import com.example.coquille.controllers.Sequence.Sequence_game
 import com.example.coquille.controllers.Turtle.Turtle
 import com.example.coquille.controllers.Turtle.tutorial.TurtleTutorial
+import com.example.coquille.utils.Utils
 
 class PreviewGame() : AppCompatActivity() {
 
@@ -401,8 +402,10 @@ class PreviewGame() : AppCompatActivity() {
             "Cuentos asombrosos" -> {
                 when (card) {
                     "com.example.coquille:id/card1" -> {
-                        val player = MediaPlayer.create(this, R.raw.profile_sound)
-                        player.start()
+                        if(Utils.getCurrentUser(this).settings.sfx) {
+                            val player = MediaPlayer.create(this, R.raw.profile_sound)
+                            player.start()
+                        }
                         val intent = Intent(this, BookGame::class.java)
                         val nameLevel: String = "El león y el ratón"
                         val b: Bundle = Bundle()
@@ -411,8 +414,10 @@ class PreviewGame() : AppCompatActivity() {
                         startActivity(intent)
                     }
                     "com.example.coquille:id/card2" -> {
-                        val player = MediaPlayer.create(this, R.raw.profile_sound)
-                        player.start()
+                        if(Utils.getCurrentUser(this).settings.sfx) {
+                            val player = MediaPlayer.create(this, R.raw.profile_sound)
+                            player.start()
+                        }
                         val intent = Intent(this, BookGame::class.java)
                         val nameLevel: String = "El patito feo"
                         val b: Bundle = Bundle()
@@ -421,8 +426,10 @@ class PreviewGame() : AppCompatActivity() {
                         startActivity(intent)
                     }
                     "com.example.coquille:id/card3" -> {
-                        val player = MediaPlayer.create(this, R.raw.profile_sound)
-                        player.start()
+                        if(Utils.getCurrentUser(this).settings.sfx) {
+                            val player = MediaPlayer.create(this, R.raw.profile_sound)
+                            player.start()
+                        }
                         val intent = Intent(this, BookGame::class.java)
                         val nameLevel: String = "El pájaro y la ballena"
                         val b: Bundle = Bundle()
@@ -437,8 +444,10 @@ class PreviewGame() : AppCompatActivity() {
             "Juego de colores? xd" -> {
                 when (card) {
                     "com.example.coquille:id/card1" -> {
-                        val player = MediaPlayer.create(this, R.raw.profile_sound)
-                        player.start()
+                        if(Utils.getCurrentUser(this).settings.sfx) {
+                            val player = MediaPlayer.create(this, R.raw.profile_sound)
+                            player.start()
+                        }
                         val intent = Intent(this, Repeated_figures::class.java)
                         val nameLevel: String = "Dibujo"
                         val b: Bundle = Bundle()
@@ -447,8 +456,10 @@ class PreviewGame() : AppCompatActivity() {
                         startActivity(intent)
                     }
                     "com.example.coquille:id/card2" -> {
-                        val player = MediaPlayer.create(this, R.raw.profile_sound)
-                        player.start()
+                        if(Utils.getCurrentUser(this).settings.sfx) {
+                            val player = MediaPlayer.create(this, R.raw.profile_sound)
+                            player.start()
+                        }
                         val intent = Intent(this, Repeated_figuresLvl2::class.java)
                         val nameLevel: String = "Dibujo"
                         val b: Bundle = Bundle()
@@ -457,8 +468,10 @@ class PreviewGame() : AppCompatActivity() {
                         startActivity(intent)
                     }
                     "com.example.coquille:id/card3" -> {
-                        val player = MediaPlayer.create(this, R.raw.profile_sound)
-                        player.start()
+                        if(Utils.getCurrentUser(this).settings.sfx) {
+                            val player = MediaPlayer.create(this, R.raw.profile_sound)
+                            player.start()
+                        }
                         val intent = Intent(this, Repeated_figuresLvl3::class.java)
                         val nameLevel: String = "Khe-so :O"
                         val b: Bundle = Bundle()
